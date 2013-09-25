@@ -212,56 +212,81 @@ header .menu-main-nav-container .menu li a:hover {
   margin: auto;
 }
 
+/* line 124, ../sass/screen.scss */
+.main-content {
+  /* Columns */
+  /* Home Page */
+}
 /* line 125, ../sass/screen.scss */
 .main-content .container {
   background: white;
+  max-width: 1080px;
+}
+/* line 131, ../sass/screen.scss */
+.main-content .column {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
   padding: 40px;
-  max-width: 1000px;
+}
+/* line 132, ../sass/screen.scss */
+.main-content .one-third {
+  width: 355px;
+}
+/* line 133, ../sass/screen.scss */
+.main-content .two-third {
+  width: 560px;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 footer.container {
   max-width: 1000px;
   padding: 40px;
   background: white;
   font-size: 11px;
 }
-/* line 137, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 footer.container .footer-nav {
   width: 50%;
   display: inline-block;
   vertical-align: top;
 }
-/* line 141, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 footer.container .footer-nav li {
   display: inline-block;
   width: 75px;
   vertical-align: top;
   margin-bottom: 10px;
 }
-/* line 146, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 footer.container .footer-nav li a {
   color: #a0a0a0;
   text-decoration: none;
 }
-/* line 153, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 footer.container .footer-social-links {
   display: inline-block;
   vertical-align: bottom;
   text-align: right;
   width: 49%;
 }
-/* line 159, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 footer.container .footer-social-links #socialmedia-container DIV.smc_icon_container {
   margin: 0 10px !important;
 }
-/* line 161, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 footer.container .footer-social-links #socialmedia-container DIV.smc_icon_container:last-child {
   margin-right: 0 !important;
 }
-/* line 165, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 footer.container .footer-sub {
   padding-top: 20px;
   margin-top: 20px;
   border-top: 4px solid #f4f4f4;
+}
+
+/* misc styles */
+/* line 189, ../sass/screen.scss */
+.linklove {
+  display: none;
 }

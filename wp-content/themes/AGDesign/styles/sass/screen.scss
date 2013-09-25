@@ -124,10 +124,22 @@ header {
 .main-content {
 	.container{
 		background: white;
-		padding: 40px;
-		max-width: 1000px;
+		max-width: 1080px;
 	}
+
+	/* Columns */
+	.column { display: inline-block; vertical-align: top; margin:0; padding: 40px; }
+	.one-third { width: 355px; }
+	.two-third { width: 560px; }
+
+
+	/* Home Page */
+
+
 }
+
+
+
 
 footer.container {
 	max-width: 1000px;
@@ -173,7 +185,8 @@ footer.container {
 
 
 
-
+/* misc styles */
+.linklove { display: none; }
 
 
 
