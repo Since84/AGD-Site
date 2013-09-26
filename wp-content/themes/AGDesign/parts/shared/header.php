@@ -1,8 +1,8 @@
 <header>
 	<div class="container">
-		<h1>
-			<a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a>
-		</h1>
+		<div class="home-logo">
+			<a href="<?php echo home_url(); ?>"><img src="<?php bloginfo( 'template_url' );?>/styles/images/logos/agdinc-logo.png"/></a>
+		</div>
 		<?php wp_nav_menu( array('menu' => 'Main Nav' )); ?>
 	</div>
 </header>

@@ -11,8 +11,31 @@
 body{ background: url(../images/diagonal-stripes.png); }
 strong { font-weight: bold; }
 .right { float: right; }
-/** Typography **/
 
+/** Typography **/
+body { 
+	font-size: $fontMedium; 
+	font-family: 'Open Sans', Arial, sans-serif;
+	color: $textGray;
+	line-height: 1.3em;
+}
+
+a { 
+	color: $red; 
+	font-weight: 700;
+}
+
+h1 {
+	font-size: $fontXLarge;
+	font-weight: 700;
+	color: black;
+}
+
+h2 {
+	font-size: $fontLarge;
+	font-weight: 700;
+	color: black;
+}
 
 /** Layout **/ 
 .container { 
@@ -20,15 +43,20 @@ strong { font-weight: bold; }
 	max-width: 1080px; 
 	margin: auto;
 }
+.section {
+	margin-bottom: 20px;
+}
 
 header {
 	height: 100px;
 	@include header-gradient;
+	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 
-	h1{
+	.home-logo{
 		width: 50%;
 		display: inline-block;
 		vertical-align: top;
+		padding-top: 30px;
 	}
 
 	.menu-main-nav-container {
@@ -46,6 +74,7 @@ header {
 					display: block;
 					text-decoration: none;
 					font-size: 14px;
+					font-weight: normal;
 					text-align: center;
 					color: #FFF;
 					width: 105px;
@@ -86,18 +115,7 @@ header {
 		}
 
 		input[type="submit"] { 
-			border-radius: 5px; 
-			@include button-gradient;
-			border: none;
-			padding: 5px;
-			width: 160px;
-			font-size: 12px;
-			color: white;
-			text-transform: uppercase;
-			font-weight: normal;
-			-webkit-box-shadow: inset 0 0 4px #fff;
-		    -moz-box-shadow: inset 0 0 4px #fff;
-		    box-shadow: inset 0 0 4px #fff;
+			@include blue-button;
 		}
 
 	}
@@ -122,6 +140,14 @@ header {
 }
 
 .main-content {
+	h1, h2 { margin-bottom: 10px; }
+	h2 {
+		padding-bottom: 10px; 
+		border-bottom: 3px solid $lightGray;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+
 	.container{
 		background: white;
 		max-width: 1080px;
@@ -134,8 +160,81 @@ header {
 
 
 	/* Home Page */
+	.testimonial { 
+		border-top: 3px solid $lightGray; 
+		padding: 20px 0;
 
+		& > img, & > div {
+			display: inline-block;
+			vertical-align: top;
+		}
 
+		.client-quote {
+			width: 270px;
+			margin-left: 20px;
+
+			& > p {
+				font-style: italic;
+				font-size: $fontXLarge;
+				line-height: 1.45em;
+			}
+
+			.client-info {
+				margin-top: 10px;
+				.client-name {
+					font-weight: 700;
+					clear: both;
+					display: block;
+				}
+				.client-position { }
+			}
+		}
+
+	}
+	.read-more {
+		position: relative;
+		display: block;
+		margin-top: 5px;
+		text-transform: uppercase;
+	}
+	/* Stay Connected Form */
+	.stay-connected {
+		.cf-ol, .cf-sb { display: inline-block; }
+		.cf_hidden { display: none; }
+
+		margin-bottom: 40px;
+
+		li { 
+			display: inline-block; 
+			margin-right: 10px;
+		}
+		input {
+			border-radius: 5px;
+			border: 1px solid $textGray;
+			background: $lightGray;
+			color: $textGray;
+		}
+		input[type="text"] {
+			padding: 3px 5px;
+			width: 170px;
+		}
+		input[type="submit"] {
+			@include blue-button;
+		}
+	}
+	/* News Section */
+	.news.section {
+		.post {
+			display: inline-block;
+			vertical-align: top;
+			width: 46.5%; 
+			height: 170%;
+			margin-bottom: 40px;
+			&:nth-of-type(odd){
+				margin-right: 5%;
+			}
+		}
+	}
 }
 
 

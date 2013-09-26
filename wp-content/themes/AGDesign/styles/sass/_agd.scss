@@ -2,6 +2,7 @@
 
 
 /* COLORS */
+$red 			: red;
 $darkRed 		: #ff0202;
 $midRed 		: #E70000;
 $lightRed 		: #7a0707;
@@ -40,4 +41,19 @@ $header-hover 		: url(../images/nav_over.png) no-repeat;
 	// IE9 SVG, needs conditional override of 'filter' to 'none'
 	$experimental-support-for-svg: true;
 	@include background-image(linear-gradient(top, #6ec9d0 0%,#6ec9d0 48%,#4d9fa5 59%,#367075 95%,#367075 100%));
+}
+
+@mixin blue-button {
+	@include button-gradient;
+	border-radius: 5px; 
+	border: none;
+	padding: 5px;
+	width: 160px;
+	font-size: 12px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: normal;
+	-webkit-box-shadow: inset 0 0 4px #fff;
+    -moz-box-shadow: inset 0 0 4px #fff;
+    box-shadow: inset 0 0 4px #fff;
 }

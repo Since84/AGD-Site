@@ -8,6 +8,7 @@
 */
 
 /* styles */
+wp_enqueue_style( 'news-font', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700', $media = 'all' );
 wp_enqueue_style( 'dscreen', plugins_url( 'dynamite-portfolio/styles/stylesheets/screen.css'), $media = 'screen' );
 wp_enqueue_style( 'dprint', plugins_url( 'dynamite-portfolio/styles/stylesheets/print.css'), $media = 'print' );
 

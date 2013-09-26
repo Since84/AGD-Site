@@ -24,10 +24,12 @@
 		$position = get_post_meta( get_the_ID(), 'client_position', true );
 ?>
 				<?php the_post_thumbnail();?>
-				<div><?php the_excerpt(); ?></div>
-				<div>
-					<span class="client-name"><?php the_title(); ?></span>
-					<span class="client-position"><?php echo $position; ?></span>
+				<div class="client-quote">
+					<?php the_excerpt(); ?>
+					<div class="client-info">
+						<span class="client-name"><?php the_title(); ?></span>
+						<span class="client-position"><?php echo $position; ?></span>
+					</div>
 				</div>
 <?php
 	endwhile; 
@@ -53,21 +55,21 @@
 				<h2>Stay Connected</h2>
 				<?php insert_cform('Stay Connected'); ?>
 			</div>
-			<div class="news section">
+			<ul class="news section">
+				<h2>What's New</h2>
 <?php 
 	$newsQuery = new WP_Query('showposts=4'); 
 	if ( $newsQuery->have_posts() ) : while ( $newsQuery->have_posts() ) : $newsQuery->the_post();
 ?>
-				<div class="post">
+				<li class="post">
 					<?php the_post_thumbnail(); ?>
 					<div><?php the_excerpt(); ?></div>
-					<?php new_excerpt_more("Read More"); ?>
-				</div>
+				</lis>
 <?php
 	endwhile; 
 	endif;
 ?>
-			</div>
+			</ul>
 		</div>
 	</div>
 </div>
