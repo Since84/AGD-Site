@@ -66,3 +66,42 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
+
+/* line 9, ../sass/screen.scss */
+.dFolio {
+  width: 800px;
+  height: 600px;
+  display: block;
+  /*TEMP*/
+  background: #f8f8f8;
+}
+
+/* line 17, ../sass/screen.scss */
+.dMember {
+  display: inline-block;
+  float: left;
+  width: 180px;
+  height: 180px;
+  margin: 10px;
+  margin: 10px;
+  /*TEMP*/
+}
+/* line 26, ../sass/screen.scss */
+.dMember:nth-child(odd) {
+  background: #eee;
+}
+/* line 29, ../sass/screen.scss */
+.dMember:nth-child(even) {
+  background: #fff;
+}
+
+/* line 36, ../sass/screen.scss */
+.dMember-thumb {
+  width: 200px;
+  height: auto;
+}
+
+/* line 40, ../sass/screen.scss */
+.dMember-profile {
+  display: none;
+}

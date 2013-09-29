@@ -1,3 +1,9 @@
+<?php
+/* Header	*/
+
+$headline = get_post_meta( $post->ID, 'headline', true );
+
+?>
 <header>
 	<div class="container">
 		<div class="home-logo">
@@ -10,4 +16,9 @@
 	<div class="container">
 		<?php get_search_form(); ?>
 	</div>
+<?php if( $headline ) { ?>
+	<div class="headline">
+<?php 	echo $headline;  ?>
+	</div>
+<?php } ?>
 </div>

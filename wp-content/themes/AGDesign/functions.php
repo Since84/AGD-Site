@@ -44,9 +44,7 @@
 	e.g. require_once( 'custom-post-types/your-custom-post-type.php' );
 	
 	======================================================================================================================== */
-
-	require_once( 'custom-post-types/project-spotlight.php' );
-	require_once( 'custom-post-types/team-members.php' );
+	
 
 	/* ========================================================================================================================
 	

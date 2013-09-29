@@ -1,0 +1,133 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+
+#dFolio {
+	display: block; 
+	width: 800px;
+	height: 600px;
+	background: #f8f8f8;
+
+	position: relative;
+
+	/* Demo */
+	margin: auto;
+	margin-top: 20px;
+	.dBio {
+		display: none;
+		position: absolute;
+		width: 200px; 
+		height: 200px;
+		background: green;
+		z-index: 2;
+
+		&.open{
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;			
+		}
+	}
+	.dContainer {
+		position: relative;
+		display: block; 
+		float:left;
+		width: 200px; 
+		height: 200px;
+	-webkit-perspective: 800px;
+	 -moz-perspective: 800px;
+	   -o-perspective: 800px;
+	      perspective: 800px;
+	      transition: all 0.5s ease;	
+		&:nth-child(odd) {
+			background: #ccc;
+		}
+		&:nth-child(even) {
+			background: #f1f1f1;
+		}
+		.open{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.dCard {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transform-style: preserve-3d;
+      -webkit-transition: -webkit-transform .75s;
+         -moz-transition: -moz-transform .75s;
+           -o-transition: -o-transform .75s;
+              transition: transform .75s;
+              transition: all 0.5s ease;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transform-origin: right center;
+         -moz-transform-origin: right center;
+           -o-transform-origin: right center;
+              transform-origin: right center;
+			figure {
+			  display: block;
+			  position: absolute;
+			  width: 100%;
+			  height: 100%;
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+			}
+			&.flipped{
+      -webkit-transform: translateX( -100% ) rotateY( -180deg );
+         -moz-transform: translateX( -100% ) rotateY( -180deg );
+           -o-transform: translateX( -100% ) rotateY( -180deg );
+              transform: translateX( -100% ) rotateY( -180deg );
+			}
+			.front {
+			  background: url('../img/bottles.jpeg') no-repeat;
+			}
+			.back {
+			  background: blue;
+      -webkit-transform: rotateY( 180deg );
+         -moz-transform: rotateY( 180deg );
+           -o-transform: rotateY( 180deg );
+              transform: rotateY( 180deg );
+			}
+		}
+
+		.dBio {
+			position: absolute;
+			width: 0px;
+			height: 0px;
+			background: orange;
+			display: none;
+			transition: all 0.5s ease;
+		}
+		&.open .dBio {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+			&.closed {
+				width: 0px;
+				height: 0px;
+				opacity: 0;
+			}
+			&.open {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top:0;
+				left: 0;
+			}
+	}
+}
