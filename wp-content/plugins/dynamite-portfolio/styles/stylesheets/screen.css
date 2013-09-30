@@ -68,40 +68,72 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 9, ../sass/screen.scss */
-.dFolio {
+#dFolio {
   width: 800px;
   height: 600px;
   display: block;
   /*TEMP*/
   background: #f8f8f8;
 }
-
 /* line 17, ../sass/screen.scss */
-.dMember {
-  display: inline-block;
-  float: left;
-  width: 180px;
-  height: 180px;
-  margin: 10px;
-  margin: 10px;
-  /*TEMP*/
-}
-/* line 26, ../sass/screen.scss */
-.dMember:nth-child(odd) {
+#dFolio .dBio {
   background: #eee;
 }
-/* line 29, ../sass/screen.scss */
-.dMember:nth-child(even) {
+/* line 21, ../sass/screen.scss */
+#dFolio .dMember {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 200px;
+  /*TEMP*/
+}
+/* line 28, ../sass/screen.scss */
+#dFolio .dMember:nth-child(odd) {
+  background: #eee;
+}
+/* line 31, ../sass/screen.scss */
+#dFolio .dMember:nth-child(even) {
   background: #fff;
 }
-
-/* line 36, ../sass/screen.scss */
-.dMember-thumb {
+/* line 35, ../sass/screen.scss */
+#dFolio .dMember img {
+  width: 200px;
+  height: 200px;
+}
+/* line 44, ../sass/screen.scss */
+#dFolio .dMember .dCard figure.back {
+  background: #333;
+}
+/* line 46, ../sass/screen.scss */
+#dFolio .dMember .dCard figure.back h1 {
+  color: white;
+}
+/* line 49, ../sass/screen.scss */
+#dFolio .dMember .dCard figure.back p {
+  color: red;
+}
+/* line 52, ../sass/screen.scss */
+#dFolio .dMember .dCard figure.back img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 57, ../sass/screen.scss */
+#dFolio .dMember .dCard figure.back .dMember-info {
+  z-index: 3;
+  display: block;
+  position: relative;
+  width: 92%;
+  height: 92%;
+  padding: 4%;
+  background: rgba(10, 10, 10, 0.6);
+}
+/* line 74, ../sass/screen.scss */
+#dFolio .dMember-thumb {
   width: 200px;
   height: auto;
 }
-
-/* line 40, ../sass/screen.scss */
-.dMember-profile {
+/* line 78, ../sass/screen.scss */
+#dFolio .dMember-profile {
   display: none;
 }

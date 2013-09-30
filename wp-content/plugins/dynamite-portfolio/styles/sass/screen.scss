@@ -6,37 +6,77 @@
 @import "compass/reset";
 
 
-.dFolio {
+#dFolio {
 	width: 800px;
 	height: 600px;
 	display: block;
 
 	/*TEMP*/
 	background:#f8f8f8;
-}
-.dMember {
-	display: inline-block;
-	float: left;
-	width: 180px;
-	height: 180px;
-	margin: 10px;
-	margin: 10px;
 
-	/*TEMP*/
-	&:nth-child(odd){
+	.dBio {
 		background: #eee;
 	}
-	&:nth-child(even){
-		background: #fff;
+
+	.dMember {
+		display: block;
+		float: left;
+		width: 200px;
+		height: 200px;
+
+		/*TEMP*/
+		&:nth-child(odd){
+			background: #eee;
+		}
+		&:nth-child(even){
+			background: #fff;
+		}
+
+		img {
+			width: 200px;
+			height: 200px;
+			// filter: grayscale(100%);
+			// -webkit-filter: grayscale(100%);
+			// -moz-filter: grayscale(100%);
+			// filter: grayscale(100%);
+		}
+		.dCard {
+			figure.back { 
+				background: #333; 
+				h1 {
+					color: white;
+				}
+				p {
+					color: red;
+				}
+				img {
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+				.dMember-info {
+					z-index: 3;
+					display: block;
+					position: relative;
+					width: 92%;
+					height: 92%;
+					padding: 4%;
+					background: rgba( 10, 10, 10, .6 );
+				}
+
+			}		
+		}
+
 	}
-}
 
 
 
-.dMember-thumb {
-	width: 200px;
-	height: auto;
-}
-.dMember-profile {
-	display: none;
+	.dMember-thumb {
+		width: 200px;
+		height: auto;
+	}
+	.dMember-profile {
+		display: none;
+	}
+
 }

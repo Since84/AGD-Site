@@ -35,7 +35,7 @@
 		}, 
 		openProject: function(elem) {
 			var self = this;
-			
+
 			var thisPosition = $(elem).position();
 			
 			var startPosition = { 
@@ -52,6 +52,8 @@
 					height: '100%',
 					width: '100%'
 				}
+
+			self._getBio(elem);
 
 			$('.dBio')
 				.css(startPosition)
@@ -71,6 +73,16 @@
 			$('.open').click(function(){
 				$(this).removeClass('open');
 				$('.closed').removeClass('closed');
+			});
+		},
+		_getBio: function(elem) {
+
+			var data = {
+				action: 'member_bio',
+				memberId: $(elem).attr('data-id')
+			};
+			$.post(ajaxurl, data, function(response) {
+				console.log( response );
 			});
 		},
 		_devSet: function() {

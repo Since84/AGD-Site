@@ -10,7 +10,7 @@
 function register_styles_scripts(){
 	/* styles */
 	wp_register_style( 'news-font', 'http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' );
-	// wp_register_style( 'dscreen', plugins_url( 'dynamite-portfolio/styles/stylesheets/screen.css') );
+	wp_register_style( 'dscreen', plugins_url( 'dynamite-portfolio/styles/stylesheets/screen.css') );
 	wp_register_style( 'dprint', plugins_url( 'dynamite-portfolio/styles/stylesheets/print.css') );
 
 	wp_enqueue_style( 'news-font' );
