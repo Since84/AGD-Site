@@ -47,6 +47,21 @@ function save_meta($post_id) {
 	if(isset($_POST['professional_position']))
 	update_post_meta($post_id, 'professional_position', $_POST['professional_position']);
 
+	if(isset($_POST['member_facebook']))
+	update_post_meta($post_id, 'member_facebook', $_POST['member_facebook']);
+
+	if(isset($_POST['member_linkedin']))
+	update_post_meta($post_id, 'member_linkedin', $_POST['member_linkedin']);
+
+	if(isset($_POST['member_twitter']))
+	update_post_meta($post_id, 'member_twitter', $_POST['member_twitter']);
+
+	if(isset($_POST['member_behance']))
+	update_post_meta($post_id, 'member_behance', $_POST['member_behance']);
+
+	if(isset($_POST['member_dribbble']))
+	update_post_meta($post_id, 'member_dribbble', $_POST['member_dribbble']);
+
 }
 
 
@@ -63,12 +78,38 @@ function showClientInfoBox($post) {
 }
 
 function showTeamInfoBox($post) {		
- 	$prof_position = get_post_meta($post->ID, 'professional_position', true);	
+ 	$prof_position = get_post_meta($post->ID, 'professional_position', true);
+ 	$member_facebook = get_post_meta($post->ID, 'member_facebook', true);
+ 	$member_linkedin = get_post_meta($post->ID, 'member_linkedin', true);
+ 	$member_twitter = get_post_meta($post->ID, 'member_twitter', true);
+ 	$member_behance = get_post_meta($post->ID, 'member_behance', true);	
+ 	$member_dribbble = get_post_meta($post->ID, 'member_dribbble', true);
+
  ?>
  		<ul>
  			<li>
  				<label for="professional_position">Position Title</label>
- 				<input type="text" id="professional_position" class="widefat" name="professional_position" value="<?php echo $prof_position; ?>">
+ 				<input type="text" id="professional_position" class="widefat" name="professional_position" value="<?php echo $prof_position; ?>" />
+			</li>
+			<li>
+				<label for="member_facebook">Facebook</label>
+				<input type="text" id="member_facebook" class="widefat" name="member_facebook" value="<?php echo $member_facebook; ?>"/>
+			</li>
+			<li>
+				<label for="member_linkedin">LinkedIn</label>
+				<input type="text" id="member_linkedin" class="widefat" name="member_linkedin" value="<?php echo $member_linkedin; ?>"/>
+			</li>
+			<li>
+				<label for="member_twitter">Twitter</label>
+				<input type="text" id="member_twitter" class="widefat" name="member_twitter" value="<?php echo $member_twitter; ?>"/>
+			</li>
+			<li>
+				<label for="member_behance">Behance</label>
+				<input type="text" id="member_behance" class="widefat" name="member_behance" value="<?php echo $member_behance; ?>"/>
+			</li>
+			<li>
+				<label for="member_dribbble">Dribbble</label>
+				<input type="text" id="member_dribbble" class="widefat" name="member_dribbble" value="<?php echo $member_dribbble; ?>"/>
 			</li>
 		</ul>
  <?php

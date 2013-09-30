@@ -8,7 +8,6 @@
 			development : false,
 			devItems : 12
 		},
-
 		_create: function() {
 			var self = this;
 
@@ -38,7 +37,7 @@
 
 			var thisPosition = $(elem).position();
 			
-			var startPosition = { 
+			this.options.startPosition = { 
 					top: thisPosition.top, 
 					left: thisPosition.left, 
 					display: 'block',
@@ -46,7 +45,7 @@
 					height: $(elem).height()
 				}
 
-			var openPosition = { 
+			this.options.openPosition = { 
 					top: 0, 
 					left: 0,
 					height: '100%',
@@ -56,33 +55,36 @@
 			self._getBio(elem);
 
 			$('.dBio')
-				.css(startPosition)
-				.animate(openPosition, 500)
-				.unbind()
-				.click(function(){
-					$(this).animate(startPosition, 500, function(){
-						$(this).removeAttr('style');
-					});
-				});
-			
-			// $('.dBio').animate({
-			// 	top: 0,
-			// 	left: 0
-			// }, 500);
+				.addClass('open')
+				.css(this.options.startPosition)
+				.animate( this.options.openPosition, 500 )
+				.unbind();
+		},
+		_closeProject: function(){
+			console.log('here');
+			var $bioDiv = $(this.element).find('.dBio ');
 
-			$('.open').click(function(){
-				$(this).removeClass('open');
-				$('.closed').removeClass('closed');
-			});
+			$bioDiv
+				.animate(this.options.startPosition, 500, function(){
+					$bioDiv.removeClass('open');
+				})
+				.empty();
+
+			$('.closed').removeClass('closed');
 		},
 		_getBio: function(elem) {
-
+			var self = this;
 			var data = {
 				action: 'member_bio',
 				memberId: $(elem).attr('data-id')
 			};
 			$.post(ajaxurl, data, function(response) {
-				console.log( response );
+				$(self.element).find('.dBio').append(response);
+				$('.dBio').find('.close').unbind();
+				$('.dBio').find('.close').on('click', function(){
+					$(this).parent().removeAttr('style')
+					self._closeProject();
+				});
 			});
 		},
 		_devSet: function() {

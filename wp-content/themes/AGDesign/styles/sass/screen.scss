@@ -25,6 +25,10 @@ a {
 	font-weight: 700;
 }
 
+p {
+	margin-bottom: 1.33em; 
+}
+
 h1 {
 	font-size: $fontXLarge;
 	font-weight: 700;
@@ -46,6 +50,17 @@ h2 {
 .section {
 	margin-bottom: 20px;
 }
+
+/* 	Columns */
+.column { 
+	display: inline-block; 
+	vertical-align: top; 
+	margin:0; 
+	padding: 60px 0; 
+}
+
+.one-third { width: 25%; padding-left: 8%}
+.two-third { width: 58%; padding-right: 8%}
 
 header {
 	height: 100px;
@@ -153,11 +168,9 @@ header {
 		max-width: 1080px;
 	}
 
-	/* Columns */
-	.column { display: inline-block; vertical-align: top; margin:0; padding: 40px; }
-	.one-third { width: 355px; }
-	.two-third { width: 560px; }
-
+	/* 	Columns */
+	.one-third { width: 27%; padding: 60px 3%}
+	.two-third { width: 58%; padding: 60px 4%}
 
 	/* Home Page */
 	.testimonial { 
@@ -170,7 +183,7 @@ header {
 		}
 
 		.client-quote {
-			width: 270px;
+			width: 205px;
 			margin-left: 20px;
 
 			& > p {
@@ -232,6 +245,35 @@ header {
 			margin-bottom: 40px;
 			&:nth-of-type(odd){
 				margin-right: 5%;
+			}
+		}
+	}
+}
+
+.dBio {
+	position: relative;
+	.close { 
+		display: block;
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		width: 20px;
+		height: 20px;
+		background: black;
+		z-index: 10;
+	}
+	.member-social {
+		position: relative;
+		margin: 10px 0;
+
+		li{
+			display: inline-block;
+			a {
+				display: block;
+				width: 20px;
+				height: 20px;
+				background: black;
+				margin-right: 10px;
 			}
 		}
 	}

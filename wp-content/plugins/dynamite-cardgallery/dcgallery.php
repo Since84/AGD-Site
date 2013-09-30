@@ -31,7 +31,43 @@ function get_member_bio() {
 
 	$id = $_POST['memberId'] ;
 
-	echo $id;
+	$member = get_post($id);
+
+	$memberPosition = get_post_meta( $id, 'professional_position', true );
+	$memberFacebook = get_post_meta( $id, 'member_facebook', true );
+	$memberLinkedin = get_post_meta( $id, 'member_linkedin', true );
+	$memberTwitter = get_post_meta( $id, 'member_twitter', true );
+	$memberBehance = get_post_meta( $id, 'member_behance', true );
+	$memberDribbble = get_post_meta( $id, 'member_dribbble', true );
+
+	$memberSocialBlock 	= "<ul class='member-social'>";
+	$memberSocialBlock .= 	( $memberFacebook ) ? "<li class='member-facebook'><a href='www.facebook.com/".$memberFacebook."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberLinkedin ) ? "<li class='member-linkedin'><a href='www.linkedin.com/in/".$memberLinkedin."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberTwitter ) ? "<li class='member-twitter'><a href='www.twitter.com/".$memberTwitter."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberBehance ) ? "<li class='member-behance'><a href='www.behance.com/".$memberBehance."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberDribbble ) ? "<li class='member-dribbble'><a href='www.dribbble.com/".$memberDribbble."'></a></li>" : "" ;
+	$memberSocialBlock .= "</ul>";
+
+	$memberExpertise = get_the_terms( $id, 'expertise' );
+	$memberExpertiseBlock = "<ul class='member-expertise'>";
+	foreach ( $memberExpertise as $expertise ) {
+		$memberExpertiseBlock .= "<li>".$expertise->name."</li>";
+	}
+	$memberExpertiseBlock .= "</ul>";
+
+
+	$block  = "<div class='close'></div>";
+	$block .= "<div class='column one-third'>";
+	$block .= 	"<h1 class='member-name'>".$member->post_title."</h1>";
+	$block .=	"<h2 class='member-position'>".$memberPosition."</h2>";
+	$block .=	$memberSocialBlock;
+	$block .=	$memberExpertiseBlock;
+	$block .= "</div>";
+	$block .= "<div class='column two-third'>";
+	$block .= 	"<div class='member-bio'>".apply_filters( 'the_content', $member->post_content )."</div>";
+	$block .= "</div>";
+
+	echo $block;
 
 	die(); // this is required to return a proper result
 }
