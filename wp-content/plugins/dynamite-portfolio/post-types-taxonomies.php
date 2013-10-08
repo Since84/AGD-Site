@@ -70,12 +70,12 @@ function save_meta($post_id) {
 	update_post_meta($post_id, 'member_dribbble', $_POST['member_dribbble']);
 
 }
-add_action('init', 'addSettingsFields');
+// add_action('init', 'addSettingsFields');
 
-function addSettingsFields(){
-	add_settings_field( 'address-one', 'Address 1', 'getAddressOneField', 'general' );
-	// add_settings_field( 'address_one', 'Address 1', 'getAddress1Field', 'manage_options' );
-}
+// function addSettingsFields(){
+// 	add_settings_field( 'address-one', 'Address 1', 'getAddressOneField', 'general' );
+// 	// add_settings_field( 'address_one', 'Address 1', 'getAddress1Field', 'manage_options' );
+// }
 
 function getAddressOneField (){
  	$address1 = get_post_meta($post->ID, 'address_one', true);	
