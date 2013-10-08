@@ -41,6 +41,13 @@ function create_post_types() {
 
 add_action( 'save_post', 'save_meta' );
 function save_meta($post_id) {
+
+	if(isset($_POST['address1']))
+	update_post_meta($post_id, 'address1', $_POST['address1']);
+
+	if(isset($_POST['headline']))
+	update_post_meta($post_id, 'headline', $_POST['headline']);
+
 	if(isset($_POST['client_position']))
 	update_post_meta($post_id, 'client_position', $_POST['client_position']);
 
@@ -63,7 +70,36 @@ function save_meta($post_id) {
 	update_post_meta($post_id, 'member_dribbble', $_POST['member_dribbble']);
 
 }
+add_action('init', 'addSettingsFields');
 
+function addSettingsFields(){
+	add_settings_field( 'address-one', 'Address 1', 'getAddressOneField', 'general' );
+	// add_settings_field( 'address_one', 'Address 1', 'getAddress1Field', 'manage_options' );
+}
+
+function getAddressOneField (){
+ 	$address1 = get_post_meta($post->ID, 'address_one', true);	
+ ?>
+ 		<ul>
+ 			<li>
+ 				<label for="address_one">Address 1</label>
+ 				<input type="text" id="address_one" class="widefat" name="address_one" value="<?php echo ( $address1 ? $address1 : '');?>">
+			</li>
+		</ul>
+ <?php	
+}
+
+function showHeadlineBox($post) {		
+ 	$headline = get_post_meta($post->ID, 'headline', true);	
+ ?>
+ 		<ul>
+ 			<li>
+ 				<label for="headline">Headline</label>
+ 				<input type="text" id="headline" class="widefat" name="headline" value="<?php echo ( $headline ? $headline : '');?>">
+			</li>
+		</ul>
+ <?php
+}
 
 function showClientInfoBox($post) {		
  	$position = get_post_meta($post->ID, 'client_position', true);	
@@ -120,6 +156,7 @@ add_action( 'add_meta_boxes', 'addMetaBoxes' );
 function addMetaBoxes(){
 	add_meta_box('meta_box', 'Client Information', 'showClientInfoBox', 'testimonial');
 	add_meta_box('meta_box', 'Team Information', 'showTeamInfoBox', 'team');
+	add_meta_box('meta_box', 'Headline', 'showHeadlineBox', 'page');
 }
 
 add_action( 'init', 'create_team_tax' );

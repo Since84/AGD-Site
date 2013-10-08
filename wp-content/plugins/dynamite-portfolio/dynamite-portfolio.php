@@ -22,7 +22,7 @@ function register_styles_scripts(){
 	
 	wp_register_script( 'main', plugins_url( 'dynamite-portfolio/js/script.js'), array('jquery', 'jqueryui') );
 
-	wp_enqueue_script( 'isotope' );
+	// wp_enqueue_script( 'isotope' );
 	wp_enqueue_script( 'main' );
 
 }

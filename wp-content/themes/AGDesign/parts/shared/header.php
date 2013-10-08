@@ -17,7 +17,7 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 		<?php get_search_form(); ?>
 	</div>
 <?php if( $headline ) { ?>
-	<div class="headline">
+	<div class="headline container">
 <?php 	echo $headline;  ?>
 	</div>
 <?php } ?>

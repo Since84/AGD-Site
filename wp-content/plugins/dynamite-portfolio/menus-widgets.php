@@ -5,6 +5,7 @@ add_action( 'init', 'register_menus_sidebars' );
 function register_menus_sidebars(){
 	$menus = array(
 		'main'		=> 'Main Nav',
+		'side-menu'	=> 'Side Menu',
 		'footer-1' 	=> 'Footer Links Column 1',
 		'footer-2' 	=> 'Footer Links Column 2',
 		'footer-3' 	=> 'Footer Links Column 3',
