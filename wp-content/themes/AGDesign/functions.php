@@ -37,6 +37,15 @@
 
 	add_filter( 'body_class', array( 'Starkers_Utilities', 'add_slug_to_body_class' ) );
 
+	function myplugin_settings() {  
+	// Add tag metabox to page
+	register_taxonomy_for_object_type('post_tag', 'page'); 
+	// Add category metabox to page
+	register_taxonomy_for_object_type('category', 'page');  
+	}
+	 // Add to the admin_init hook of your theme functions.php file 
+	add_action( 'admin_init', 'myplugin_settings' );
+
 	/* ========================================================================================================================
 	
 	Custom Post Types - include custom post types and taxonimies here e.g.

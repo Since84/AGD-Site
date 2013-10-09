@@ -19,10 +19,6 @@
 	margin-top: 20px;
 	.dBio {
 		display: none;
-		position: absolute;
-		width: 200px; 
-		height: 200px;
-		background: green;
 		z-index: 2;
 
 		&.open{
@@ -32,6 +28,17 @@
 			left: 0;
 			width: 100%;
 			height: 100%;			
+		}
+		&.team{
+			position: absolute;
+			width: 200px; 
+			height: 200px;
+		}
+		&.projects{
+			position: relative;
+			height: 0;
+			width: 100%;
+			display: block;
 		}
 	}
 	.dContainer {

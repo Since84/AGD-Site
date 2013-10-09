@@ -17,4 +17,13 @@
 		echo ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">'.$more.'</a>';
 	}
 
+	function get_custom_terms($taxonomies, $args){
+		$args = array('orderby'=>'asc','hide_empty'=>true);
+		$custom_terms = get_terms(array('post-type'), $args);
+		var_dump($custom_terms);
+		foreach($custom_terms as $term){
+		    //echo 'Term slug: ' . $term->slug . ' Term Name: ' . $term->name;
+		}
+	}
+
 ?>

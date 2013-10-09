@@ -71,3 +71,30 @@ function get_member_bio() {
 
 	die(); // this is required to return a proper result
 }
+
+add_action('wp_ajax_project_profile', 'get_project_profile');
+add_action('wp_ajax_nopriv_project_profile', 'get_project_profile');
+function get_project_profile() {
+	global $wpdb; // this is how you get access to the database
+
+	$id = $_POST['projectId'] ;
+
+	$project = get_post($id);
+	$projectType = '';
+
+
+	$block  = "<div class='close'></div>";
+	$block .= "<div class='column two-third'>";
+	$block .= 	"<div class='project-thumb'>".get_the_post_thumbnail( $project->ID )."</div>";
+	$block .= "</div>";
+	$block .= "<div class='column one-third'>";
+	$block .= 	"<h1 class='project-name'>".$project->post_title."</h1>";
+	$block .=	"<h2 class='project-type'>".$projectType."</h2>";
+	$block .= 	"<div class='project-profile'>".apply_filters( 'the_content', $project->post_content )."</div>";
+	$block .=   "Services";
+	$block .= "</div>";
+
+	echo $block;
+
+	die(); // this is required to return a proper result
+}

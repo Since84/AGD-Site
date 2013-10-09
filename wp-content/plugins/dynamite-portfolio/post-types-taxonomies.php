@@ -23,7 +23,8 @@ function create_post_types() {
 		array(
 			'label' => 'Project',
 			'public' => true,
-			'has_archive' => true
+			'has_archive' => true,
+			'supports' => array('title', 'thumbnail', 'editor', 'excerpt')
 		)
 	);
 
@@ -167,6 +168,19 @@ function create_team_tax() {
 		array(
 			'label' => __( 'Expertise' ),
 			'rewrite' => array( 'slug' => 'expertise' ),
+			'hierarchical' => true,
+		)
+	);
+}
+
+add_action( 'init', 'create_proj_tax' );
+function create_proj_tax() {
+	register_taxonomy(
+		'project-type',
+		'agd_project',
+		array(
+			'label' => __( 'Project Type' ),
+			'rewrite' => array( 'slug' => 'project-type' ),
 			'hierarchical' => true,
 		)
 	);

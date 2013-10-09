@@ -7,12 +7,12 @@
 		options: {
 			development : false,
 			devItems : 12
+		
 		},
+
 		_create: function() {
 			var self = this;
-
-			// this.runIsotope();
-
+			this.options.pagename = $( this.element ).find('.dBio').attr('data-page')
 			$(".dCard")
 				.mouseover(function(){
 					$(this).addClass('flipped');
@@ -22,7 +22,18 @@
 				});
 			$(".dContainer")
 				.on('click', function(){
-					self.openProject(this);
+					switch( self.options.pagename )
+					{
+					case 'team':
+					  self.openMember(this);
+					  break;
+					case 'projects':
+					  self.openProject(this);
+					  break;
+					default:
+					  self.openProject(this);
+					}
+					
 				});
 			
 
@@ -32,7 +43,7 @@
 	        itemSelector: '.testBlock'
 	      });
 		}, 
-		openProject: function(elem) {
+		openMember: function(elem) {
 			var self = this;
 
 			var thisPosition = $(elem).position();
@@ -60,15 +71,50 @@
 				.animate( this.options.openPosition, 500 )
 				.unbind();
 		},
-		_closeProject: function(){
+		_closeMember: function(){
 			console.log('here');
 			var $bioDiv = $(this.element).find('.dBio ');
 
 			$bioDiv
 				.animate(this.options.startPosition, 500, function(){
 					$bioDiv.removeClass('open');
+					$bioDiv.removeAttr('style');
 				})
 				.empty();
+
+			$('.closed').removeClass('closed');
+		},
+		openProject: function(elem) {
+			var self = this;
+			
+			this.options.openPosition = { 
+					display: 'block',
+					height: '500px'
+				}
+			this.options.closedPosition = { 
+					display: 'block',
+					height: '0px'
+				}
+
+			self._getProject(elem);
+
+			$('.dBio')
+				.addClass('open')
+				// .css(this.options.openPosition)
+				.animate( this.options.openPosition, 500 )
+				.unbind();
+		},
+		_closeProject: function(){
+			console.log('here');
+			var $bioDiv = $(this.element).find('.dBio ');
+
+			$bioDiv
+				.animate(this.options.closedPosition, 500, function(){
+					$bioDiv.removeClass('open');
+					$(this).parent().removeAttr('style')
+				})
+				.empty()
+				.unbind();
 
 			$('.closed').removeClass('closed');
 		},
@@ -82,8 +128,21 @@
 				$(self.element).find('.dBio').append(response);
 				$('.dBio').find('.close').unbind();
 				$('.dBio').find('.close').on('click', function(){
-					$(this).parent().removeAttr('style')
-					self._closeProject();
+					self._closeMember(this);
+				});
+			});
+		},
+		_getProject: function(elem) {
+			var self = this;
+			var data = {
+				action: 'project_profile',
+				projectId: $(elem).attr('data-id')
+			};
+			$.post(ajaxurl, data, function(response) {
+				$(self.element).find('.dBio').append(response);
+				$('.dBio').find('.close').unbind();
+				$('.dBio').find('.close').on('click', function(){
+					 self._closeProject(this);
 				});
 			});
 		},

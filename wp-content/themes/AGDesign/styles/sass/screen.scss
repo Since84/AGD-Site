@@ -64,10 +64,11 @@ h3 {
 	padding: 60px 0; 
 }
 
-.one-third { width: 25%; padding-left: 8%}
-.two-third { width: 58%; padding-right: 8%}
-.left-column { width: 160px; padding-left: 8%; }
-.wide-content { width: 740px; padding-right: 8% }
+.one-third { width: 25%; padding-left: 5%}
+.two-third { width: 58%; padding-right: 5%}
+.left-column { width: 160px; padding-left: 5%; } 
+.wide-content { width: 809px; padding-right: 5%; }
+.col-2 { width: 46%; &:nth-child(odd){ padding-right: 6%; } }
 
 .menu {
 	li {
@@ -281,6 +282,12 @@ header {
 			}
 		}
 	}
+}
+
+/* Team */
+.lower-content {
+	width: 100%;
+	position: relative;
 }
 
 .dBio {
