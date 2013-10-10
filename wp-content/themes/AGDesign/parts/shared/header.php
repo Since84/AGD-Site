@@ -20,5 +20,7 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 	<div class="headline container">
 <?php 	echo $headline;  ?>
 	</div>
+<?php } else if ( !is_home() ) { ?>
+	<div class="page-title container"><?php the_title(); ?></div>
 <?php } ?>
 </div>

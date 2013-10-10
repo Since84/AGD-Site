@@ -15,7 +15,18 @@ function create_post_types() {
 			'supports' 		=> array ( 'title', 'thumbnail', 'editor', 'tag' ),
 			'taxonomies' 	=> array('category', 'post_tag')
 		)
-);
+	);
+
+	/** Home Page Features **/
+
+	register_post_type( 'feature',
+		array(
+			'label' => 'Feature',
+			'public' => true,
+			'has_archive' => true,
+			'supports' => array('title', 'thumbnail', 'editor', 'excerpt')
+		)
+	);
 
 	/** Project Spotlight **/
 
@@ -70,6 +81,9 @@ function save_meta($post_id) {
 	if(isset($_POST['member_dribbble']))
 	update_post_meta($post_id, 'member_dribbble', $_POST['member_dribbble']);
 
+	if(isset($_POST['feature_type']))
+	update_post_meta($post_id, 'feature_type', $_POST['feature_type']);
+
 }
 // add_action('init', 'addSettingsFields');
 
@@ -109,6 +123,18 @@ function showClientInfoBox($post) {
  			<li>
  				<label for="client_position">Position Title</label>
  				<input type="text" id="client_position" class="widefat" name="client_position" value="">
+			</li>
+		</ul>
+ <?php
+}
+
+function showFeatureTypeBox($post) {		
+ 	$type = get_post_meta($post->ID, 'feature_type', true);	
+ ?>
+ 		<ul>
+ 			<li>
+ 				<label for="feature_type">Position Title</label>
+ 				<input type="text" id="feature_type" class="widefat" name="feature_type" value="">
 			</li>
 		</ul>
  <?php
@@ -181,6 +207,15 @@ function create_proj_tax() {
 		array(
 			'label' => __( 'Project Type' ),
 			'rewrite' => array( 'slug' => 'project-type' ),
+			'hierarchical' => true,
+		)
+	);
+	register_taxonomy(
+		'services',
+		'agd_project',
+		array(
+			'label' => __( 'Services' ),
+			'rewrite' => array( 'slug' => 'services' ),
 			'hierarchical' => true,
 		)
 	);

@@ -22,13 +22,19 @@
 				});
 			$(".dContainer")
 				.on('click', function(){
+					var id = $(this).data('id');
+
 					switch( self.options.pagename )
 					{
 					case 'team':
 					  self.openMember(this);
 					  break;
 					case 'projects':
+					  $(this).find('.dCard').addClass('active');
 					  self.openProject(this);
+					  break;
+					case 'feature':
+					  window.location = '/our-work?pid=' + id;
 					  break;
 					default:
 					  self.openProject(this);
@@ -104,8 +110,8 @@
 				.animate( this.options.openPosition, 500 )
 				.unbind();
 		},
-		_closeProject: function(){
-			console.log('here');
+		_closeProject: function(elem){
+			$(elem).parent('.dContainer').find('.dCard').removeClass('active');
 			var $bioDiv = $(this.element).find('.dBio ');
 
 			$bioDiv

@@ -5,7 +5,8 @@ $projectTypes = new WP_Query(array('post_type' => 'agd_project', 'posts_per_page
 ?>
 <div class='main-content'>
 	<div class="container">
-		<div class="top-menu">
+		<ul class="top-menu">
+			<li class="active" data-slug="all">All</li>
 			<?php
             while ($projectTypes -> have_posts()): $projectTypes -> the_post();
 
@@ -22,11 +23,10 @@ $projectTypes = new WP_Query(array('post_type' => 'agd_project', 'posts_per_page
 
             endwhile;​
 			?>
-		</div>
-		<div class="">
+		</ul>
+		<div>
 			<div class="portfolio-feature">
-				<h1><?php the_title(); ?></h1>
-				<?php get_dFolio( "agd_project", "25", "projects" ); ?>
+				<?php get_dFolio( "agd_project", "25", "feature" ); ?>
 			</div>
 		</div>
 	</div>

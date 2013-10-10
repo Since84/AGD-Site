@@ -72,6 +72,8 @@ function get_member_bio() {
 	die(); // this is required to return a proper result
 }
 
+
+
 add_action('wp_ajax_project_profile', 'get_project_profile');
 add_action('wp_ajax_nopriv_project_profile', 'get_project_profile');
 function get_project_profile() {
@@ -80,18 +82,36 @@ function get_project_profile() {
 	$id = $_POST['projectId'] ;
 
 	$project = get_post($id);
-	$projectType = '';
 
+	$projectType = wp_get_post_terms( $project->ID, 'project-type' );
+	
+	$projectBlock = "";
+	$p = 0;
+	foreach ( $projectType as $type ) {
+		$projectBlock .= ( $p == 0  ) ? '' : ', ';
+		$projectBlock .= $type->name;
+		$p++;
+	}
+
+	$services = wp_get_post_terms( $project->ID, 'services' );
+
+	$serviceBlock  = "<ul class='project-services'>";
+	$serviceBlock .=	"<h2>Services</h2>";
+	foreach ( $services as $service ) {
+		$serviceBlock .= "<li class='project-service'>".$service->name."</li>";
+	}
+	$serviceBlock .= "</ul>";
 
 	$block  = "<div class='close'></div>";
-	$block .= "<div class='column two-third'>";
-	$block .= 	"<div class='project-thumb'>".get_the_post_thumbnail( $project->ID )."</div>";
+	$block .= "<div class='feature-wide'>";
+	$block .= 	"<div class='project-thumb'>".get_the_post_thumbnail( $project->ID, 'full' )."</div>";
 	$block .= "</div>";
-	$block .= "<div class='column one-third'>";
+	$block .= "<div class='feature-side'>";
+	$block .= 	"<div class='pager'>.</div>";
 	$block .= 	"<h1 class='project-name'>".$project->post_title."</h1>";
-	$block .=	"<h2 class='project-type'>".$projectType."</h2>";
-	$block .= 	"<div class='project-profile'>".apply_filters( 'the_content', $project->post_content )."</div>";
-	$block .=   "Services";
+	$block .=	"<h2 class='project-type'>".$projectBlock."</h2>";
+	$block .= 	"<div class='project-profile'>".$project->post_excerpt."</div>";
+	$block .=   $serviceBlock;
 	$block .= "</div>";
 
 	echo $block;

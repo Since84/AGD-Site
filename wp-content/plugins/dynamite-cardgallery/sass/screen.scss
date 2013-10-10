@@ -13,6 +13,7 @@
 	background: #f8f8f8;
 
 	position: relative;
+	overflow: hidden;
 
 	/* Demo */
 	margin: auto;
@@ -39,6 +40,10 @@
 			height: 0;
 			width: 100%;
 			display: block;
+			.column{
+				padding: 0;
+			}
+
 		}
 	}
 	.dContainer {
@@ -92,7 +97,7 @@
            -o-backface-visibility: hidden;
               backface-visibility: hidden;
 			}
-			&.flipped{
+			&.flipped, &.activeCard{
       -webkit-transform: translateX( -100% ) rotateY( -180deg );
          -moz-transform: translateX( -100% ) rotateY( -180deg );
            -o-transform: translateX( -100% ) rotateY( -180deg );
