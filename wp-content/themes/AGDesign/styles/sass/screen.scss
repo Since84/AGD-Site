@@ -215,8 +215,11 @@ header {
 
 		.featured-slide{
 			display: inline-block;
+			vertical-align: top;
+			position: relative;
 			width: 1000px;
 			height: 400px;
+			overflow: hidden;
 			&:nth-child(odd){ background: red;}
 			&:nth-child(even){ background: blue;}
 		}
