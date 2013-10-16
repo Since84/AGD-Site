@@ -101,7 +101,7 @@
 		},
 		openProject: function(elem) {
 			var self = this;
-			var $bioDiv = $(this.element).find('.dBio ');
+			var $bioDiv = $(this.element).find('.dBio');
 
 			this.options.openPosition = { 
 					display: 'block',
@@ -112,8 +112,7 @@
 					height: '0px'
 				}
 
-			$bioDiv
-				.animate( this.options.openPosition, 500, function(){
+			$bioDiv.animate( this.options.openPosition, 500, function(){
 					$(this).addClass('open');
 					$(this).unbind();
 				} )

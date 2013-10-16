@@ -26,7 +26,7 @@ $projectTypes = new WP_Query(array('post_type' => 'agd_project', 'posts_per_page
 		</ul>
 		<div>
 			<div class="portfolio-feature">
-				<?php get_dFolio( "agd_project", "25", "feature" ); ?>
+				<?php get_dFolio( "agd_project", "25", "projects" ); ?>
 			</div>
 		</div>
 	</div>
