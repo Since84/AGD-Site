@@ -83,10 +83,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #dFolio .dBio {
   display: none;
   z-index: 2;
+  position: relative;
 }
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
 #dFolio .dBio.open {
-  position: absolute;
   display: block;
   top: 0;
   left: 0;

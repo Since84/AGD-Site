@@ -131,12 +131,14 @@ function showClientInfoBox($post) {
 function showFeatureTypeBox($post) {		
  	$type = get_post_meta($post->ID, 'feature_type', true);	
  ?>
- 		<ul>
- 			<li>
- 				<label for="feature_type">Position Title</label>
- 				<input type="text" id="feature_type" class="widefat" name="feature_type" value="">
-			</li>
-		</ul>
+		<label for="feature_type">Division</label>
+		<select name="feature_type" id="feature_type">
+			<option value="image"></option>
+			<option value="small content"<?php if($did == 25) echo 'selected' ?>>[25] iD Tech Camps</option>
+			<option value="22"<?php if($did == 22) echo 'selected' ?>>[22] iD Gaming Academy</option>
+			<option value="23"<?php if($did == 23) echo 'selected' ?>>[23] iD Programming Academy</option>
+			<option value="26"<?php if($did == 26) echo 'selected' ?>>[26] iD Visual Arts Academy</option>
+		</select>
  <?php
 }
 

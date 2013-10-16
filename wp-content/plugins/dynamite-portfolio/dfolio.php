@@ -4,13 +4,13 @@
 function get_dFolio( $type, $perPage, $pageSlug ){
 	global $post;
 	$listArgs = array (
-			'post_type'			=>	$type
-			// 'posts_per_page'	=>	$perPage
+			'post_type'			=>	$type,
+			'posts_per_page'	=>	$perPage
 	);
 	$list = new WP_Query( $listArgs );
-
+	$pid = get_query_var( 'pid' );
 ?>
-	<div id = "dFolio">
+	<div id = "dFolio" data-pid= "<?php echo $pid; ?>">
 		<div class = "dBio <?php echo $pageSlug; ?>" data-page="<?php echo $pageSlug; ?>"></div>
 		<ul class = "dGallery>">
 <?php

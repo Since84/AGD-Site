@@ -21,9 +21,9 @@
 	.dBio {
 		display: none;
 		z-index: 2;
+		position: relative;
 
 		&.open{
-			position: absolute;
 			display: block;
 			top: 0;
 			left: 0;

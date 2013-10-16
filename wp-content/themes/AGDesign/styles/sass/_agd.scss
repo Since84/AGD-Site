@@ -21,6 +21,16 @@ $fontXLarge: 14px;
 $header-gradient 	: url(../images/navbg.png) repeat-x;
 $header-hover 		: url(../images/nav_over.png) no-repeat;
 
+/* Icons */
+
+$left-arrow-slider	: url(../images/icons/Left-Arrow.png);
+$right-arrow-slider	: url(../images/icons/Right-Arrow.png);
+$close-button		: url(../images/icons/close-button.png);
+$facebook			: url(../images/icons/Facebook.png);
+$linkedin			: url(../images/icons/LinkedIn.png);
+$twitter			: url(../images/icons/Twitter.png);
+$pager-circle		: url(../images/icons/paging-sprite.png);
+
 // @mixin header-gradient{
 // // needs latest Compass, add '@import "compass"' to your scss
 // 	background-color: #ff0202; // Old browsers

@@ -12,7 +12,7 @@
 		<div class="wide-content column">
 			<div class="team-feature">
 				<h1><?php the_title(); ?></h1>
-				<?php get_dFolio( "team", "25", "team" ); ?>
+				<?php get_dFolio( "team", 25, "team" ); ?>
 			</div>
 			<ul class="lower-content">
 				<li class="work-with col-2 column">

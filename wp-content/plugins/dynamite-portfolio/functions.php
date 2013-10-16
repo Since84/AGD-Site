@@ -26,4 +26,12 @@
 		}
 	}
 
+	//add pid to query vars
+	function add_pid_query_var() {
+	    global $wp;
+	    $wp->add_query_var('pid');
+	}
+
+	add_filter('init', 'add_pid_query_var');
+
 ?>

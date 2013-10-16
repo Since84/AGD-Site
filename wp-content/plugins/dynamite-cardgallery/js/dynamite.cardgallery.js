@@ -12,7 +12,10 @@
 
 		_create: function() {
 			var self = this;
-			this.options.pagename = $( this.element ).find('.dBio').attr('data-page')
+			var activeProjectId = $(self.element).data('pid');
+			var activeProjectElem = $(self.element).find( '[data-id='+ activeProjectId +']' );
+			this.options.pagename = $( this.element ).find('.dBio').attr('data-page');
+			
 			$(".dCard")
 				.mouseover(function(){
 					$(this).addClass('flipped');
@@ -34,7 +37,7 @@
 					  self.openProject(this);
 					  break;
 					case 'feature':
-					  window.location = '/our-work?pid=' + id;
+					  window.location = '/dev/our-work?pid=' + id;
 					  break;
 					default:
 					  self.openProject(this);
@@ -42,6 +45,12 @@
 					
 				});
 			
+			if ( activeProjectId != undefined ) { 
+				$(activeProjectElem).find('.dCard').addClass('active');
+				self.openProject(activeProjectElem);
+			}
+
+
 
 		},
 		runIsotope: function(){
@@ -92,7 +101,8 @@
 		},
 		openProject: function(elem) {
 			var self = this;
-			
+			var $bioDiv = $(this.element).find('.dBio ');
+
 			this.options.openPosition = { 
 					display: 'block',
 					height: '500px'
@@ -102,13 +112,14 @@
 					height: '0px'
 				}
 
-			self._getProject(elem);
+			$bioDiv
+				.animate( this.options.openPosition, 500, function(){
+					$(this).addClass('open');
+					$(this).unbind();
+				} )
 
-			$('.dBio')
-				.addClass('open')
-				// .css(this.options.openPosition)
-				.animate( this.options.openPosition, 500 )
-				.unbind();
+			self._getProject(elem);
+				
 		},
 		_closeProject: function(elem){
 			$(elem).parent('.dContainer').find('.dCard').removeClass('active');

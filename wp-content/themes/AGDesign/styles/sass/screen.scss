@@ -194,12 +194,22 @@ header {
 		display:block;
 		position: absolute;
 		background: #f8f8f8;
-		background: rgba(0,0,0,.2);
+		background: rgba(0,0,0,.4);
 		border:none;
 		z-index: 5; 
 		top: 0;
-		&.prev{ left: 0; }
-		&.next{ right: 0; }
+		&.prev{ 
+			left: 0; 
+			background-image: $left-arrow-slider;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+		}
+		&.next{ 
+			right: 0; 
+			background-image: $right-arrow-slider;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+		}
 	}
 
 	.featured-slider{
@@ -364,26 +374,40 @@ header {
 .dBio {
 	position: relative;
 	.close { 
-		display: block;
+		display: none;
 		position: absolute;
 		top: 20px;
 		left: 20px;
 		width: 20px;
 		height: 20px;
-		background: black;
+		background: $close-button 50% 50% no-repeat;
 		z-index: 10;
 	}
+	&:hover .close { display: block; }
 	.member-social {
 		position: relative;
 		margin: 10px 0;
 
 		li{
 			display: inline-block;
+
+			&.member-facebook {
+				background: $facebook 50% 50% no-repeat;
+				background-size: 20px auto;
+			}
+			&.member-twitter {
+				background: $twitter 50% 50% no-repeat;
+				background-size: 20px auto;
+			}
+			&.member-linkedin {
+				background: $linkedin 50% 50% no-repeat;
+				background-size: 20px auto;
+			}
+
 			a {
 				display: block;
 				width: 20px;
 				height: 20px;
-				background: black;
 				margin-right: 10px;
 			}
 		}
