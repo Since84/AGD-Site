@@ -37,7 +37,7 @@
 					  self.openProject(this);
 					  break;
 					case 'feature':
-					  window.location = '/dev/our-work?pid=' + id;
+					  window.location = '/dev/?page_id=143&pid=' + id;
 					  break;
 					default:
 					  self.openProject(this);
