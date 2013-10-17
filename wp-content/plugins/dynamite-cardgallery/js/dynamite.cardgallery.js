@@ -37,15 +37,15 @@
 					  self.openProject(this);
 					  break;
 					case 'feature':
-					  window.location = '/dev/?page_id=143&pid=' + id;
+					  window.location = '/dev/?page_id=114&pid=' + id;
 					  break;
 					default:
 					  self.openProject(this);
 					}
 					
 				});
-			
-			if ( activeProjectId != undefined ) { 
+			console.log(activeProjectId);
+			if ( activeProjectId != '' ) { 
 				$(activeProjectElem).find('.dCard').addClass('active');
 				self.openProject(activeProjectElem);
 			}
@@ -87,7 +87,6 @@
 				.unbind();
 		},
 		_closeMember: function(){
-			console.log('here');
 			var $bioDiv = $(this.element).find('.dBio ');
 
 			$bioDiv
@@ -101,18 +100,18 @@
 		},
 		openProject: function(elem) {
 			var self = this;
-			var $bioDiv = $(this.element).find('.dBio');
+			var $bioDiv = $(self.element).find('.dBio ');
 
-			this.options.openPosition = { 
+			self.options.openPosition = { 
 					display: 'block',
-					height: '500px'
+					height: '500',
 				}
-			this.options.closedPosition = { 
+			self.options.closedPosition = { 
 					display: 'block',
 					height: '0px'
 				}
 
-			$bioDiv.animate( this.options.openPosition, 500, function(){
+			$bioDiv.animate( self.options.openPosition, 500, function(){
 					$(this).addClass('open');
 					$(this).unbind();
 				} )

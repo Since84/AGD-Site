@@ -28,9 +28,9 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 	    		 data-id='<? echo get_the_ID(); ?>'
 			>
 				<div class='dCard'>	
-				    <figure class='front'><? echo $thumbnail; ?></figure>
+				    <figure class='front'><?php echo $thumbnail; ?></figure>
 				    <figure class='back'>
-				    	<? echo $thumbnail; ?>
+				    	<?php echo $thumbnail; ?>
 				    	<div class='dMember-info'>
 					    	<h1><?php the_title(); ?></h1>
 					    	<p><?php echo $position; ?></p>
@@ -44,6 +44,6 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 ?>
 		</ul>
 	</div>
-<? 
+<?php 
 } 
 ?>
