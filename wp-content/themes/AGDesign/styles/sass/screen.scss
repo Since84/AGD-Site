@@ -49,7 +49,8 @@ h3 {
 /** Layout **/ 
 .container { 
 	width: 100%;
-	max-width: 1080px; 
+	max-width: 1000px;
+	padding: 0 40px; 
 	margin: auto;
 }
 .section {
@@ -66,8 +67,8 @@ h3 {
 
 .one-third { width: 25%; padding-left: 5%}
 .two-third { width: 58%; padding-right: 5%}
-.left-column { width: 160px; padding-left: 5%; } 
-.wide-content { width: 809px; padding-right: 5%; }
+.left-column { width: 160px; padding-right: 2%;} 
+.wide-content { width: 809px; }
 .col-2 { width: 46%; &:nth-child(odd){ padding-right: 6%; } }
 
 .menu {
@@ -88,14 +89,14 @@ header {
 	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 
 	.home-logo{
-		width: 50%;
+		width: 40.7%;
 		display: inline-block;
 		vertical-align: top;
 		padding-top: 30px;
 	}
 
 	.menu-main-nav-container {
-		width: 49%;
+		width: 59%;
 		display: inline-block;
 		vertical-align: top;
 		.menu{
@@ -105,6 +106,7 @@ header {
 				border-right: 1px solid #E70000;
 				height: 36px;
 				margin-top: 1px;
+				margin-right: -3px;
 				a{
 					display: block;
 					text-decoration: none;
@@ -162,12 +164,10 @@ header {
 	}
 
 	.headline {
-		// text-align: center;
-		padding: 20px 8%;
-		font-size: 18px;
-		width: 84%;
-		max-width: 896px;
-		color: white;
+		clear: both;
+		padding: 20px 0 40px;
+		font-size: 20px;
+		line-height: 1.33;
 	}
 }
 
@@ -246,7 +246,7 @@ header {
 }
 
 .top-menu{ 
-	padding: 20px 40px 0;  
+	padding: 20px 0 0;  
 	li { 
 			display: inline-block; 
 			vertical-align: bottom;
@@ -263,6 +263,8 @@ header {
 		font-size: $fontMedium;
 		font-weight: 700;
 		color: black;
+		border-bottom: 3px solid $lightGray;
+		padding-bottom: 10px;
 	}
 	h3 {
 		padding-bottom: 10px; 
@@ -279,13 +281,12 @@ header {
 
 	.container{
 		background: white;
-		max-width: 1080px;
 		padding-bottom: 20px;
 	}
 
 	/* 	Columns */
-	.one-third { width: 27%; padding: 60px 3%}
-	.two-third { width: 58%; padding: 60px 4%}
+	.one-third { width: 35.9%; padding: 60px 3% 0 0}
+	.two-third { width: 56%; padding: 60px 0 0 4%}
 
 	/* Home Page */
 	.testimonial { 
@@ -355,12 +356,14 @@ header {
 		.post {
 			display: inline-block;
 			vertical-align: top;
-			width: 46.5%; 
+			width: 48%; 
 			height: 170%;
 			margin-bottom: 40px;
 			&:nth-of-type(odd){
-				margin-right: 5%;
+				margin-right: 4%;
 			}
+			
+			img { margin-bottom: 30px; }
 		}
 	}
 }
@@ -369,10 +372,16 @@ header {
 .lower-content {
 	width: 100%;
 	position: relative;
+	
+	.column { padding-top: 40px; }
+	h2 { border: none; padding-bottom: 0; }
 }
 
 .dBio {
 	position: relative;
+	overflow: hidden;
+	h1, h2 { margin-bottom: 5px; }
+	h2 { border: none; padding-bottom: 0; font-weight: normal; }
 	.close { 
 		display: none;
 		position: absolute;
@@ -386,21 +395,21 @@ header {
 	&:hover .close { display: block; }
 	.member-social {
 		position: relative;
-		margin: 10px 0;
+		margin: 5px 0 40px;
 
 		li{
 			display: inline-block;
-
+			background-position: 0% 50%;
 			&.member-facebook {
-				background: $facebook 50% 50% no-repeat;
+				background: $facebook no-repeat;
 				background-size: 20px auto;
 			}
 			&.member-twitter {
-				background: $twitter 50% 50% no-repeat;
+				background: $twitter 0% 50% no-repeat;
 				background-size: 20px auto;
 			}
 			&.member-linkedin {
-				background: $linkedin 50% 50% no-repeat;
+				background: $linkedin 0% 50% no-repeat;
 				background-size: 20px auto;
 			}
 
@@ -412,13 +421,18 @@ header {
 			}
 		}
 	}
+	.member-expertise {
+		li { list-style: none; margin-bottom: 3px; }
+		h2 { font-weight: 700; }
+	}
+
 }
 
 /* Project Profiles */
 .page-template-portfolio-php {
 	#dFolio {
 		width: auto;  
-		margin: 20px 40px;
+		margin: 20px 0;
 		.dBio { 
 			img {
 				max-width: 2000px; 
@@ -465,6 +479,18 @@ header {
 	}	
 }
 
+/* Testimonials */
+.main-content.testimonials{
+	img { float: left; margin-right: 20px; }
+	p {
+		margin-bottom: 5px;
+	}
+	h2{ 
+		border: none; 
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+}
 
 
 /* Blog Post */
@@ -494,11 +520,10 @@ header {
 
 
 
-footer.container {
-	max-width: 1000px;
-	padding: 40px;
-	background: white;
+.main-content footer.container, footer.container {
+	background: white; 
 	font-size: $fontSmall;
+	padding-bottom: 40px;
 	.footer-nav {
 		width: 50%;
 		display: inline-block;
@@ -528,7 +553,7 @@ footer.container {
 			&:last-child { margin-right: 0 !important; }
 		}
 	}
-
+	
 	.footer-sub {
 		padding-top: 20px;
 		margin-top: 20px;

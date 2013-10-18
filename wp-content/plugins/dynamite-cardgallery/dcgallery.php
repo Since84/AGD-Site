@@ -49,7 +49,8 @@ function get_member_bio() {
 	$memberSocialBlock .= "</ul>";
 
 	$memberExpertise = get_the_terms( $id, 'expertise' );
-	$memberExpertiseBlock = "<ul class='member-expertise'>";
+	$memberExpertiseBlock  = "<ul class='member-expertise'>";
+	$memberExpertiseBlock .= "	<h2>Expertise</h2>";
 	foreach ( $memberExpertise as $expertise ) {
 		$memberExpertiseBlock .= "<li>".$expertise->name."</li>";
 	}

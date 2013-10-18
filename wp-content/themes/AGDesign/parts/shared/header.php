@@ -13,14 +13,18 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 	</div>
 </header>
 <div class="subheader">
+<?php if ( !is_home() ) : ?>
 	<div class="container">
-		<?php get_search_form(); ?>
-	</div>
+<?php 		( !is_home() ? get_search_form() : '' ); ?>
 <?php if( $headline ) { ?>
-	<div class="headline container">
+		<div class="headline">
 <?php 	echo $headline;  ?>
-	</div>
+		</div>
 <?php } else if ( !is_home() ) { ?>
-	<div class="page-title container"><?php the_title(); ?></div>
+		<div class="page-title container">
+			<?php the_title(); ?>
+		</div>
 <?php } ?>
+	</div>
+<?php endif; ?>
 </div>
