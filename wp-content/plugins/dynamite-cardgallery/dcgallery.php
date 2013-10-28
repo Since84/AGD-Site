@@ -94,6 +94,22 @@ function get_project_profile() {
 		$p++;
 	}
 
+	/* PROJECT IMAGES */
+	$features = dynamite_get_project_features($project->ID);
+
+	$featureBlock  = "<div 	class='cycle-slideshow' 
+    						data-cycle-fx=scrollHorz
+    						data-cycle-timeout=2000
+    						data-cycle-pager='.feature-pager'
+    				 >";
+    				
+	foreach ($features as $feature => $image) {
+		$featureBlock .= $image;
+	}
+
+	$featureBlock .= "</div>";
+
+	/* PROJECT SERVICES */
 	$services = wp_get_post_terms( $project->ID, 'services' );
 
 	$serviceBlock  = "<ul class='project-services'>";
@@ -105,10 +121,10 @@ function get_project_profile() {
 
 	$block  = "<div class='close'></div>";
 	$block .= "<div class='feature-wide'>";
-	$block .= 	"<div class='project-thumb'>".do_shortcode('[gallery]')."</div>";
+	$block .= 	"<div class='project-feature'>".$featureBlock."</div>";
 	$block .= "</div>";
 	$block .= "<div class='feature-side'>";
-	$block .= 	"<div class='pager'>.</div>";
+	$block .= 	"<div class='feature-pager'></div>";
 	$block .= 	"<h1 class='project-name'>".$project->post_title."</h1>";
 	$block .=	"<h2 class='project-type'>".$projectBlock."</h2>";
 	$block .= 	"<div class='project-profile'>".$project->post_excerpt."</div>";

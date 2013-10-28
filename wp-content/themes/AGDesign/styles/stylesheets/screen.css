@@ -881,8 +881,49 @@ header .menu-main-nav-container .menu li.current_page_item a {
   margin-top: 10px;
 }
 
+/* Connect */
+/* line 607, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content ul li {
+  list-style: none;
+}
+/* line 610, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content ul .column {
+  padding: 0 3% 0 0;
+}
+/* line 612, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content ul .column.one-third {
+  width: 30%;
+}
+/* line 617, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content h2 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+/* line 622, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content .business-contact {
+  margin-bottom: 20px;
+}
+/* line 624, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content .business-contact strong {
+  color: black;
+  margin-right: 30px;
+}
+/* line 630, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content .social #socialmedia-container {
+  padding: 0;
+}
+/* line 632, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content .social #socialmedia-container div.smc_icon_container {
+  margin: 0 10px 0 0 !important;
+}
+/* line 638, ../sass/screen.scss */
+.page-template-contact-template-php .wide-content .lower-content {
+  margin-top: 80px;
+}
+
 /* misc styles */
-/* line 608, ../sass/screen.scss */
+/* line 645, ../sass/screen.scss */
 .linklove {
   display: none;
 }

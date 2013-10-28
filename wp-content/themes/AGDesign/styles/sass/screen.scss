@@ -65,7 +65,7 @@ h3 {
 	padding: 60px 0; 
 }
 
-.one-third { width: 25%; padding-left: 5%}
+.one-third { width: 25%; padding-left: 5%}	
 .two-third { width: 58%; padding-right: 5%}
 .left-column { width: 160px; padding-right: 2%;} 
 .wide-content { width: 809px; }
@@ -600,7 +600,44 @@ header {
 	}
 }
 
+/* Connect */
+.page-template-contact-template-php {
+	.wide-content {
+		ul {
+			li {
+				list-style: none;
+			}
+			.column { 
+				padding: 0 3% 0 0; 
+				&.one-third {
+					width: 30%;
+				}
+			}
+		}
+		h2 {
+			margin: 0;
+			padding: 0;
+			border: none;
+		}
+		.business-contact {
+			margin-bottom: 20px;
+			strong {
+				color: black; 
+				margin-right: 30px;				
+			}
+		}
+		.social {
+			#socialmedia-container { 
+				padding: 0; 
+				div.smc_icon_container {
+					margin: 0 10px 0 0 !important;
+				}
+			}
 
+		}
+		.lower-content { margin-top: 80px; }
+	}
+}
 
 
 

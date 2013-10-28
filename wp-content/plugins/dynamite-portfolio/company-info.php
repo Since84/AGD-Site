@@ -104,7 +104,8 @@ function my_business_zip_html() {
 
 function dynamite_get_address(){
 	$address = array(
-		 "address1"	=>	get_option( 'business_address1' )
+		 "name"		=>	get_option( 'business_name' )
+		,"address1"	=>	get_option( 'business_address1' )
 		,"address2"	=>	get_option( 'business_address2' )
 		,"city"		=>	get_option( 'business_city' )
 		,"state"	=>	get_option( 'business_state' )

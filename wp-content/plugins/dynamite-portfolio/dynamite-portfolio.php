@@ -38,6 +38,9 @@ include('menus-widgets.php');
 /* folio company settings */
 include('company-info.php');
 
+/* images */
+include('images.php');
+
 // /* functions */
 include('functions.php');
 
