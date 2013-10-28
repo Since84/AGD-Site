@@ -19,12 +19,13 @@
 	margin: auto;
 	margin-top: 20px;
 	.dBio {
-		display: none;
-		z-index: 2;
+		opacity: 0;
+		z-index: -1;
 		position: relative;
 
 		&.open{
 			display: block;
+			z-index: 2;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -57,12 +58,6 @@
 	   -o-perspective: 800px;
 	      perspective: 800px;
 	      transition: all 0.5s ease;	
-		&:nth-child(odd) {
-			background: #ccc;
-		}
-		&:nth-child(even) {
-			background: #f1f1f1;
-		}
 		.open{
 			position: absolute;
 			top: 0;

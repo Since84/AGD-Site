@@ -20,7 +20,13 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 			$list->the_post();
 				$position = get_post_meta( get_the_ID(), 'professional_position', true );
 				$terms = wp_get_post_terms( get_the_ID(), 'expertise', array('fields' => 'name' ) );
-				$thumbnail = get_the_post_thumbnail( $post->ID, array('200','200') );
+				$thumbnail = get_the_post_thumbnail();
+				
+				if (class_exists('MultiPostThumbnails')
+                && MultiPostThumbnails::has_post_thumbnail( get_post_type(), 'project-thumbnail' ) ) :
+	            	$thumbnail = MultiPostThumbnails::get_the_post_thumbnail( get_post_type(), 'project-thumbnail' );
+                endif;
+				
 ?>
 			<li class = "dMember dContainer" 
 	    		 data-name='<?php echo get_the_title(); ?>'
@@ -28,12 +34,17 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 	    		 data-id='<? echo get_the_ID(); ?>'
 			>
 				<div class='dCard'>	
-				    <figure class='front'><?php echo $thumbnail; ?></figure>
+				    <figure class='front'>
+<?php 				echo $thumbnail;	?>
+				    </figure>
 				    <figure class='back'>
-				    	<?php echo $thumbnail; ?>
+<?php 				
+					echo $thumbnail;	?>
 				    	<div class='dMember-info'>
 					    	<h1><?php the_title(); ?></h1>
-					    	<p><?php echo $position; ?></p>
+					    	<p>
+					    		<?php echo ( get_post_type() == "project" ) ? get_the_excerpt() : $position; ?>
+							</p>
 					    </div>
 				    </figure>
 				</div>

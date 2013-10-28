@@ -62,7 +62,9 @@
 	if ( $newsQuery->have_posts() ) : while ( $newsQuery->have_posts() ) : $newsQuery->the_post();
 ?>
 				<li class="post">
-					<?php the_post_thumbnail(); ?>
+					<div class="thumbnail">
+<?php 					the_post_thumbnail(); ?>
+					</div>
 					<div><?php the_excerpt(); ?></div>
 				</lis>
 <?php

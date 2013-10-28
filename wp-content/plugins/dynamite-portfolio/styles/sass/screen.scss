@@ -40,6 +40,8 @@
 			// -moz-filter: grayscale(100%);
 			// filter: grayscale(100%);
 		}
+		&.inactive { opacity: .2; }
+		&:hover { opacity: 1; }
 		.dCard {
 			figure.back { 
 				background: #333; 
@@ -61,9 +63,12 @@
 					width: 88%;
 					height: 88%;
 					padding: 6%;
-					background: rgba( 10, 10, 10, .7 );
+					background: rgba( 10, 10, 10, .85 );
 					
-					h1 { margin-bottom: 5px; }
+					h1 { 
+						margin-bottom: 5px; 
+						font-weight: normal;
+					}
 				}
 
 			}		

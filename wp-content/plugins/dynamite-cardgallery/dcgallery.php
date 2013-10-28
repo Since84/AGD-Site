@@ -105,7 +105,7 @@ function get_project_profile() {
 
 	$block  = "<div class='close'></div>";
 	$block .= "<div class='feature-wide'>";
-	$block .= 	"<div class='project-thumb'>".get_the_post_thumbnail( $project->ID, 'full' )."</div>";
+	$block .= 	"<div class='project-thumb'>".do_shortcode('[gallery]')."</div>";
 	$block .= "</div>";
 	$block .= "<div class='feature-side'>";
 	$block .= 	"<div class='pager'>.</div>";

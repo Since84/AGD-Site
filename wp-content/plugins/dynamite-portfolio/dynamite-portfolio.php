@@ -35,6 +35,9 @@ include('post-types-taxonomies.php');
 /* menus and widgets */ 
 include('menus-widgets.php');
 
+/* folio company settings */
+include('company-info.php');
+
 // /* functions */
 include('functions.php');
 

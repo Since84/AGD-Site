@@ -30,7 +30,7 @@ function create_post_types() {
 
 	/** Project Spotlight **/
 
-	register_post_type( 'agd_project',
+	register_post_type( 'project',
 		array(
 			'label' => 'Project',
 			'public' => true,
@@ -205,7 +205,7 @@ add_action( 'init', 'create_proj_tax' );
 function create_proj_tax() {
 	register_taxonomy(
 		'project-type',
-		'agd_project',
+		'project',
 		array(
 			'label' => __( 'Project Type' ),
 			'rewrite' => array( 'slug' => 'project-type' ),
@@ -214,7 +214,7 @@ function create_proj_tax() {
 	);
 	register_taxonomy(
 		'services',
-		'agd_project',
+		'project',
 		array(
 			'label' => __( 'Services' ),
 			'rewrite' => array( 'slug' => 'services' ),

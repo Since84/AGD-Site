@@ -15,7 +15,15 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 <div class="subheader">
 <?php if ( !is_home() ) : ?>
 	<div class="container">
-<?php 		( !is_home() ? get_search_form() : '' ); ?>
+<?php 	
+	if( !is_home() ){	 
+	  if ( is_page('114') ){
+		  echo get_search_form();
+	  } else {
+		  insert_cform('Stay Connected');
+	  }
+	}
+?>
 <?php if( $headline ) { ?>
 		<div class="headline">
 <?php 	echo $headline;  ?>

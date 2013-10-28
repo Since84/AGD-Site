@@ -127,8 +127,8 @@ if (class_exists('MultiPostThumbnails')) {
 	new MultiPostThumbnails(
 		array(
 			'label' => 'Thumb',
-			'id' => 'project_thumbnail',
-			'post_type' => 'agd_project'
+			'id' => 'project-thumbnail',
+			'post_type' => 'project'
 		) 	
 	);
 

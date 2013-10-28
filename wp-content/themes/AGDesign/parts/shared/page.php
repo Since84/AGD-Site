@@ -1,8 +1,22 @@
-<?/* Basic Page Content */?>
+<?php /* Basic Page Content */?>
+<?php global $post; ?>
 <div class='main-content'>
 	<div class="container">
 		<div class="left-column column">
-			<?php wp_nav_menu( array("menu" => "side-menu") ); ?>
+			<?php 
+				
+				switch( $post->post_name ){
+					case "about-agd": 
+						echo "<h1> Get to Know Us </h1>";
+						$navMenu = "main-nav";
+						break;
+					default:
+						var_dump($post->post_name);
+						$navMenu = "side-menu";
+						break;
+				}
+				wp_nav_menu( array("menu" => $navMenu ) ); 
+			?>
 		</div>
 		<div class="wide-content column">
 			<?php the_content(); ?>

@@ -46,6 +46,7 @@
 				});
 			if ( activeProjectId != '' ) { 
 				$(activeProjectElem).addClass('active');
+				$(activeProjectElem).siblings().addClass('inactive');
 				self.openProject(activeProjectElem);
 			}
 
@@ -67,14 +68,16 @@
 					left: thisPosition.left, 
 					display: 'block',
 					width: $(elem).width(),
-					height: $(elem).height()
+					height: $(elem).height(),
+					opacity: 0
 				}
 
 			this.options.openPosition = { 
 					top: 0, 
 					left: 0,
 					height: '100%',
-					width: '100%'
+					width: '100%',
+					opacity: 1,
 				}
 
 			self._getBio(elem);
@@ -140,6 +143,7 @@
 						.empty()
 						.unbind();
 					$(elem).parent('.dContainer').removeClass('active');
+					$('.inactive').removeClass('inactive');
 					$(this).parent().removeAttr('style')
 				})
 
@@ -169,6 +173,8 @@
 					.promise().done(function(){
 						$(this).append(response)
 						$(this).animate({opacity: 1}, self.options.animationSpeed );
+						$(elem).addClass('active');
+						$(elem).siblings().addClass('inactive');
 						$('.dBio').find('.close')
 							.unbind()
 							.on('click', function(){

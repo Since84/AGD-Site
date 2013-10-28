@@ -17,7 +17,7 @@ body {
 	font-size: $fontMedium; 
 	font-family: 'Open Sans', Arial, sans-serif;
 	color: $textGray;
-	line-height: 1.3em;
+	line-height: 1.6em;
 }
 
 a { 
@@ -26,7 +26,7 @@ a {
 }
 
 p {
-	margin-bottom: 1.33em; 
+	margin-bottom: 1.45em; 
 }
 
 h1 {
@@ -74,6 +74,9 @@ h3 {
 .menu {
 	li {
 		list-style: none;
+		&.current_page_item a {
+			font-weight: 700;
+		}
 	}
 }
 
@@ -117,10 +120,11 @@ header {
 					width: 105px;
 					height: 97px;
 					padding-top: 12px;
-					&:hover{
+					&:hover {
 						background: url(../images/nav_over.png) no-repeat;
 					}
 				}
+				&.current_page_item a { background: url(../images/nav_over.png) no-repeat; }
 			}
 		}
 	}
@@ -135,8 +139,18 @@ header {
 		display: inline-block;
 		vertical-align: middle;
 	}
+	
+	form { 
+		margin-bottom: 0;
+		text-align: right;
+		padding: 10px;
+		background: #222121;
+		width: 550px;
+		float: right;
+		.cf-sb { margin-bottom: 0; }
+	}
 
-	.searchform {
+	.searchform{
 		label { display: none; }
 		float: right;
 		padding: 10px;
@@ -167,7 +181,7 @@ header {
 		clear: both;
 		padding: 20px 0 40px;
 		font-size: 20px;
-		line-height: 1.33;
+		line-height: 1.45;
 	}
 }
 
@@ -188,16 +202,21 @@ header {
 		padding: 0 40px;
 		overflow: hidden;
 	}
+
 	.paging{
 		width: 40px;
 		height: 100%;
 		display:block;
 		position: absolute;
-		background: #f8f8f8;
-		background: rgba(0,0,0,.4);
 		border:none;
 		z-index: 5; 
+		opacity: 0;
 		top: 0;
+		background: none;
+	    -moz-transition:opacity .5s, -moz-transform .5s;
+	    -webkit-transition:opacity .5s, -webkit-transform .5s;
+	    -o-transition:opacity .5s, -o-transform .5s;
+	    transition:opacity .5s, transform .5s;
 		&.prev{ 
 			left: 0; 
 			background-image: $left-arrow-slider;
@@ -211,6 +230,7 @@ header {
 			background-repeat: no-repeat;
 		}
 	}
+	&:hover .paging { opacity: 1; }
 
 	.featured-slider{
 		display: block;
@@ -242,6 +262,32 @@ header {
 
 		}
 
+	}
+}
+
+/* Stay Connected Form */
+.stay-connected {
+	.cf-ol, .cf-sb { display: inline-block; }
+	.cf_hidden { display: none; }
+
+	margin-bottom: 40px;
+
+	li { 
+		display: inline-block; 
+		margin-right: 10px;
+	}
+	input {
+		border-radius: 5px;
+		border: 1px solid $textGray;
+		background: $lightGray;
+		color: $textGray;
+	}
+	input[type="text"] {
+		padding: 3px 5px;
+		width: 170px;
+	}
+	input[type="submit"] {
+		@include blue-button;
 	}
 }
 
@@ -277,7 +323,7 @@ header {
 	}
 	.menu li { list-style: none; } 
 
-	img { max-width: 100%; }
+	img { max-width: 100%; height: auto; }
 
 	.container{
 		background: white;
@@ -326,31 +372,7 @@ header {
 		margin-top: 5px;
 		text-transform: uppercase;
 	}
-	/* Stay Connected Form */
-	.stay-connected {
-		.cf-ol, .cf-sb { display: inline-block; }
-		.cf_hidden { display: none; }
 
-		margin-bottom: 40px;
-
-		li { 
-			display: inline-block; 
-			margin-right: 10px;
-		}
-		input {
-			border-radius: 5px;
-			border: 1px solid $textGray;
-			background: $lightGray;
-			color: $textGray;
-		}
-		input[type="text"] {
-			padding: 3px 5px;
-			width: 170px;
-		}
-		input[type="submit"] {
-			@include blue-button;
-		}
-	}
 	/* News Section */
 	.news.section {
 		.post {
@@ -362,8 +384,13 @@ header {
 			&:nth-of-type(odd){
 				margin-right: 4%;
 			}
-			
-			img { margin-bottom: 30px; }
+			.thumbnail {
+				position: relative;
+				display: block;
+				height: 80px;
+				overflow: hidden;
+				margin-bottom: 20px;
+			}
 		}
 	}
 }
@@ -380,6 +407,17 @@ header {
 .dBio {
 	position: relative;
 	overflow: hidden;
+	
+	&.team {
+		.one-third { 
+			padding-left: 40px; 
+			padding-right: 0px;
+		}
+		.two-third {
+			padding: 60px 0 0 0;
+			width: 54%;
+		}
+	}
 	h1, h2 { margin-bottom: 5px; }
 	h2 { border: none; padding-bottom: 0; font-weight: normal; }
 	.close { 
@@ -481,7 +519,7 @@ header {
 
 /* Testimonials */
 .main-content.testimonials{
-	img { float: left; margin-right: 20px; }
+	img { float: left; margin-right: 10px; }
 	p {
 		margin-bottom: 5px;
 	}
@@ -532,7 +570,7 @@ header {
 			display: inline-block;
 			width: 75px;
 			vertical-align: top;
-			margin-bottom: 10px;
+			margin-bottom: 0px;
 			margin-right: 20px;
 			a {
 				color: $textGray;
@@ -549,15 +587,16 @@ header {
 		width: 49%;
 
 		#socialmedia-container DIV.smc_icon_container {
-			margin: 0 10px !important;
-			&:last-child { margin-right: 0 !important; }
+			margin: 0 !important;
+			&:not(:last-child) { margin-right: 5px !important; }
+			a { height: 30px !important; }
 		}
 	}
 	
 	.footer-sub {
 		padding-top: 20px;
-		margin-top: 20px;
 		border-top: 4px solid $lightGray;
+		margin-top: 10px;
 	}
 }
 

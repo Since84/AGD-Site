@@ -13,7 +13,7 @@ $features = new WP_Query( $fArgs );
 		<div class='featured-slide-window'>
 			<ul class="featured-slide-container">
 				<li class='featured-slide'>
-					<?php get_dFolio( "agd_project", "10", "feature" ); ?>
+					<?php get_dFolio( "project", "10", "feature" ); ?>
 				</li>
 <?php
 				if ( $features->have_posts() ) : while ( $features->have_posts() ) : $features->the_post();

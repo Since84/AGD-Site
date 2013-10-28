@@ -1,7 +1,7 @@
 <?php
 /** Project Spotlight **/
 
-	register_post_type( 'agd_project',
+	register_post_type( 'project',
 		array(
 			'labels' => array(
 				'name' => __( 'Our Projects' ),

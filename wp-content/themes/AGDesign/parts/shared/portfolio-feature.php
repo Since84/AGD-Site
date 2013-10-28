@@ -1,7 +1,7 @@
 <?php
 /* Portfolio Feature section */
 
-$projectTypes = new WP_Query(array('post_type' => 'agd_project', 'posts_per_page' => '-1', 'order' => 'DESC'));
+$projectTypes = new WP_Query(array('post_type' => 'project', 'posts_per_page' => '-1', 'order' => 'DESC'));
 ?>
 <div class='main-content'>
 	<div class="container">
@@ -26,7 +26,7 @@ $projectTypes = new WP_Query(array('post_type' => 'agd_project', 'posts_per_page
 		</ul>
 		<div>
 			<div class="portfolio-feature">
-				<?php get_dFolio( "agd_project", "25", "projects" ); ?>
+				<?php get_dFolio( "project", "25", "projects" ); ?>
 			</div>
 		</div>
 	</div>
