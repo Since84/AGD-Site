@@ -17,6 +17,9 @@ function my_general_settings_register_fields()
     register_setting('general', 'business_email', 'esc_attr');
     add_settings_field('business_email', '<label for="business_email">'.__('Email' , 'business_email' ).'</label>' , 'my_business_email_html', 'general');
 
+     register_setting('general', 'business_careers_email', 'esc_attr');
+    add_settings_field('business_careers_email', '<label for="business_careers_email">'.__('Email' , 'business_careers_email' ).'</label>' , 'my_business_careers_email_html', 'general');
+
     register_setting('general', 'business_address1', 'esc_attr');
     add_settings_field('business_address1', '<label for="business_address1">'.__('Address 1' , 'business_address1' ).'</label>' , 'my_business_address1_html', 'general');
 
@@ -61,6 +64,13 @@ function my_business_email_html() {
     $email = get_option( 'business_email');
     echo '<input type="text" id="business_email" name="business_email" value="' . $email . '" />';
 	
+}
+
+function my_business_careers_email_html() {
+
+    $careersEmail = get_option( 'business_careers_email');
+    echo '<input type="text" id="business_careers_email" name="business_careers_email" value="' . $careersEmail . '" />';
+    
 }
 
 /* Address */
@@ -117,10 +127,11 @@ function dynamite_get_address(){
 
 function dynamite_get_contact(){
 	$contact = array(
-		 "name"		=>	get_option( 'business_name' )
-		,"phone"	=>	get_option( 'business_phone' )
-		,"fax"		=>	get_option( 'business_fax' )
-		,"email"	=>	get_option( 'business_email' )
+		 "name"		            =>	get_option( 'business_name' )
+		,"phone"	            =>	get_option( 'business_phone' )
+		,"fax"		            =>	get_option( 'business_fax' )
+		,"email"	            =>	get_option( 'business_email' )
+        ,"careers_email"        =>  get_option( 'business_email' )
 	);
 
 	return $contact;

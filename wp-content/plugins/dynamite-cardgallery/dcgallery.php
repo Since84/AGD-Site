@@ -41,11 +41,11 @@ function get_member_bio() {
 	$memberDribbble = get_post_meta( $id, 'member_dribbble', true );
 
 	$memberSocialBlock 	= "<ul class='member-social'>";
-	$memberSocialBlock .= 	( $memberFacebook ) ? "<li class='member-facebook'><a href='www.facebook.com/".$memberFacebook."'></a></li>" : "" ;
-	$memberSocialBlock .= 	( $memberLinkedin ) ? "<li class='member-linkedin'><a href='www.linkedin.com/in/".$memberLinkedin."'></a></li>" : "" ;
-	$memberSocialBlock .= 	( $memberTwitter ) ? "<li class='member-twitter'><a href='www.twitter.com/".$memberTwitter."'></a></li>" : "" ;
-	$memberSocialBlock .= 	( $memberBehance ) ? "<li class='member-behance'><a href='www.behance.com/".$memberBehance."'></a></li>" : "" ;
-	$memberSocialBlock .= 	( $memberDribbble ) ? "<li class='member-dribbble'><a href='www.dribbble.com/".$memberDribbble."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberFacebook ) ? "<li class='member-facebook'><a href='//www.facebook.com/".$memberFacebook."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberLinkedin ) ? "<li class='member-linkedin'><a href='//www.linkedin.com/in/".$memberLinkedin."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberTwitter ) ? "<li class='member-twitter'><a href='//www.twitter.com/".$memberTwitter."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberBehance ) ? "<li class='member-behance'><a href='//www.behance.com/".$memberBehance."'></a></li>" : "" ;
+	$memberSocialBlock .= 	( $memberDribbble ) ? "<li class='member-dribbble'><a href='//www.dribbble.com/".$memberDribbble."'></a></li>" : "" ;
 	$memberSocialBlock .= "</ul>";
 
 	$memberExpertise = get_the_terms( $id, 'expertise' );
@@ -99,7 +99,8 @@ function get_project_profile() {
 
 	$featureBlock  = "<div 	class='cycle-slideshow' 
     						data-cycle-fx=scrollHorz
-    						data-cycle-timeout=2000
+    						data-cycle-swipe=true
+    						data-cycle-timeout=5000
     						data-cycle-pager='.feature-pager'
     				 >";
     				

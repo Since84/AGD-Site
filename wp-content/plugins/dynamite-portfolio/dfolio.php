@@ -3,10 +3,15 @@
 
 function get_dFolio( $type, $perPage, $pageSlug ){
 	global $post;
+
+	$projectType = $_GET['project-type'];
+
 	$listArgs = array (
-			'post_type'			=>	$type,
-			'posts_per_page'	=>	$perPage
+			'post_type'			=>	$type
+			,'posts_per_page'	=>	$perPage
+			,'project-type'		=>	$projectType
 	);
+
 	$list = new WP_Query( $listArgs );
 	$pid = get_query_var( 'pid' );
 ?>

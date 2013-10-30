@@ -9,8 +9,8 @@ $accQuery = new WP_Query ( $accArgs );
 <div class='main-content testimonials'>
 	<div class="container">
 		<div class="left-column column">
-			<h1>Get To Know Us</h1>
-			<?php wp_nav_menu( array("menu" => "get-to-know-us") ); ?>
+			<!-- <h1>Get To Know Us</h1> -->
+			<?php //wp_nav_menu( array("menu" => "get-to-know-us") ); ?>
 		</div>
 		<div class="wide-content column">
 			<h1><?php the_title(); ?></h1>

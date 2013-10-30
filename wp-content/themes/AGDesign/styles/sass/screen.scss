@@ -69,7 +69,7 @@ h3 {
 .two-third { width: 58%; padding-right: 5%}
 .left-column { width: 160px; padding-right: 2%;} 
 .wide-content { width: 809px; }
-.col-2 { width: 46%; &:nth-child(odd){ padding-right: 6%; } }
+.col-2 { width: 47%; &:nth-child(odd){ padding-right: 5%; } }
 
 .menu {
 	li {
@@ -266,11 +266,16 @@ header {
 }
 
 /* Stay Connected Form */
+.stay-connected .reqtxt {
+display: none;
+}
 .stay-connected {
 	.cf-ol, .cf-sb { display: inline-block; }
 	.cf_hidden { display: none; }
+	.reqtxt { display: none; }
 
 	margin-bottom: 40px;
+
 
 	li { 
 		display: inline-block; 
@@ -298,8 +303,17 @@ header {
 			vertical-align: bottom;
 			padding-right: 10px;
 			&:not(:last-child){ border-right: 2px solid #bbb; margin-right: 10px; }
-			&.active{ color: $red; font-weight: 700; }
+			&.active{ 
+				color: $red; 
+				font-weight: 700; 
+				a { color: $red; }
+			}
 			&:not(.active){ cursor: pointer; }
+			a {
+				color: black;
+				text-decoration: none;
+				&:hover { color: $red; }
+			}
 	}
 }
 
@@ -378,11 +392,16 @@ header {
 		.post {
 			display: inline-block;
 			vertical-align: top;
-			width: 48%; 
+			width: 47.5%; 
 			height: 170%;
 			margin-bottom: 40px;
 			&:nth-of-type(odd){
 				margin-right: 4%;
+			}
+			& > a {
+				color: $textGray; 
+				font-weight: normal;
+				text-decoration: none;
 			}
 			.thumbnail {
 				position: relative;
@@ -480,23 +499,36 @@ header {
 				vertical-align: top;
 			}
 			.feature-wide{
-				width: 700px;
-				margin-right: 20px; 
+				width: 700px; 
+				overflow: hidden;
 			}
 			.feature-side{
-				width: 250px;
-				padding-top: 20px;
+				width: 275px;
+				padding: 20px 10px;
+				height: 100%;
+				border-left: 5px solid #bbb;
+				background: #ddd;
 
 				h2 { margin-bottom: 5px; }
 				h1 { margin-bottom: 5px; }
 
 				li { list-style: none; margin-bottom: 2px; }
 
-				.pager {
+
+				.feature-pager {
 					height: 10px;
 					margin-bottom: 30px;
-					// background: black;
+					span {
+					    font-size: 40px;
+					    color: white;
+					    margin-right: 5px;
+					    cursor: pointer;
+					    &.cycle-pager-active {
+						    color: #bbb;
+						}
+					}
 				}
+
 				.project-profile { margin-top: 10px; }
 				.project-type { font-weight: 400; }
 				.project-services {
@@ -530,6 +562,54 @@ header {
 	}
 }
 
+/* Blogroll */
+.page-template-blogroll-php, .category {
+	.blog {
+		position: relative;
+		width: 100%;
+		white-space: nowrap;
+		overflow-x: scroll;
+
+		.post {
+			display: inline-block;
+			width: 200px;
+			position: relative;
+			margin: 0 35px 0 0;
+			white-space: normal;
+			vertical-align: top;
+			.post-date{
+				border: none;
+				margin: 0;
+				padding: 0;
+				color: #bbb;
+				font-size: 12px;
+				font-weight: normal;
+			}
+			.post-title {
+				margin-bottom: 10px;
+				height: 7em;
+			}
+			img { border: 2px solid #bbb; }
+		}
+
+	}
+	.categories {
+		list-style: none;
+		font-size: 14px;
+		font-weight: bold;
+		color: black;
+		ul {
+			font-size: 12px;
+			font-weight: normal;
+			color: black;
+			margin-top: 10px;
+			li{
+				margin-bottom: 0px;
+				list-style: none;
+			}
+		}
+	}
+}
 
 /* Blog Post */
 .single {
@@ -602,40 +682,157 @@ header {
 
 /* Connect */
 .page-template-contact-template-php {
-	.wide-content {
-		ul {
-			li {
-				list-style: none;
-			}
-			.column { 
-				padding: 0 3% 0 0; 
-				&.one-third {
-					width: 30%;
-				}
+	.column {
+		margin: 70px 0; 
+		padding: 0 2% 0 0; 
+		&.one-half {
+			width: 47.5%;
+		}
+	}
+	ul {
+		li {
+			list-style: none;
+		}
+	}
+	h2 {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	.map { text-align: right; }
+	.business-contact {
+		margin-bottom: 20px;
+		strong {
+			color: black; 
+			margin-right: 30px;				
+		}
+	}
+	.social {
+		#socialmedia-container { 
+			padding: 0; 
+			div.smc_icon_container {
+				margin: 0 10px 0 0 !important;
 			}
 		}
-		h2 {
-			margin: 0;
-			padding: 0;
-			border: none;
-		}
-		.business-contact {
-			margin-bottom: 20px;
-			strong {
-				color: black; 
-				margin-right: 30px;				
-			}
-		}
-		.social {
-			#socialmedia-container { 
-				padding: 0; 
-				div.smc_icon_container {
-					margin: 0 10px 0 0 !important;
-				}
-			}
 
+	}
+
+	.lower-content {
+		.column > p {
+			min-height: 80px;
+			padding-bottom: 20px;
 		}
-		.lower-content { margin-top: 80px; }
+
+
+		.work-with, .collaborate-with {
+			background: $lightGray;
+			padding: 2%;
+			width: 43%;
+
+			.open-close {
+				display: block;
+				position: relative;
+				clear: both;
+				width: auto;
+				text-align: right;
+				.arrow-button{
+					width: 20px;
+					height: 20px;
+					background: black;
+					display: inline-block;
+				}
+			}
+			.cform {
+				display: none;
+				&.open {
+					display: inline;
+				}
+
+
+				label {
+					font-weight: bold;
+					span {
+						padding: 10px 0;
+						display: inline-block;
+					}
+				}
+				.cf-box-title {
+					height: auto;
+					min-height: 0;
+					margin-top: 10px;
+					font-weight: bold;
+				}
+				.cf-box-group {
+					margin-bottom: 20px;
+					label { 
+						font-weight: normal;
+						margin-left: 5px;
+						width: 107px;
+						display: inline-block;
+						height: 30px;
+					}
+					input[type='radio'] {
+						margin-left: 10px;
+					}
+
+				}
+
+				.cformselect {
+					float: right;
+					background: white;
+					width: 150px;
+					padding: 5px;
+					border: 0;
+					border-radius: 0;
+					height: 34px;
+					-webkit-appearance: none;
+				}
+				li {
+					min-height: 45px;
+					padding-left: 5%;
+
+					&#li-2-8 {
+						width: 21.5%;
+						display: inline-block;
+						font-weight: bold;
+						&:before {
+							position: absolute;
+							left: 0px;
+							content: "*"
+						}
+					}
+					&#li-2-9, &#li-2-10 {
+						display: inline-block;
+						width: 36%;
+						padding-left: 0px;
+					}
+
+				}
+				input[type="text"], textarea {
+					border: none;
+					padding: 2%;
+					width: 96%;
+					margin-bottom: 2%;
+				}
+
+				.cf-sb {
+					text-align: right;
+					input[type="submit"]{
+						@include blue-button;
+						padding: 10px 0;
+					}
+				}
+				.reqtxt, .emailreqtxt {
+					position: absolute;
+					left: 0;
+					top: 9px;
+					font-size: 14px;
+				}
+			}
+		}
+		.work-with {
+			margin-right: 3%;
+		}
 	}
 }
 

@@ -10,22 +10,35 @@
  */
 ?>
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-<?php if ( have_posts() ): ?>
-<h2>Category Archive: <?php echo single_cat_title( '', false ); ?></h2>
-<ol>
-<?php while ( have_posts() ) : the_post(); ?>
-	<li>
-		<article>
-			<h2><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
-			<?php the_content(); ?>
-		</article>
-	</li>
-<?php endwhile; ?>
-</ol>
-<?php else: ?>
-<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
-<?php endif; ?>
+<div class='main-content'>
+	<div class="container">
+		<div class="left-column column">
+			<ul>
+			<?php wp_list_categories(); ?> 
+			</ul>
+		</div>
+		<div class="wide-content column">
+			<ul class="blog">
+<?php
+			if ( have_posts() ) : while ( have_posts() ) : the_post();
+?>
+				<li class="post">
+					<h3 class="post-date"><?php the_time('m.d.Y'); ?></h3>
+					<h1 class="post-title"><?php the_title();?></h1>
+					<?php the_post_thumbnail( array('196', '196') ); ?>
+					<?php the_excerpt(); ?>
+				</li>
+<?php
+			endwhile; 
+			else: 
+?>
+				<h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>	
+<?php		
+			endif;
+?>
+			</ul>
+		</div>
+	</div>
+</div>
 
 <?php Starkers_Utilities::get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>

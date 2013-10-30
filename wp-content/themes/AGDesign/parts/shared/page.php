@@ -4,18 +4,20 @@
 	<div class="container">
 		<div class="left-column column">
 			<?php 
-				
 				switch( $post->post_name ){
 					case "about-agd": 
 						echo "<h1> Get to Know Us </h1>";
-						$navMenu = "main-nav";
+						$navMenu = "about-us";
+						break;
+					case "accolades":
 						break;
 					default:
 						var_dump($post->post_name);
 						$navMenu = "side-menu";
 						break;
 				}
-				wp_nav_menu( array("menu" => $navMenu ) ); 
+				var_dump($navMenu);
+				if ( $navMenu ) { wp_nav_menu( array("menu" => $navMenu ) ); } 
 			?>
 		</div>
 		<div class="wide-content column">

@@ -1,27 +1,29 @@
 <?php
 /* Portfolio Feature section */
-
-$projectTypes = new WP_Query(array('post_type' => 'project', 'posts_per_page' => '-1', 'order' => 'DESC'));
+$projectPage = get_page_by_title('Select Work' );
+$pageLink = get_permalink( $projectPage->ID );
+$projectType = $_GET['project-type'];
 ?>
 <div class='main-content'>
 	<div class="container">
 		<ul class="top-menu">
-			<li class="active" data-slug="all">All</li>
+			<li <?php echo ( $projectType == NULL ? 'class="active"' : '' ); ?> data-slug="all"><a href="<?php echo $pageLink; ?>">All</a></li>
 			<?php
-            while ($projectTypes -> have_posts()): $projectTypes -> the_post();
 
-                $taxonomy_ar = get_the_terms($post->ID, 'project-type');
+            	$tArgs = array(
+            		'taxonomy' 		=> 'project_type',
+            		'hide_empty'	=> true
+            	);
+                $taxonomy_ar = get_terms('project-type', $tArgs);
                 $output = '<span class="btn">';
                 foreach($taxonomy_ar as $taxonomy_term) {
                 	// var_dump($taxonomy_term);
-                    $output.= '<li data-slug="'.$taxonomy_term->slug.'">'.$taxonomy_term->name.'</li>';
+                    $output.= '<li '.( $taxonomy_term->slug === $projectType ? 'class="active"' : '' ).' data-slug="'.$taxonomy_term->slug.'"><a href="'.$pageLink.'&project-type='.$taxonomy_term->slug.'">'.$taxonomy_term->name.'</a></li>';
                 }
                 $output.= '</span>';
 
                 echo $output;
 
-
-            endwhile;​
 			?>
 		</ul>
 		<div>

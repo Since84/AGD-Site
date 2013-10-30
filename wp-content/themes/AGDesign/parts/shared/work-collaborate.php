@@ -1,4 +1,8 @@
-<?php /* Work and Collaborate Preview Content */ ?>			
+<?php 
+	/* Work and Collaborate Preview Content */ 	
+	$name = $post->post_name;
+	$contactPage = get_page('contact');
+?>			
 
 			<ul class="lower-content">
 				<li class="work-with col-2 column">
@@ -7,7 +11,22 @@
 ?>
 					<h2><?php the_title(); ?></h2>
 <?php
-					the_excerpt();
+					the_content();
+					$contactLink = get_post_meta( get_the_id(), 'contact_link', true );
+?>
+					<div class="open-close">
+						<span class="arrow-button"></span>
+					</div>
+<?php
+						if ( $name != 'contact' ) : 
+?>					
+							<a href="<?php echo get_permalink('$contactPage->ID' ); ?>"><?php echo $contactLink; ?></a>
+<?php
+						else :
+
+							insert_cform('Work With Us');
+						
+						endif;
 
 					endwhile;
 					endif;
@@ -20,7 +39,22 @@
 ?>
 					<h2><?php the_title(); ?></h2>
 <?php
-					the_excerpt();
+					the_content();
+					$contactLink = get_post_meta( get_the_id(), 'contact_link', true );
+?>
+					<div class="open-close">
+						<span class="arrow-button"></span>
+					</div>
+<?php
+						if ( $name != 'contact' ) : 
+?>					
+							<a href="<?php echo get_permalink('$contactPage->ID' ); ?>"><?php echo $contactLink; ?></a>
+<?php
+						else :
+
+							insert_cform('Collaborate With Us');
+						
+						endif;
 
 					endwhile;
 					endif;

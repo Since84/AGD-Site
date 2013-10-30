@@ -146,7 +146,7 @@
 					$('.inactive').removeClass('inactive');
 					$(this).parent().removeAttr('style')
 				})
-
+			$('.cycle-slideshow').cycle('destroy');
 			$('.closed').removeClass('closed');
 		},
 		_getBio: function(elem) {
@@ -159,7 +159,7 @@
 				$(self.element).find('.dBio').append(response);
 				$('.dBio').find('.close').unbind().on('click', function(){
 					self._closeMember(this);
-				});
+				}); 
 			});
 		},
 		_getProject: function(elem) {
@@ -180,6 +180,7 @@
 							.on('click', function(){
 								 self._closeProject(this);
 						});
+						$('.cycle-slideshow').cycle();
 					});
 			});
 		},

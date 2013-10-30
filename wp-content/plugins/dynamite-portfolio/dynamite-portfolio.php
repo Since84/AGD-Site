@@ -20,9 +20,16 @@ function register_styles_scripts(){
 	/* scripts */
 	// wp_register_script( 'isotope', plugins_url( 'dynamite-portfolio/js/isotope/jquery.isotope.min.js'), array('jquery') );
 	
+	wp_register_script( 'cycle', plugins_url( 'dynamite-portfolio/js/jquery.cycle2.min.js'), array('jquery') );
+	wp_register_script( 'cycle-swipe', plugins_url( 'dynamite-portfolio/js/jquery.cycle2.swipe.min.js'), array('jquery', 'cycle') );
+	wp_register_script( 'cycle-iOSfix', plugins_url( 'dynamite-portfolio/js/ios6fix.js'), array('jquery', 'cycle', 'cycle-swipe') );
 	wp_register_script( 'main', plugins_url( 'dynamite-portfolio/js/script.js'), array('jquery', 'jqueryui') );
 
+
 	// wp_enqueue_script( 'isotope' );
+	wp_enqueue_script( 'cycle' );
+	wp_enqueue_script( 'cycle-swipe' );
+	wp_enqueue_script( 'cycle-iOSfix' );
 	wp_enqueue_script( 'main' );
 
 }

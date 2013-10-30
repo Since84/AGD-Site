@@ -11,7 +11,7 @@
 ?>
 				<h1><?php the_title(); ?></h1>
 				<div><?php the_excerpt(); ?></div>
-				<?php new_excerpt_more("Read More"); ?>
+				<?php new_excerpt_more("Read What our Clients Have to Say"); ?>
 <?php
 	endwhile; 
 	endif;
@@ -43,7 +43,7 @@
 ?>
 			<h1><?php the_title(); ?></h1>
 			<div><?php the_excerpt(); ?></div>
-			<?php new_excerpt_more("Read More"); ?>
+			<?php //new_excerpt_more("Read More"); ?>
 <?php
 	endwhile; 
 	endif;
@@ -62,11 +62,13 @@
 	if ( $newsQuery->have_posts() ) : while ( $newsQuery->have_posts() ) : $newsQuery->the_post();
 ?>
 				<li class="post">
-					<div class="thumbnail">
-<?php 					the_post_thumbnail(); ?>
-					</div>
-					<div><?php the_excerpt(); ?></div>
-				</lis>
+					<a href="<?php the_permalink(); ?>">
+						<div class="thumbnail">
+<?php 						the_post_thumbnail(); ?>
+						</div>
+						<div><?php the_excerpt(); ?></div>
+					</a>
+				</li>
 <?php
 	endwhile; 
 	endif;
