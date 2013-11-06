@@ -81,8 +81,8 @@ function save_meta($post_id) {
 	if(isset($_POST['member_dribbble']))
 	update_post_meta($post_id, 'member_dribbble', $_POST['member_dribbble']);
 
-	if(isset($_POST['feature_type']))
-	update_post_meta($post_id, 'feature_type', $_POST['feature_type']);
+	if(isset($_POST['feature_link']))
+	update_post_meta($post_id, 'feature_link', $_POST['feature_link']);
 
 }
 // add_action('init', 'addSettingsFields');
@@ -128,17 +128,15 @@ function showClientInfoBox($post) {
  <?php
 }
 
-function showFeatureTypeBox($post) {		
- 	$type = get_post_meta($post->ID, 'feature_type', true);	
+function showFeatureLinkBox($post) {		
+ 	$link = get_post_meta($post->ID, 'feature_link', true);	
  ?>
-		<label for="feature_type">Division</label>
-		<select name="feature_type" id="feature_type">
-			<option value="image"></option>
-			<option value="small content"<?php if($did == 25) echo 'selected' ?>>[25] iD Tech Camps</option>
-			<option value="22"<?php if($did == 22) echo 'selected' ?>>[22] iD Gaming Academy</option>
-			<option value="23"<?php if($did == 23) echo 'selected' ?>>[23] iD Programming Academy</option>
-			<option value="26"<?php if($did == 26) echo 'selected' ?>>[26] iD Visual Arts Academy</option>
-		</select>
+	<ul>
+		<li>
+			<label for="feature_link">Link To:</label>
+			<input type="text" id="feature_link" class="widefat" name="feature_link" value="<?php echo ( $link ? $link : 'http://');?>">
+		</li>
+	</ul>
  <?php
 }
 
@@ -186,6 +184,7 @@ function addMetaBoxes(){
 	add_meta_box('meta_box', 'Client Information', 'showClientInfoBox', 'testimonial');
 	add_meta_box('meta_box', 'Team Information', 'showTeamInfoBox', 'team');
 	add_meta_box('meta_box', 'Headline', 'showHeadlineBox', 'page');
+	add_meta_box('meta_box', 'Feature Link', 'showFeatureLinkBox', 'feature');
 }
 
 add_action( 'init', 'create_team_tax' );

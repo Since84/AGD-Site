@@ -1,0 +1,19 @@
+/* Responsive Styles */
+/** Base Styles for AGD **/
+/* COLORS */
+/* GRAPHIC ELEMENTS */
+/* Icons */
+/* Responsive 1 */
+@media (max-width: 1087px) {
+  /* line 7, ../sass/responsive.scss */
+  .container {
+    width: auto;
+    padding: 0 4%;
+  }
+}
+@media (max-width: 1005px) {
+  /* line 15, ../sass/responsive.scss */
+  .main-content .testimonial .client-quote {
+    width: 68%;
+  }
+}

@@ -28,30 +28,42 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 				$thumbnail = get_the_post_thumbnail();
 				
 				if (class_exists('MultiPostThumbnails')
-                && MultiPostThumbnails::has_post_thumbnail( get_post_type(), 'project-thumbnail' ) ) :
-	            	$thumbnail = MultiPostThumbnails::get_the_post_thumbnail( get_post_type(), 'project-thumbnail' );
+                &&  MultiPostThumbnails::has_post_thumbnail( get_post_type(), 'project_thumbnail' ) ) :
+	            	$thumbnail = MultiPostThumbnails::get_the_post_thumbnail( get_post_type(), 'project_thumbnail' );
                 endif;
 				
 ?>
 			<li class = "dMember dContainer" 
 	    		 data-name='<?php echo get_the_title(); ?>'
 	    		 data-position='<?php echo $position; ?>'
-	    		 data-id='<? echo get_the_ID(); ?>'
+	    		 data-id='<?php echo get_the_ID(); ?>'
 			>
 				<div class='dCard'>	
 				    <figure class='front'>
-<?php 				echo $thumbnail;	?>
+<?php 					echo $thumbnail;	?>
 				    </figure>
 				    <figure class='back'>
-<?php 				
-					echo $thumbnail;	?>
+<?php 					echo $thumbnail;	
+						if ( get_post_type() == "project" ):
+?>
+				    	<div class='dMember-info'>
+					    	<h1>
+					    		<?php echo ( get_post_type() == "project" ) ? get_the_excerpt() : $position; ?>
+					    	</h1>
+					    	<p><?php the_title(); ?></p>
+					    </div>
+
+<?php 					else :
+?>
+
 				    	<div class='dMember-info'>
 					    	<h1><?php the_title(); ?></h1>
-					    	<p>
-					    		<?php echo ( get_post_type() == "project" ) ? get_the_excerpt() : $position; ?>
-							</p>
+					    	<p><?php echo $position; ?></p>
 					    </div>
-				    </figure>
+
+<?php 					endif; ?>
+
+				    </figure>					
 				</div>
 			</li>
 <?php

@@ -13,7 +13,10 @@ function register_styles_scripts(){
 	wp_register_style( 'dscreen', plugins_url( 'dynamite-portfolio/styles/stylesheets/screen.css') );
 	wp_register_style( 'dprint', plugins_url( 'dynamite-portfolio/styles/stylesheets/print.css') );
 
+	wp_register_style( 'smoothscrollcss', plugins_url( 'dynamite-portfolio/js/smooth-div-scroll/css/smoothDivScroll.css') );	
+
 	wp_enqueue_style( 'news-font' );
+	wp_enqueue_style( 'smoothscrollcss' );
 	wp_enqueue_style( 'dscreen' );
 	wp_enqueue_style( 'dprint' );
 
@@ -25,11 +28,19 @@ function register_styles_scripts(){
 	wp_register_script( 'cycle-iOSfix', plugins_url( 'dynamite-portfolio/js/ios6fix.js'), array('jquery', 'cycle', 'cycle-swipe') );
 	wp_register_script( 'main', plugins_url( 'dynamite-portfolio/js/script.js'), array('jquery', 'jqueryui') );
 
+	wp_register_script( 'kinetic', plugins_url( 'dynamite-portfolio/js/smooth-div-scroll/jquery.kinetic.min.js' ), array('jqueryui') );
+	wp_register_script( 'mousewheel', plugins_url( 'dynamite-portfolio/js/smooth-div-scroll/jquery.mousewheel.min.js' ), array('jqueryui') );
+	wp_register_script( 'smoothscroll', plugins_url( 'dynamite-portfolio/js/smooth-div-scroll/jquery.smoothdivscroll-1.3-min.js' ), array('jqueryui') );
+
 
 	// wp_enqueue_script( 'isotope' );
 	wp_enqueue_script( 'cycle' );
 	wp_enqueue_script( 'cycle-swipe' );
 	wp_enqueue_script( 'cycle-iOSfix' );
+	wp_enqueue_script( 'kinetic' );
+	wp_enqueue_script( 'mousewheel' );
+	wp_enqueue_script( 'smoothscroll' );
+
 	wp_enqueue_script( 'main' );
 
 }

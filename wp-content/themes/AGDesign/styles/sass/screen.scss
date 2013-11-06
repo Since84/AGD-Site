@@ -23,6 +23,10 @@ body {
 a { 
 	color: $red; 
 	font-weight: 700;
+	:hover{
+		color: $red;
+		text-decoration: underline;
+	}
 }
 
 p {
@@ -48,7 +52,7 @@ h3 {
 
 /** Layout **/ 
 .container { 
-	width: 100%;
+	width: auto;
 	max-width: 1000px;
 	padding: 0 40px; 
 	margin: auto;
@@ -67,8 +71,8 @@ h3 {
 
 .one-third { width: 25%; padding-left: 5%}	
 .two-third { width: 58%; padding-right: 5%}
-.left-column { width: 160px; padding-right: 2%;} 
-.wide-content { width: 809px; }
+.left-column { width: 16%; padding-right: 2%;} 
+.wide-content { width: 80.9%; }
 .col-2 { width: 47%; &:nth-child(odd){ padding-right: 5%; } }
 
 .menu {
@@ -84,6 +88,10 @@ h3 {
 	text-decoration: none;
 	font-weight: 400;
 	color: black;
+	&:hover {
+		color: $red;
+		text-decoration: underline;
+	}
 }
 
 header {
@@ -96,10 +104,12 @@ header {
 		display: inline-block;
 		vertical-align: top;
 		padding-top: 30px;
+		position: absolute;
 	}
 
 	.menu-main-nav-container {
-		width: 59%;
+		height: 100px;
+		float: right;
 		display: inline-block;
 		vertical-align: top;
 		.menu{
@@ -110,6 +120,7 @@ header {
 				height: 36px;
 				margin-top: 1px;
 				margin-right: -3px;
+				width: 100px;
 				a{
 					display: block;
 					text-decoration: none;
@@ -117,7 +128,7 @@ header {
 					font-weight: normal;
 					text-align: center;
 					color: #FFF;
-					width: 105px;
+					width: 100%;
 					height: 97px;
 					padding-top: 12px;
 					&:hover {
@@ -145,7 +156,7 @@ header {
 		text-align: right;
 		padding: 10px;
 		background: #222121;
-		width: 550px;
+		width: auto;
 		float: right;
 		.cf-sb { margin-bottom: 0; }
 	}
@@ -194,6 +205,7 @@ header {
 	.featured-slide-container{
 		position: relative;
 		width: 100%;
+		white-space: nowrap;
 		margin: auto;
 	}
 	
@@ -201,6 +213,7 @@ header {
 		width: 1000px;
 		padding: 0 40px;
 		overflow: hidden;
+		background: $darkGray;
 	}
 
 	.paging{
@@ -250,8 +263,6 @@ header {
 			width: 1000px;
 			height: 400px;
 			overflow: hidden;
-			&:nth-child(odd){ background: red;}
-			&:nth-child(even){ background: blue;}
 		}
 
 		#dFolio{
@@ -359,7 +370,7 @@ display: none;
 		}
 
 		.client-quote {
-			width: 205px;
+			width: 75%;
 			margin-left: 20px;
 
 			& > p {
@@ -488,26 +499,48 @@ display: none;
 /* Project Profiles */
 .page-template-portfolio-php {
 	#dFolio {
-		width: auto;  
+		width: auto; 
+		height: auto; 
 		margin: 20px 0;
+		.dMember {
+			width: 20%;
+			.dCard figure.back .dMember-info {
+				width: 88%;
+				height: 180px;
+				padding: 10px 6%;
+			}
+		}
 		.dBio { 
+			max-height: 0;
+		    -moz-transition: all .5s;
+		    -ms-transition: all .5s;
+		    -o-transition: all .5s;
+		    -webkit-transition: all .5s;
+		    transition: all .5s;
+			&.open {
+			    max-height:500px;
+			}
+
 			img {
+				width: 100%;
 				max-width: 2000px; 
+			}
+			&.projects{
+				height: auto;
 			}
 			.feature-wide, .feature-side{ 
 				display: inline-block; 
 				vertical-align: top;
 			}
 			.feature-wide{
-				width: 700px; 
+				width: 70%; 
 				overflow: hidden;
+				border-right: 5px solid #bbb;
 			}
 			.feature-side{
-				width: 275px;
+				width: 25%;
 				padding: 20px 10px;
 				height: 100%;
-				border-left: 5px solid #bbb;
-				background: #ddd;
 
 				h2 { margin-bottom: 5px; }
 				h1 { margin-bottom: 5px; }
@@ -568,7 +601,6 @@ display: none;
 		position: relative;
 		width: 100%;
 		white-space: nowrap;
-		overflow-x: scroll;
 
 		.post {
 			display: inline-block;
@@ -588,50 +620,56 @@ display: none;
 			.post-title {
 				margin-bottom: 10px;
 				height: 7em;
+				a { color: black; text-decoration: none; }
 			}
 			img { border: 2px solid #bbb; }
 		}
 
 	}
-	.categories {
+	ul.categories {
 		list-style: none;
 		font-size: 14px;
 		font-weight: bold;
 		color: black;
-		ul {
-			font-size: 12px;
-			font-weight: normal;
-			color: black;
-			margin-top: 10px;
-			li{
-				margin-bottom: 0px;
-				list-style: none;
-			}
+		font-size: 12px;
+		font-weight: normal;
+		color: black;
+		margin-top: 10px;
+		li{
+			margin-bottom: 0px;
+			list-style: none;
 		}
 	}
 }
 
 /* Blog Post */
 .single {
+
 	.main-content {
 		time { position: relative; font-size: 10px; margin-bottom: 1.3em;}
-		h1 {
-			font-size: 20px;
-			margin-bottom: 1em;
+		article {
+			h1 {
+				font-size: 20px;
+				margin-bottom: 1em;
+			}	
+			> img {
+				margin-bottom: 10px;
+			}		
 		}
+
 	}
 	.categories {
 		font-weight: 700; 
 		list-style: none;
-		color: black;
-		ul { 
-			margin-top: 3px;
-			padding-top: 3px;
-			li{
-				font-weight: 400;
-				list-style: none;
-				a { color: black; text-decoration: none; font-weight: 400; }
-			}
+		color: black;		 
+		margin-top: 3px;
+		padding-top: 3px;
+		li{
+			list-style: none;
+		}
+		.go-back-button {
+			margin-top: 1em;
+			a { color: $red; }
 		}
 	}
 }
@@ -643,12 +681,13 @@ display: none;
 	font-size: $fontSmall;
 	padding-bottom: 40px;
 	.footer-nav {
-		width: 50%;
+		width: 84%;
+		min-width: 400px;
 		display: inline-block;
 		vertical-align: top;
-		li {
+		> li {
 			display: inline-block;
-			width: 75px;
+			width: auto;
 			vertical-align: top;
 			margin-bottom: 0px;
 			margin-right: 20px;
@@ -656,6 +695,10 @@ display: none;
 				color: $textGray;
 				text-decoration: none;
 				font-weight: 400;
+				&:hover{
+					color: $red;
+					text-decoration: underline;
+				}
 			}
 		}
 	}
@@ -663,8 +706,9 @@ display: none;
 	.footer-social-links {
 		display: inline-block;
 		vertical-align: bottom;
-		text-align: right;
-		width: 49%;
+		text-align: left;
+		width: 15%;
+		min-width: 125px;
 
 		#socialmedia-container DIV.smc_icon_container {
 			margin: 0 !important;
@@ -727,7 +771,7 @@ display: none;
 		.work-with, .collaborate-with {
 			background: $lightGray;
 			padding: 2%;
-			width: 43%;
+			width: 44.3%;
 
 			.open-close {
 				display: block;
@@ -738,16 +782,22 @@ display: none;
 				.arrow-button{
 					width: 20px;
 					height: 20px;
-					background: black;
+					background: url(../images/icons/right-arrow-disc.png) no-repeat;
 					display: inline-block;
 				}
 			}
+			&.open {
+				.cform { 
+					display: inline-block; 
+					margin-top: 20px; 
+					width: 100%;
+				}
+				.arrow-button { background: url(../images/icons/down-arrow-disc.png) no-repeat; }
+			}
+
 			.cform {
 				display: none;
-				&.open {
-					display: inline;
-				}
-
+				margin-top: 20px;
 
 				label {
 					font-weight: bold;
@@ -787,6 +837,12 @@ display: none;
 					height: 34px;
 					-webkit-appearance: none;
 				}
+
+				.cfselectmulti {
+				    border: none;
+				    padding: 10px;
+				}
+
 				li {
 					min-height: 45px;
 					padding-left: 5%;
@@ -813,6 +869,9 @@ display: none;
 					padding: 2%;
 					width: 96%;
 					margin-bottom: 2%;
+				}
+				.cformselect {
+					background: white url(../images/icons/down-arrow-light-disc.png) no-repeat 95% 50%;
 				}
 
 				.cf-sb {

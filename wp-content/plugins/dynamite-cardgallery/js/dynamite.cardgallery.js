@@ -105,12 +105,12 @@
 			var $bioDiv = $(self.element).find('.dBio ');
 
 			self.options.openPosition = { 
-					display: 'block',
-					height: '500'
+					display: 'block'
+					// height: '500'
 				}
 			self.options.closedPosition = { 
 					display: 'block',
-					height: '0px',
+					// height: '0px',
 					opacity: '0'
 				}
 			self._getProject(elem);
@@ -118,15 +118,14 @@
 			if( $bioDiv.hasClass('open') ) {
 				self._closeProject('open');
 				$bioDiv
+					.addClass('open')
 					.animate( self.options.openPosition, self.options.animationSpeed, function(){
 						$(this).animate({opacity: 1}, self.options.animationSpeed, function(){
-							$(this).addClass('open');
 							$(this).unbind();
 						})
 					} )
 			} else {
-				$bioDiv.animate( self.options.openPosition, self.options.animationSpeed, function(){
-					$(this).addClass('open');
+				$bioDiv.addClass('open').animate( self.options.openPosition, self.options.animationSpeed, function(){
 					$(this).unbind();
 				} )
 			}
@@ -137,9 +136,9 @@
 			var $bioDiv = $(this.element).find('.dBio ');
 			
 			$bioDiv
+				.removeClass('open')
 				.animate(self.options.closedPosition, self.options.animationSpeed, function(){
 					$bioDiv
-						.removeClass('open')
 						.empty()
 						.unbind();
 					$(elem).parent('.dContainer').removeClass('active');

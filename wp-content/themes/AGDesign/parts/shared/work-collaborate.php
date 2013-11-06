@@ -1,7 +1,7 @@
 <?php 
 	/* Work and Collaborate Preview Content */ 	
 	$name = $post->post_name;
-	$contactPage = get_page('contact');
+	$contactPage = get_page_by_title('connect');
 ?>			
 
 			<ul class="lower-content">
@@ -20,7 +20,7 @@
 <?php
 						if ( $name != 'contact' ) : 
 ?>					
-							<a href="<?php echo get_permalink('$contactPage->ID' ); ?>"><?php echo $contactLink; ?></a>
+							<a href="<?php echo get_permalink( $contactPage->ID ); ?>"><?php echo $contactLink; ?></a>
 <?php
 						else :
 
@@ -48,7 +48,7 @@
 <?php
 						if ( $name != 'contact' ) : 
 ?>					
-							<a href="<?php echo get_permalink('$contactPage->ID' ); ?>"><?php echo $contactLink; ?></a>
+							<a href="<?php echo get_permalink($contactPage->ID ); ?>"><?php echo $contactLink; ?></a>
 <?php
 						else :
 

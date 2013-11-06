@@ -13,22 +13,17 @@
 <div class='main-content'>
 	<div class="container">
 		<div class="left-column column">
-			<ul>
-			<?php wp_list_categories(); ?> 
+			<ul class="categories">
+<?php 			Starkers_Utilities::get_template_parts( array( 'parts/shared/blog-category-list' ) ); ?> 
 			</ul>
 		</div>
 		<div class="wide-content column">
 			<ul class="blog">
 <?php
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
-?>
-				<li class="post">
-					<h3 class="post-date"><?php the_time('m.d.Y'); ?></h3>
-					<h1 class="post-title"><?php the_title();?></h1>
-					<?php the_post_thumbnail( array('196', '196') ); ?>
-					<?php the_excerpt(); ?>
-				</li>
-<?php
+
+			Starkers_Utilities::get_template_parts( array( 'parts/shared/blogroll-post-block' ) ); 
+
 			endwhile; 
 			else: 
 ?>

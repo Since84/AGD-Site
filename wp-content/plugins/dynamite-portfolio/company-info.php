@@ -131,7 +131,7 @@ function dynamite_get_contact(){
 		,"phone"	            =>	get_option( 'business_phone' )
 		,"fax"		            =>	get_option( 'business_fax' )
 		,"email"	            =>	get_option( 'business_email' )
-        ,"careers_email"        =>  get_option( 'business_email' )
+        ,"careers_email"        =>  get_option( 'business_careers_email' )
 	);
 
 	return $contact;

@@ -17,11 +17,11 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 	<div class="container">
 <?php 	
 	if( !is_home() ){	 
-	  if ( is_page('114') ){
-		  echo get_search_form();
-	  } else {
+	  // if ( is_page('114') ){
+		 //  echo get_search_form();
+	  // } else {
 		  insert_cform('Stay Connected');
-	  }
+	  // }
 	}
 ?>
 <?php if( $headline ) { ?>
@@ -29,7 +29,7 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 <?php 	echo $headline;  ?>
 		</div>
 <?php } else if ( !is_home() ) { ?>
-		<div class="page-title container">
+		<div class="headline page-title container">
 			<?php the_title(); ?>
 		</div>
 <?php } ?>

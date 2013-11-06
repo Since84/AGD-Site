@@ -18,7 +18,15 @@ $features = new WP_Query( $fArgs );
 <?php
 				if ( $features->have_posts() ) : while ( $features->have_posts() ) : $features->the_post();
 ?>
-				<li class='featured-slide'><?php the_post_thumbnail(); ?></li>
+				<li class='featured-slide'>
+				<?php 
+					$link = get_post_meta( get_the_ID(), 'feature_link', true );
+					echo ( $link ) ? '<a href='.$link.'>' : '';
+						the_post_thumbnail(); 
+					echo ( $link ) ? '</a>' : '';
+
+				?>
+				</li>
 <?php
 				endwhile;
 				endif;

@@ -1,5 +1,8 @@
 <?php
 /* Home Main Content */
+
+$accoladesPage = get_page_by_title( 'accolades' );
+$accoladesLink = get_permalink( $accoladesPage->ID );
 ?>
 <div class='main-content'>
 	<div class="container">
@@ -11,7 +14,7 @@
 ?>
 				<h1><?php the_title(); ?></h1>
 				<div><?php the_excerpt(); ?></div>
-				<?php new_excerpt_more("Read What our Clients Have to Say"); ?>
+				<a href="<?php echo $accoladesLink; ?>">Read What Our Clients Have To Say</a>
 <?php
 	endwhile; 
 	endif;
@@ -25,7 +28,7 @@
 ?>
 				<?php the_post_thumbnail();?>
 				<div class="client-quote">
-					<?php the_excerpt(); ?>
+					<?php the_content(); ?>
 					<div class="client-info">
 						<span class="client-name"><?php the_title(); ?></span>
 						<span class="client-position"><?php echo $position; ?></span>

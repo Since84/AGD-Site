@@ -81,6 +81,9 @@
 		wp_register_style( 'screen', get_stylesheet_directory_uri().'/styles/stylesheets/screen.css', '', '', 'screen' );
         wp_enqueue_style( 'screen' );
 
+        wp_register_style( 'responsive', get_stylesheet_directory_uri().'/styles/stylesheets/responsive.css', '', '' );
+        wp_enqueue_style( 'responsive' );
+
 		wp_register_style( 'print', get_stylesheet_directory_uri().'/styles/stylesheets/screen.css', '', '', 'print' );
         wp_enqueue_style( 'print' );
 
