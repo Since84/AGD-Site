@@ -28,6 +28,10 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 		<div class="headline">
 <?php 	echo $headline;  ?>
 		</div>
+<?php } else if ( is_404() ) { ?>
+		<div class="headline page-title container">
+			Oops. We can't seem to find the page you are searching for. 
+		</div>
 <?php } else if ( !is_home() ) { ?>
 		<div class="headline page-title container">
 			<?php the_title(); ?>

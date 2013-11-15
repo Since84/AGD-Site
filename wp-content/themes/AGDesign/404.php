@@ -15,7 +15,7 @@
 	<div class="container">
 		<div class="wide-content column">
 			<p>
-				Oops. We can't seem to find the page you are searching for. Click <a href='javascript:history.back(1);'>Back</a> to go to the previous page or use the navigation above. If you need immediate assistance, please <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>">contact</a> our office directly.
+				Click <a href='javascript:history.back(1);'>Back</a> to go to the previous page or use the navigation above. If you need immediate assistance, please <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>">contact</a> our office directly.
 			</p>
 		</div>
 	</div>
