@@ -43,10 +43,11 @@ function create_post_types() {
 
 	register_post_type( 'team',
 		array(
-			'label' => 'Member',
-			'public' => true,
-			'has_archive' => true,
-			'supports' => array('title', 'thumbnail', 'editor')
+			'label' 		=> 'Member',
+			'public' 		=> true,
+			'rewrite'       => array( 'slug' => 'our-team' ),
+			'has_archive' 	=> true,
+			'supports' 		=> array('title', 'thumbnail', 'editor')
 		)
 	);
 }

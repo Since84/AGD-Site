@@ -32,6 +32,55 @@ function add_post_thumbs(){
 
 		new MultiPostThumbnails(
 				array(
+					'label' => 'Feature 5',
+					'id' => 'feature_5',
+					'post_type' => 'project'
+				)
+			);
+
+		new MultiPostThumbnails(
+				array(
+					'label' => 'Feature 6',
+					'id' => 'feature_6',
+					'post_type' => 'project'
+				)
+			);
+
+		new MultiPostThumbnails(
+				array(
+					'label' => 'Feature 7',
+					'id' => 'feature_7',
+					'post_type' => 'project'
+				)	
+			);
+
+		new MultiPostThumbnails(
+				array(
+					'label' => 'Feature 8',
+					'id' => 'feature_8',
+					'post_type' => 'project'
+				)
+			);
+
+		new MultiPostThumbnails(
+				array(
+					'label' => 'Feature 9',
+					'id' => 'feature_9',
+					'post_type' => 'project'
+				)
+			);
+
+		new MultiPostThumbnails(
+				array(
+					'label' => 'Feature 10',
+					'id' => 'feature_10',
+					'post_type' => 'project'
+				)	
+			);
+
+
+		new MultiPostThumbnails(
+				array(
 					'label' => 'Thumb',
 					'id' => 'project_thumbnail',
 					'post_type' => 'project'
@@ -41,7 +90,7 @@ function add_post_thumbs(){
 }
 
 function dynamite_get_project_features( $postID ){
-	$imageArray = Array( 'feature_2', 'feature_3', 'feature_4' );
+	$imageArray = Array( 'feature_2', 'feature_3', 'feature_4', 'feature_5', 'feature_6', 'feature_7','feature_8', 'feature_9','feature_10' );
 
 	if ( has_post_thumbnail( $postID ) ) : 
 

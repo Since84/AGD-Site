@@ -1,0 +1,146 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+
+.block { /* Block wrapper */
+  margin-bottom: 1.5em;
+}
+
+.block.first { /* The first block in the region */
+}
+
+.block.last { /* The last block in the region */
+}
+
+.block.odd { /* Zebra striping for each block in the region */
+}
+
+.block.even { /* Zebra striping for each block in the region */
+}
+
+h2.block-title { /* Block title */
+}
+
+#block-aggregator-category-1 { /* Block for the latest news items in the first category */
+}
+
+#block-aggregator-feed-1 { /* Block for the latest news items in the first feed */
+}
+
+#block-block-1 { /* First block created with "Add block" link */
+	background: #FFF;
+	max-width: 1200px;
+	margin:0 auto;
+	border-top: 3px solid #D3D3D3;
+	clear: both;
+}
+
+#block-views-staff-images-block {margin-top: 25px;}
+#block-views-staff-images-block .item-list {padding-top: 14px;}
+#block-views-staff-images-block ul {
+	padding: 0;
+	margin: 0;
+}
+#block-views-staff-images-block li {list-style: none}
+#block-views-staff-images-block img {border: 3px solid #E2E2E2;cursor: pointer;}
+#block-views-staff-images-block .field-name-field-staff-name {
+	cursor: pointer;
+	height: 41px;
+	width: 263px;
+	text-align: center;
+	position: relative;
+	padding: 24px 0 0;
+	color: #FFF;
+	background: rgba(0, 0, 0, .6); 
+	text-transform: uppercase;
+	margin-bottom: 6px;
+	z-index: 2;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s ease-out;  
+	   -moz-transition: opacity 0.3s ease-out;  
+	     -o-transition: opacity 0.3s ease-out;  
+	        transition: opacity 0.3s ease-out;
+}
+#block-views-staff-images-block .field-name-field-staff-name:hover {
+	opacity: 1;
+}
+#block-views-staff-images-block .staffimage {position: absolute;top: 76px;z-index: 1;}
+
+#block-views-homepage-blog-block { padding: 0 43px 0; max-width: 1200px; margin-bottom: 0; margin-top: 10px; }
+#block-views-homepage-blog-block img { border: 5px solid #d3d3d3; filter: url(filters.svg#grayscale); filter: gray; -webkit-filter: grayscale(1); }
+#block-views-homepage-blog-block a:hover img { border: 5px solid #4F4C4C; filter: none; -webkit-filter: grayscale(0); }
+#block-views-homepage-blog-block .views-row { float: left; margin-right: 10px; }
+
+#block-blog-recent { /* "Recent blog posts" block */
+}
+
+#block-book-navigation { /* "Book navigation" block for the current book's table of contents */
+}
+
+#block-comment-recent { /* "Recent comments" block */
+}
+
+#block-forum-active { /* "Active forum topics" block */
+}
+
+#block-forum-new { /* "New forum topics" block */
+}
+
+#block-locale-language { /* Language switcher block */
+}
+
+#block-menu-menu-NAME { /* Custom menu block */
+}
+
+#block-node-recent { /* "Recent content" block */
+}
+
+#block-node-syndicate { /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
+}
+
+#block-poll-recent { /* "Most recent poll" block */
+}
+
+#block-profile-author-information { /* "Author information" block for the profile of the page's author */
+}
+
+#block-search-form { /* "Search form" block */
+}
+
+#block-shortcut-shortcuts { /* "Shortcuts" block */
+}
+
+#block-statistics-popular { /* "Popular content" block */
+}
+
+#block-system-main-menu { /* "Main menu" block */
+}
+
+#block-system-management { /* "Management" block for Drupal management menu */
+}
+
+#block-system-navigation { /* "Navigation" block for Drupal navigation menu */
+}
+
+#block-system-user-menu { /* "User menu" block for Drupal user menu */
+}
+
+#block-system-help { /* "System help" block */
+}
+
+#block-system-main { /* "Main page content" block */
+}
+
+#block-system-powered-by { /* "Powered by Drupal" block */
+}
+
+#block-user-login { /* "User login form" block */
+}
+
+#block-user-new { /* "Who's new" block for a list of the newest users */
+}
+
+#block-user-online { /* "Who's online" block for a list of the online users */
+}
