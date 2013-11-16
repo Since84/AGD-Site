@@ -522,8 +522,9 @@ display: none;
 		.dMember {
 			width: 20%;
 			.dCard figure.back .dMember-info {
-				width: 88%;
-				height: 180px;
+				box-sizing: border-box;
+				width: 100%;
+				height: 100%;
 				padding: 10px 6%;
 			}
 		}
