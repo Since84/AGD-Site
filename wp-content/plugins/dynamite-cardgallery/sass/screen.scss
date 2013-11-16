@@ -56,7 +56,11 @@
 	 -moz-perspective: 800px;
 	   -o-perspective: 800px;
 	      perspective: 800px;
-	      transition: all 0.5s ease;	
+
+	-moz-transform:perspective(800px) rotateY(0);
+		-webkit-transform:perspective(800px) rotateY(0);
+		transform:perspective(800px) rotateY(0);
+	      transition: all 0.25s ease;	
 		.open{
 			position: absolute;
 			top: 0;
@@ -64,49 +68,54 @@
 		}
 
 		.dCard {
+			position: absolute;
 			width: 100%;
 			height: 100%;
-			position: absolute;
-			transform-style: preserve-3d;
-      -webkit-transition: -webkit-transform .75s;
-         -moz-transition: -moz-transform .75s;
-           -o-transition: -o-transform .75s;
-              transition: transform .75s;
-              transition: all 0.5s ease;
-      -webkit-transform-style: preserve-3d;
-         -moz-transform-style: preserve-3d;
-           -o-transform-style: preserve-3d;
-              transform-style: preserve-3d;
-      -webkit-transform-origin: right center;
-         -moz-transform-origin: right center;
-           -o-transform-origin: right center;
-              transform-origin: right center;
+
 			figure {
-			  display: block;
-			  position: absolute;
-			  width: 100%;
-			  height: 100%;
-      -webkit-backface-visibility: hidden;
-         -moz-backface-visibility: hidden;
-           -o-backface-visibility: hidden;
-              backface-visibility: hidden;
+				position:absolute;
+				left:0;
+				top:0;
+				width:200px;
+				height:200px;
+				background:#3C404B;
+				-webkit-transition:1s ease-in-out;
+				-moz-transition:1s ease-in-out;
+				transition:1s ease-in-out;
+
+				&.back {
+					background:#000;
+					-moz-backface-visibility:hidden;
+					-webkit-backface-visibility:hidden;
+					backface-visibility:hidden;
+					-moz-transform:perspective(800px) rotateY(180deg);
+					-webkit-transform:perspective(800px) rotateY(180deg);
+					transform:perspective(800px) rotateY(180deg);
+				}
+
+				&.front {
+					-moz-backface-visibility:hidden;
+					-webkit-backface-visibility:hidden;
+					backface-visibility:hidden;
+					-moz-transform:perspective(800px) rotateY(0deg);
+					-webkit-transform:perspective(800px) rotateY(0deg);
+					transform:perspective(800px) rotateY(0deg);
+				}
 			}
-			&.flipped, &.activeCard{
-      -webkit-transform: translateX( -100% ) rotateY( -180deg );
-         -moz-transform: translateX( -100% ) rotateY( -180deg );
-           -o-transform: translateX( -100% ) rotateY( -180deg );
-              transform: translateX( -100% ) rotateY( -180deg );
+
+			&:hover { 
+				.front {
+					-webkit-transform:perspective(800px) rotateY(-179.9deg);
+					-moz-transform:perspective(800px) rotateY(-179.9deg);
+					transform:perspective(800px) rotateY(-179.9deg);
+				}
+				.back {
+					-moz-transform:perspective(800px) rotateY(0);
+					-webkit-transform:perspective(800px) rotateY(0);
+					transform:perspective(800px) rotateY(0);
+				}
 			}
-			.front {
-			  background: url('../img/bottles.jpeg') no-repeat;
-			}
-			.back {
-			  background: blue;
-      -webkit-transform: rotateY( 180deg );
-         -moz-transform: rotateY( 180deg );
-           -o-transform: rotateY( 180deg );
-              transform: rotateY( 180deg );
-			}
+
 		}
 
 		.dBio {
