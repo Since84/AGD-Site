@@ -17,3 +17,9 @@
     width: 68%;
   }
 }
+@media (max-width: 720px) {
+  /* line 23, ../sass/responsive.scss */
+  body {
+    min-width: 1080px;
+  }
+}
