@@ -3,6 +3,7 @@
 <!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]--> 
 <!--[if IE 7 ]><html class="no-js ie7" lang="en"><![endif]--> 
 <!--[if IE 8 ]><html class="no-js ie8" lang="en"><![endif]--> 
+<!--[if IE 8]><script src="js/browser-warning/warning.js"></script><script>window.onload=function(){e("js/browser-warning/")}</script><![endif]-->
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	<head>
 		<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
