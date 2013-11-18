@@ -22,9 +22,4 @@
   body {
     min-width: 1080px;
   }
-
-  @viewport {
-    zoom: 1.0;
-    width: extend-to-zoom;
-}
 }
