@@ -25,6 +25,6 @@
 
   @viewport {
     zoom: 1.0;
-    width: device-width;
+    width: extend-to-zoom;
 }
 }
