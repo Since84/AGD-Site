@@ -53,6 +53,7 @@
 
 
 		},
+
 		runIsotope: function(){
 		$(this.element).isotope({
 	        itemSelector: '.testBlock'
