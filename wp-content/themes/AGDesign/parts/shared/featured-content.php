@@ -14,7 +14,6 @@ $features = new WP_Query( $fArgs );
 			<ul class="featured-slide-container">
 				<li class='featured-slide'>
 					<?php get_dFolio( "project", "10", "feature" ); ?>
-				</li>
 <?php
 				if ( $features->have_posts() ) : while ( $features->have_posts() ) : $features->the_post();
 ?>
@@ -26,7 +25,6 @@ $features = new WP_Query( $fArgs );
 					echo ( $link ) ? '</a>' : '';
 
 				?>
-				</li>
 <?php
 				endwhile;
 				endif;

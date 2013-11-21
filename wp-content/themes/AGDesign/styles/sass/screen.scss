@@ -202,6 +202,11 @@ header {
 	width: 100%;
 	background: $darkGray;
 	padding: 0 0 40px; 
+
+	#dFolio .dGallery{
+		position: absolute;
+	}
+
 	.featured-slide-container{
 		position: relative;
 		width: 100%;
@@ -443,6 +448,14 @@ display: none;
 }
 
 /* Team */
+.page-template-team-template-php{
+	#dFolio {
+		.dMember {
+			width: 25%;
+		}
+	}
+}
+
 .lower-content {
 	width: 100%;
 	position: relative;
@@ -468,7 +481,7 @@ display: none;
 	h1, h2 { margin-bottom: 5px; }
 	h2 { border: none; padding-bottom: 0; font-weight: normal; }
 	.close { 
-		display: none;
+		display: block;
 		position: absolute;
 		top: 20px;
 		left: 20px;
@@ -477,7 +490,6 @@ display: none;
 		background: $close-button 50% 50% no-repeat;
 		z-index: 10;
 	}
-	&:hover .close { display: block; }
 	.member-social {
 		position: relative;
 		margin: 5px 0 40px;
@@ -522,7 +534,7 @@ display: none;
 		.dMember {
 			width: 20%;
 			.dCard figure.back .dMember-info {
-				box-sizing: border-box;
+				box-sizing: border-box; 
 				width: 100%;
 				height: 100%;
 				padding: 10px 6%;

@@ -40,13 +40,33 @@
 			  };
 			})();
 
+
 			$(window).resize(function(){
+				self.resizeGallery();
 				waitForFinalEvent(function(){
 					console.log("RESIZE");
 					self.resizeContainer();
 				}, 500, "sliderReposition" );
 			})
 
+			imagesLoaded( '.dGallery', function(){
+				self.resizeGallery();
+			});
+
+		},
+		resizeGallery: function(){
+			var self = this;
+			var gallery = $(self.element).find('.dGallery');
+
+			gallery.each(function() {
+        		var newHeight = 0, 
+        		$this = $( this );
+
+		        $.each( $this.children(), function() {
+		            newHeight += $( this ).height();
+		        });
+		        $this.height( newHeight );
+		    });
 		},
 		resizeContainer: function(){
 			var self = this;

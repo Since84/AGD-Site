@@ -17,7 +17,9 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 ?>
 	<div id = "dFolio" data-pid= "<?php echo $pid; ?>">
 		<div class = "dBio <?php echo $pageSlug; ?>" data-page="<?php echo $pageSlug; ?>"></div>
-		<ul class = "dGallery>">
+		<div class = "dGallery">
+			<ul>
+
 <?php
 	global $post;
 	if ( $list->have_posts() ) {
@@ -65,12 +67,12 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 
 				    </figure>					
 				</div>
-			</li>
 <?php
 		}
 	}
 ?>
-		</ul>
+			</ul>
+		</div>
 	</div>
 <?php 
 } 

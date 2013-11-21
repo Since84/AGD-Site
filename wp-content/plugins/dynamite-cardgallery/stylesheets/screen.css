@@ -111,12 +111,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 0;
 }
 /* line 49, ../sass/screen.scss */
+#dFolio .dGallery {
+  white-space: normal;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/* line 57, ../sass/screen.scss */
 #dFolio .dContainer {
   position: relative;
-  display: block;
-  float: left;
+  display: inline-block;
   width: 20%;
-  height: 20%;
+  height: auto;
   -webkit-perspective: 800px;
   -moz-perspective: 800px;
   -o-perspective: 800px;
@@ -126,32 +134,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transform: perspective(800px) rotateY(0);
   transition: all 0.25s ease;
 }
-/* line 64, ../sass/screen.scss */
-#dFolio .dContainer .open {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-/* line 70, ../sass/screen.scss */
-#dFolio .dContainer .dCard {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
 /* line 75, ../sass/screen.scss */
 #dFolio .dContainer .dCard figure {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background: #3C404B;
   -webkit-transition: 1s ease-in-out;
   -moz-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
-/* line 86, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 #dFolio .dContainer .dCard figure.back {
+  position: absolute;
+  left: 0;
+  top: 0;
   background: #000;
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -160,7 +155,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-transform: perspective(800px) rotateY(180deg);
   transform: perspective(800px) rotateY(180deg);
 }
-/* line 96, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
+#dFolio .dContainer .dCard figure.back .dMember-info {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 10px 6%;
+  top: 0;
+  left: 0;
+}
+/* line 106, ../sass/screen.scss */
 #dFolio .dContainer .dCard figure.front {
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -169,44 +174,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-transform: perspective(800px) rotateY(0deg);
   transform: perspective(800px) rotateY(0deg);
 }
-/* line 107, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
+#dFolio .dContainer .dCard figure img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 123, ../sass/screen.scss */
 #dFolio .dContainer .dCard:hover .front {
   -webkit-transform: perspective(800px) rotateY(-179.9deg);
   -moz-transform: perspective(800px) rotateY(-179.9deg);
   transform: perspective(800px) rotateY(-179.9deg);
 }
-/* line 112, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 #dFolio .dContainer .dCard:hover .back {
   -moz-transform: perspective(800px) rotateY(0);
   -webkit-transform: perspective(800px) rotateY(0);
   transform: perspective(800px) rotateY(0);
-}
-/* line 121, ../sass/screen.scss */
-#dFolio .dContainer .dBio {
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  background: orange;
-  display: none;
-  transition: all 0.5s ease;
-}
-/* line 129, ../sass/screen.scss */
-#dFolio .dContainer.open .dBio {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-/* line 135, ../sass/screen.scss */
-#dFolio .dContainer.closed {
-  width: 0px;
-  height: 0px;
-  opacity: 0;
-}
-/* line 140, ../sass/screen.scss */
-#dFolio .dContainer.open {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
