@@ -128,7 +128,7 @@ function get_project_profile() {
 	$block .= 	"<div class='feature-pager'></div>";
 	$block .= 	"<h1 class='project-name'>".$project->post_title."</h1>";
 	// $block .=	"<h2 class='project-type'>".$projectBlock."</h2>";
-	$block .= 	"<div class='project-profile'>".$project->post_excerpt."</div>";
+	$block .= 	"<div class='project-profile'>".$project->post_content."</div>";
 	$block .=   $serviceBlock;
 	$block .= "</div>";
 
