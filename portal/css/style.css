@@ -13,12 +13,12 @@
 	
 	
 	/**** MAIN STYLES ****/
-	 body {font-size:16px;  font-family: Helvetica, Arial, sans-serif; color:#069;}
+	 body {font-size:16px;  font-family: Helvetica, Arial, sans-serif; color:#069; }
 	 .wrapper {  padding:15px; margin-top:20px; }
 	 h1 {font-size:18px;}
 	.pppro_footer { width:580px; margin:0 auto; text-align:right; padding-top:15px;}
 	
-	.form_container h1 { font-size:28px; font-weight:bold;text-shadow: 1px 1px 0 white; text-align:left; width:580px; margin:0 auto; padding-bottom:20px; color:#666; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; padding-top:30px;}
+	.form_container h1 { font-size:18px; font-weight:bold;text-align:left; width:580px; margin:0 auto; padding-bottom:20px; color:#666; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; padding-top:30px;}
 	.clr { clear:both;}
 	
 	/**** PROCESSING PAGE (REDIRECTION) ****/
@@ -28,21 +28,21 @@
 	/**** ACCORDIONS STYLING ****/
 	#accordion {width: 580px;border:1px solid #EEE; color:#000; background-color:#FFF;	}
 	/* accordion header */
-	#accordion h2 {background:#e4e4e4;margin:0;text-align:left;	height:30px;padding:10px 0 0 15px;font-size:18px;font-weight:bold;color:#000;border:1px solid #fff;		border-bottom:1px solid #ddd;cursor:pointer;text-shadow: 1px 1px 0 white;}
-	/* currently active header */
-	#accordion h2.current {	cursor:default;background-color:#EEE;}
+	#accordion h2 {background:#f4f4f4;margin:0;text-align:left;	height:30px;padding:10px 0 0 15px;font-size:16px;font-weight:bold;color:#000;border-bottom:1px solid #ddd;cursor:pointer;}
+	/* currently active header */ 
+	#accordion h2.current {	cursor:default; }
 	/* accordion pane */
 	#accordion .pane {border:1px solid #fff; border-width:0 2px;  padding:15px;	 color:#000; font-size:12px; text-align:left;}
 	.ui-widget { width:580px;}
 	.ui-widget .ui-state-error, .ui-widget .ui-state-error p, .ui-widget .ui-state-highlight, .ui-widget .ui-state-highlight p, .ui-widget .ui-state-info, .ui-widget .ui-state-info p { font-size:13px; text-align:left;}
     .ui-widget .ui-state-info { padding-top: 10px !important; padding-bottom: 10px !important;}
 	/**** FORM STYLING ****/
-	.pppt_form label { float:left; width:140px; font-size:13px; font-weight:bold; text-align:right; padding:4px 5px 0 0;}
-	.pppt_form .long-field { float:left; -webkit-border-radius: 3px;-khtml-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;width:245px;height:20px;padding-left:5px;border:1px solid #666666;
+	.pppt_form label { float:left; width:140px; font-size:13px; text-align:right; padding:4px 5px 0 0;}
+	.pppt_form .long-field { float:left; width:245px; height:20px; padding-left:5px; border:1px solid #dddddd;
 background-color:#F8F8F8;margin-bottom:8px;}
 	.pppt_form .long-field:hover { border:1px solid #CCC;}
 	.pppt_form .long-field:focus { border:1px solid #6B1289;}
-	.pppt_form .small-field { float:left; -webkit-border-radius: 3px;-khtml-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;width:60px;height:20px;padding-left:5px;border:1px solid #666666;
+	.pppt_form .small-field { float:left; width:60px;height:20px;padding-left:5px;border:1px solid #dddddd;
 background-color:#F8F8F8;margin-bottom:8px; margin-right:10px;}
 	.pppt_form .small-field:hover { border:1px solid #CCC;}
 	.pppt_form .small-field:focus { border:1px solid #6B1289;}

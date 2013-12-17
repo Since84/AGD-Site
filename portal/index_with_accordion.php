@@ -17,7 +17,7 @@
 	//DEFAULT PARAMETERS FOR FORM [!DO NOT EDIT!]
 	$show_form=1;
     if(!isset($mess)){ $mess = ""; }
-	//REQUEST VARIABLES 
+	//REQUEST VARIABLES
 	$item_description = (!empty($_REQUEST["item_description"]))?strip_tags(str_replace("'","`",$_REQUEST["item_description"])):'';
 	$amount = (!empty($_REQUEST["amount"]))?strip_tags(str_replace("'","`",$_REQUEST["amount"])):'';
 	$fname = (!empty($_REQUEST["fname"]))?strip_tags(str_replace("'","`",$_REQUEST["fname"])):'';
@@ -29,18 +29,19 @@
 	$state = (!empty($_REQUEST["state"]))?strip_tags(str_replace("'","`",$_REQUEST["state"])):'';
 	$zip = (!empty($_REQUEST["zip"]))?strip_tags(str_replace("'","`",$_REQUEST["zip"])):'';
 	$service = (!empty($_REQUEST['service']))?strip_tags(str_replace("'","`",strip_tags($_REQUEST['service']))):'0';
-	
-	//FORM SUBMISSION PROCESSING 
+
+	//FORM SUBMISSION PROCESSING
 	if(!empty($_POST["process"]) && $_POST["process"]=="yes"){
 		require("includes/form.processing.php");
-	}  
-	//REQUIRE SITE HEADER TEMPLATE		
-	require "includes/site.header.php"; 
+	}
+	//REQUIRE SITE HEADER TEMPLATE
+	require "includes/site.header.php";
 ?>
 <div align="center" class="wrapper">
 <?php include "includes/javascript.validation.php"; ?>
-  	
+
     <div class="form_container">
+    	<h1>PayPal PRO Payment Terminal</h1>
         <?php echo $mess; ?>
         <form id="ff1" name="ff1" method="post" action="" enctype="multipart/form-data" onsubmit="return checkForm();" class="pppt_form">
             <div id="accordion">
@@ -51,10 +52,10 @@
                 	<?php if($show_services || $payment_mode=="RECUR"){
 						echo "<label>Service: </label><select name='service' id='service' class='long-field' onchange='checkFieldBack(this)'><option value=''>Please Select</option>";
 						switch($payment_mode){
-						
+
 						case"ONETIME":
 							//IF services specified in config file - we show services.
-							
+
 							foreach($services as $k=>$v){
 								echo "<option value='".$k."' ".($service==$k?"selected":"").">".$v[0]." ($".number_format($v[1],2).")"."</option>";
 							}
@@ -62,7 +63,7 @@
 						break;
 						case"RECUR":
 							//IF services specified in config file - we show services.
-							
+
 							foreach($recur_services as $k=>$v){
 								echo "<option value='".$k."' ".($service==$k?"selected":"").">".$v[0]." ($".number_format($v[1],2).")"."</option>";
 							}
@@ -80,30 +81,30 @@
                     <?php } ?>
                 </div>
             	<!-- PAYMENT BLOCK -->
-            
-            
+
+
             	<!-- BILLING BLOCK -->
                 <h2>Billing Information</h2>
                 <div class="pane">
                  	<label>First Name:</label>
                     <input name="fname" id="fname" type="text" class="long-field"  value="<?php echo $fname;?>" onkeyup="checkFieldBack(this);" />
                     <div class="clr"></div>
-                    
+
                      <label>Last Name:</label>
                     <input name="lname" id="lname" type="text" class="long-field"  value="<?php echo $lname;?>" onkeyup="checkFieldBack(this);" />
                     <div class="clr"></div>
-                    
+
                      <label>Address:</label>
                     <input name="address" id="address" type="text" class="long-field"  value="<?php echo $address;?>" onkeyup="checkFieldBack(this);" />
                     <div class="clr"></div>
-                    
+
                      <label>City:</label>
                     <input name="city" id="city" type="text" class="long-field"  value="<?php echo $city;?>" onkeyup="checkFieldBack(this);" />
                     <div class="clr"></div>
-                    
+
                     <label>Country:</label>
-                    <select name="country" id="country" class="long-field" onchange="checkFieldBack(this);"> 
-                 		<option value="">Please Select</option> 
+                    <select name="country" id="country" class="long-field" onchange="checkFieldBack(this);">
+                 		<option value="">Please Select</option>
                  		<option value="US" <?php echo $country=="US"?"selected":""?>>United States</option>
                         <option value="CA" <?php echo $country=="CA"?"selected":""?>>Canada</option>
                         <option value="UK" <?php echo $country=="UK"?"selected":""?>>United Kingdom</option>
@@ -322,7 +323,7 @@
                         <option value="ZW" <?php echo $country=="ZW"?"selected":""?>>Zimbabwe</option>
                     </select>
                     <div class="clr"></div>
-                    
+
                      <label>State/Province:</label>
                       <select name="state" id="state" class="long-field" onchange="checkFieldBack(this);">
                         <option value="">Please Select</option>
@@ -416,15 +417,15 @@
                         <label>ZIP/Postal Code:</label>
                     <input name="zip" id="zip" type="text" class="small-field"  value="<?php echo $zip;?>" onkeyup="checkFieldBack(this);" />
                     <div class="clr"></div>
-                    
+
                      <label>E-mail:</label>
                     <input name="email" id="email" type="text" class="long-field"  value="<?php echo $email;?>" onkeyup="checkFieldBack(this);" />
                     <div class="clr"></div>
-                    
+
                 </div>
                 <!-- BILLING BLOCK -->
-            
-            
+
+
             	<!-- CREDIT CARD BLOCK -->
                 <h2>Credit Card Information</h2>
                 <div class="pane">
@@ -475,21 +476,27 @@
                         </noscript>
                         <div class="clr"></div>
                     </div>
-                    
+
 
                     <div class="submit-btn"><input src="images/btn_submit.jpg" type="image" name="submit" /></div>
-                    <input type="hidden" name="process" value="yes" />	
+                    <input type="hidden" name="process" value="yes" />
                 </div>
             	<!-- CREDIT CARD BLOCK -->
                 <?php } ?>
-            
-            </div>
-        </form> 
-    </div>
-    
 
-    
+            </div>
+        </form>
+    </div>
+
+
+
 </div>
 
-
+<!-- activate tabs with JavaScript -->
+<script>
+$(function() {
+	$(".pane:not(:first)").hide();
+	$("#accordion").tabs("#accordion div.pane", {tabs: 'h2', effect: 'slide', initialIndex: null});
+});
+</script>
 <?php require "includes/site.footer.php"; ?>
