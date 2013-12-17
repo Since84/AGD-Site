@@ -1,0 +1,124 @@
+body
+{
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	margin:0;
+}
+
+.Bold {
+	font-weight:bold;
+}
+.accentColor {
+	color:#6f0025;
+	font-weight:bold;
+}
+.errorMsg {
+	color:#6f0025;
+	font-weight:bold;
+}
+.Totals {
+	font-weight:bold;
+	border-top:double;
+}
+td {
+	color:#666666;
+	border:none;
+	border-bottom-style:none;
+}
+td a {
+	text-decoration:none;
+	color:#aa0000;
+}
+td a:hover {
+	color:#333333;
+}
+.footer{
+	font-size: 11px; 
+	color: #999; 
+	font-weight:normal; 
+	text-decoration:none; 
+}
+.logout a {
+	color: #333; 
+	font-size: 11px; 
+	font-weight: bold; 
+	text-decoration: none;
+	text-align:right; 
+}
+.logout a:hover {
+	color: #6f0025; 
+}
+.pagetitle {
+	color: #6f0025;
+	font-weight: bold;
+	font-size: 14px;
+}
+.categorytitle {
+	color: #6f0025;
+	font-weight: bold;
+}
+.tableHeadings {
+	color: #000000;
+	background-color:#EEEEEE;
+	font-weight: bold;
+}
+.tableFields {
+	border-bottom:thin; 
+	border-bottom-color:#CCCCCC; 
+	border-bottom-style:dotted;
+}
+#mainContent {
+	margin-left:20px;
+}
+/* Vertical Menu */
+#divVert {
+	width: 150px;
+	padding: 0px;
+	margin-top:0px;
+	font-size:10px;
+	font-weight:bold;
+	color:#999999;
+}
+#divVert td {
+	border-bottom:thin; border-bottom-color:#333333; border-bottom-style:solid;
+}
+#divVert a.current {
+	background-color: #ffff99;
+}
+#divVert a:link, 
+#divVert a:visited, 
+#divVert a:active 
+{
+	color: #000000;
+	display:block;
+}
+#divVert a:hover {
+	color: #aa0000;
+}
+#divVert .current a:link {
+	background-color: #eeeeee;
+}
+input {
+	font-size: 10px;
+	font-weight: bold;
+}
+#loginText {
+	color:#ffffff;
+}
+#loginText a{
+	color:#ffffff;
+}
+.Copyright {
+	font-size:9px;
+	text-align:center;
+}
+#tipTrick {
+	padding:20px;
+	background-color:#CCCCCC;
+}
+.pageEditBars {
+	background-color:#dddddd;
+	font-size:10px;
+	color:#0A0E0D;
+}
