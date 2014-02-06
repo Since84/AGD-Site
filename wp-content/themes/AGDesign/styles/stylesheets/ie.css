@@ -7,3 +7,13 @@
 #_ul li {
   display: inline-block !important;
 }
+
+/* line 11, ../sass/ie.scss */
+#_l {
+  z-index: 99998;
+}
+
+/* line 12, ../sass/ie.scss */
+#_d {
+  z-index: 99999;
+}
