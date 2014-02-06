@@ -13,9 +13,8 @@
 		<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
 		<?php wp_head(); ?>
 <!--[if IE 8 ]>
-<![endif]--> 
 		<link href="<?php bloginfo('template_url'); ?>/styles/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<script src="<?php bloginfo('template_url'); ?>/js/browser-warning/warning.js"></script><script>window.onload=function(){e("<?php bloginfo('template_url'); ?>/js/browser-warning/")}</script>
-
+<![endif]--> 
 	</head>
 	<body <?php body_class(); ?>>
