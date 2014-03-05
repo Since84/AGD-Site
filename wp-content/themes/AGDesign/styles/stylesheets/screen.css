@@ -784,12 +784,14 @@ header .menu-main-nav-container .menu li.current_page_item a {
 }
 /* line 537, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dMember .dCard figure.back .dMember-info {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding: 10px 6%;
 }
-/* line 544, ../sass/screen.scss */
+/* line 546, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio {
   max-height: 0;
   -moz-transition: all .5s;
@@ -798,100 +800,100 @@ header .menu-main-nav-container .menu li.current_page_item a {
   -webkit-transition: all .5s;
   transition: all .5s;
 }
-/* line 551, ../sass/screen.scss */
+/* line 553, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio.open {
   max-height: 500px;
 }
-/* line 555, ../sass/screen.scss */
+/* line 557, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio img {
   width: 100%;
   max-width: 2000px;
 }
-/* line 559, ../sass/screen.scss */
+/* line 561, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio.projects {
   height: auto;
 }
-/* line 562, ../sass/screen.scss */
+/* line 564, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-wide, .page-template-portfolio-php #dFolio .dBio .feature-side {
   display: inline-block;
   vertical-align: top;
 }
-/* line 566, ../sass/screen.scss */
+/* line 568, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-wide {
   width: 70%;
   overflow: hidden;
   border-right: 5px solid #bbb;
 }
-/* line 571, ../sass/screen.scss */
+/* line 573, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side {
   width: 25%;
   padding: 20px 10px;
   height: 100%;
 }
-/* line 576, ../sass/screen.scss */
+/* line 578, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side h2 {
   margin-bottom: 5px;
 }
-/* line 577, ../sass/screen.scss */
+/* line 579, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side h1 {
   margin-bottom: 5px;
 }
-/* line 579, ../sass/screen.scss */
+/* line 581, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side li {
   list-style: none;
   margin-bottom: 2px;
 }
-/* line 582, ../sass/screen.scss */
+/* line 584, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side .feature-pager {
   height: 10px;
   margin-bottom: 30px;
 }
-/* line 585, ../sass/screen.scss */
+/* line 587, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side .feature-pager span {
   font-size: 40px;
   color: white;
   margin-right: 5px;
   cursor: pointer;
 }
-/* line 590, ../sass/screen.scss */
+/* line 592, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side .feature-pager span.cycle-pager-active {
   color: #bbb;
 }
-/* line 596, ../sass/screen.scss */
+/* line 598, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side .project-profile {
   margin-top: 10px;
 }
-/* line 597, ../sass/screen.scss */
+/* line 599, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side .project-type {
   font-weight: 400;
 }
-/* line 598, ../sass/screen.scss */
+/* line 600, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side .project-services {
   margin-top: 20px;
 }
-/* line 600, ../sass/screen.scss */
+/* line 602, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .feature-side .project-services h2 {
   font-weight: 400;
   color: black;
   margin-bottom: 2px;
 }
-/* line 607, ../sass/screen.scss */
+/* line 609, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dBio .close {
   right: 20px;
   left: auto;
 }
 
 /* Testimonials */
-/* line 618, ../sass/screen.scss */
+/* line 620, ../sass/screen.scss */
 .main-content.testimonials img {
   float: left;
   margin-right: 10px;
 }
-/* line 619, ../sass/screen.scss */
+/* line 621, ../sass/screen.scss */
 .main-content.testimonials p {
   margin-bottom: 5px;
 }
-/* line 622, ../sass/screen.scss */
+/* line 624, ../sass/screen.scss */
 .main-content.testimonials h2 {
   border: none;
   padding-bottom: 0;
@@ -899,13 +901,13 @@ header .menu-main-nav-container .menu li.current_page_item a {
 }
 
 /* Blogroll */
-/* line 631, ../sass/screen.scss */
+/* line 633, ../sass/screen.scss */
 .page-template-blogroll-php .blog, .category .blog {
   position: relative;
   width: 100%;
   white-space: nowrap;
 }
-/* line 636, ../sass/screen.scss */
+/* line 638, ../sass/screen.scss */
 .page-template-blogroll-php .blog .post, .category .blog .post {
   display: inline-block;
   width: 200px;
@@ -914,7 +916,7 @@ header .menu-main-nav-container .menu li.current_page_item a {
   white-space: normal;
   vertical-align: top;
 }
-/* line 643, ../sass/screen.scss */
+/* line 645, ../sass/screen.scss */
 .page-template-blogroll-php .blog .post .post-date, .category .blog .post .post-date {
   border: none;
   margin: 0;
@@ -923,21 +925,21 @@ header .menu-main-nav-container .menu li.current_page_item a {
   font-size: 12px;
   font-weight: normal;
 }
-/* line 651, ../sass/screen.scss */
+/* line 653, ../sass/screen.scss */
 .page-template-blogroll-php .blog .post .post-title, .category .blog .post .post-title {
   margin-bottom: 10px;
   height: 7em;
 }
-/* line 654, ../sass/screen.scss */
+/* line 656, ../sass/screen.scss */
 .page-template-blogroll-php .blog .post .post-title a, .category .blog .post .post-title a {
   color: black;
   text-decoration: none;
 }
-/* line 656, ../sass/screen.scss */
+/* line 658, ../sass/screen.scss */
 .page-template-blogroll-php .blog .post img, .category .blog .post img {
   border: 2px solid #bbb;
 }
-/* line 660, ../sass/screen.scss */
+/* line 662, ../sass/screen.scss */
 .page-template-blogroll-php ul.categories, .category ul.categories {
   list-style: none;
   font-size: 14px;
@@ -948,29 +950,29 @@ header .menu-main-nav-container .menu li.current_page_item a {
   color: black;
   margin-top: 10px;
 }
-/* line 669, ../sass/screen.scss */
+/* line 671, ../sass/screen.scss */
 .page-template-blogroll-php ul.categories li, .category ul.categories li {
   margin-bottom: 0px;
   list-style: none;
 }
 
 /* Blog Post */
-/* line 680, ../sass/screen.scss */
+/* line 682, ../sass/screen.scss */
 .single .main-content time {
   position: relative;
   font-size: 10px;
   margin-bottom: 1.3em;
 }
-/* line 682, ../sass/screen.scss */
+/* line 684, ../sass/screen.scss */
 .single .main-content article h1 {
   font-size: 20px;
   margin-bottom: 1em;
 }
-/* line 686, ../sass/screen.scss */
+/* line 688, ../sass/screen.scss */
 .single .main-content article > img {
   margin-bottom: 10px;
 }
-/* line 692, ../sass/screen.scss */
+/* line 694, ../sass/screen.scss */
 .single .categories {
   font-weight: 700;
   list-style: none;
@@ -978,33 +980,33 @@ header .menu-main-nav-container .menu li.current_page_item a {
   margin-top: 3px;
   padding-top: 3px;
 }
-/* line 698, ../sass/screen.scss */
+/* line 700, ../sass/screen.scss */
 .single .categories li {
   list-style: none;
 }
-/* line 701, ../sass/screen.scss */
+/* line 703, ../sass/screen.scss */
 .single .categories .go-back-button {
   margin-top: 1em;
 }
-/* line 703, ../sass/screen.scss */
+/* line 705, ../sass/screen.scss */
 .single .categories .go-back-button a {
   color: red;
 }
 
-/* line 710, ../sass/screen.scss */
+/* line 712, ../sass/screen.scss */
 .main-content footer.container, footer.container {
   background: white;
   font-size: 11px;
   padding-bottom: 40px;
 }
-/* line 714, ../sass/screen.scss */
+/* line 716, ../sass/screen.scss */
 .main-content footer.container .footer-nav, footer.container .footer-nav {
   width: 84%;
   min-width: 400px;
   display: inline-block;
   vertical-align: top;
 }
-/* line 719, ../sass/screen.scss */
+/* line 721, ../sass/screen.scss */
 .main-content footer.container .footer-nav > li, footer.container .footer-nav > li {
   display: inline-block;
   width: auto;
@@ -1012,18 +1014,18 @@ header .menu-main-nav-container .menu li.current_page_item a {
   margin-bottom: 0px;
   margin-right: 20px;
 }
-/* line 725, ../sass/screen.scss */
+/* line 727, ../sass/screen.scss */
 .main-content footer.container .footer-nav > li a, footer.container .footer-nav > li a {
   color: #777777;
   text-decoration: none;
   font-weight: 400;
 }
-/* line 729, ../sass/screen.scss */
+/* line 731, ../sass/screen.scss */
 .main-content footer.container .footer-nav > li a:hover, footer.container .footer-nav > li a:hover {
   color: red;
   text-decoration: underline;
 }
-/* line 737, ../sass/screen.scss */
+/* line 739, ../sass/screen.scss */
 .main-content footer.container .footer-social-links, footer.container .footer-social-links {
   display: inline-block;
   vertical-align: bottom;
@@ -1031,19 +1033,19 @@ header .menu-main-nav-container .menu li.current_page_item a {
   width: 15%;
   min-width: 125px;
 }
-/* line 744, ../sass/screen.scss */
+/* line 746, ../sass/screen.scss */
 .main-content footer.container .footer-social-links #socialmedia-container DIV.smc_icon_container, footer.container .footer-social-links #socialmedia-container DIV.smc_icon_container {
   margin: 0 !important;
 }
-/* line 746, ../sass/screen.scss */
+/* line 748, ../sass/screen.scss */
 .main-content footer.container .footer-social-links #socialmedia-container DIV.smc_icon_container:not(:last-child), footer.container .footer-social-links #socialmedia-container DIV.smc_icon_container:not(:last-child) {
   margin-right: 5px !important;
 }
-/* line 747, ../sass/screen.scss */
+/* line 749, ../sass/screen.scss */
 .main-content footer.container .footer-social-links #socialmedia-container DIV.smc_icon_container a, footer.container .footer-social-links #socialmedia-container DIV.smc_icon_container a {
   height: 30px !important;
 }
-/* line 751, ../sass/screen.scss */
+/* line 753, ../sass/screen.scss */
 .main-content footer.container .footer-sub, footer.container .footer-sub {
   padding-top: 20px;
   border-top: 4px solid #f4f4f4;
@@ -1051,62 +1053,62 @@ header .menu-main-nav-container .menu li.current_page_item a {
 }
 
 /* Connect */
-/* line 760, ../sass/screen.scss */
+/* line 762, ../sass/screen.scss */
 .page-template-contact-template-php .column {
   margin: 70px 0;
   padding: 0 2% 0 0;
 }
-/* line 763, ../sass/screen.scss */
+/* line 765, ../sass/screen.scss */
 .page-template-contact-template-php .column.one-half {
   width: 47.5%;
 }
-/* line 769, ../sass/screen.scss */
+/* line 771, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .column {
   margin-top: 0;
 }
-/* line 775, ../sass/screen.scss */
+/* line 777, ../sass/screen.scss */
 .page-template-contact-template-php ul li {
   list-style: none;
 }
-/* line 779, ../sass/screen.scss */
+/* line 781, ../sass/screen.scss */
 .page-template-contact-template-php h2 {
   margin: 0;
   padding: 0;
   border: none;
 }
-/* line 784, ../sass/screen.scss */
+/* line 786, ../sass/screen.scss */
 .page-template-contact-template-php .map {
   text-align: right;
 }
-/* line 785, ../sass/screen.scss */
+/* line 787, ../sass/screen.scss */
 .page-template-contact-template-php .business-contact {
   margin-bottom: 20px;
 }
-/* line 787, ../sass/screen.scss */
+/* line 789, ../sass/screen.scss */
 .page-template-contact-template-php .business-contact strong {
   color: black;
   margin-right: 30px;
 }
-/* line 793, ../sass/screen.scss */
+/* line 795, ../sass/screen.scss */
 .page-template-contact-template-php .social #socialmedia-container {
   padding: 0;
 }
-/* line 795, ../sass/screen.scss */
+/* line 797, ../sass/screen.scss */
 .page-template-contact-template-php .social #socialmedia-container div.smc_icon_container {
   margin: 0 10px 0 0 !important;
 }
-/* line 803, ../sass/screen.scss */
+/* line 805, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .column > p {
   min-height: 80px;
   padding-bottom: 20px;
 }
-/* line 809, ../sass/screen.scss */
+/* line 811, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with, .page-template-contact-template-php .lower-content .collaborate-with {
   background: #f4f4f4;
   padding: 2%;
   width: 44.3%;
 }
-/* line 814, ../sass/screen.scss */
+/* line 816, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .open-close, .page-template-contact-template-php .lower-content .collaborate-with .open-close {
   display: block;
   position: relative;
@@ -1114,49 +1116,49 @@ header .menu-main-nav-container .menu li.current_page_item a {
   width: auto;
   text-align: right;
 }
-/* line 820, ../sass/screen.scss */
+/* line 822, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .open-close .arrow-button, .page-template-contact-template-php .lower-content .collaborate-with .open-close .arrow-button {
   width: 20px;
   height: 20px;
   background: url(../images/icons/right-arrow-disc.png) no-repeat;
   display: inline-block;
 }
-/* line 828, ../sass/screen.scss */
+/* line 830, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with.open .cform, .page-template-contact-template-php .lower-content .collaborate-with.open .cform {
   display: inline-block;
   margin-top: 20px;
   width: 100%;
 }
-/* line 833, ../sass/screen.scss */
+/* line 835, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with.open .arrow-button, .page-template-contact-template-php .lower-content .collaborate-with.open .arrow-button {
   background: url(../images/icons/down-arrow-disc.png) no-repeat;
 }
-/* line 836, ../sass/screen.scss */
+/* line 838, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform, .page-template-contact-template-php .lower-content .collaborate-with .cform {
   display: none;
   margin-top: 20px;
 }
-/* line 840, ../sass/screen.scss */
+/* line 842, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform label, .page-template-contact-template-php .lower-content .collaborate-with .cform label {
   font-weight: bold;
 }
-/* line 842, ../sass/screen.scss */
+/* line 844, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform label span, .page-template-contact-template-php .lower-content .collaborate-with .cform label span {
   padding: 10px 0;
   display: inline-block;
 }
-/* line 847, ../sass/screen.scss */
+/* line 849, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-box-title, .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-box-title {
   height: auto;
   min-height: 0;
   margin-top: 10px;
   font-weight: bold;
 }
-/* line 853, ../sass/screen.scss */
+/* line 855, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-box-group, .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-box-group {
   margin-bottom: 20px;
 }
-/* line 855, ../sass/screen.scss */
+/* line 857, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-box-group label, .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-box-group label {
   font-weight: normal;
   margin-left: 5px;
@@ -1164,11 +1166,11 @@ header .menu-main-nav-container .menu li.current_page_item a {
   display: inline-block;
   height: 30px;
 }
-/* line 862, ../sass/screen.scss */
+/* line 864, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-box-group input[type='radio'], .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-box-group input[type='radio'] {
   margin-left: 10px;
 }
-/* line 868, ../sass/screen.scss */
+/* line 870, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cformselect, .page-template-contact-template-php .lower-content .collaborate-with .cform .cformselect {
   float: right;
   background: white;
@@ -1179,50 +1181,50 @@ header .menu-main-nav-container .menu li.current_page_item a {
   height: 34px;
   -webkit-appearance: none;
 }
-/* line 879, ../sass/screen.scss */
+/* line 881, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cfselectmulti, .page-template-contact-template-php .lower-content .collaborate-with .cform .cfselectmulti {
   border: none;
   padding: 10px;
 }
-/* line 884, ../sass/screen.scss */
+/* line 886, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform li, .page-template-contact-template-php .lower-content .collaborate-with .cform li {
   min-height: 45px;
   padding-left: 5%;
 }
-/* line 888, ../sass/screen.scss */
+/* line 890, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform li#li-2-8, .page-template-contact-template-php .lower-content .collaborate-with .cform li#li-2-8 {
   width: 21.5%;
   display: inline-block;
   font-weight: bold;
 }
-/* line 892, ../sass/screen.scss */
+/* line 894, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform li#li-2-8:before, .page-template-contact-template-php .lower-content .collaborate-with .cform li#li-2-8:before {
   position: absolute;
   left: 0px;
   content: "*";
 }
-/* line 898, ../sass/screen.scss */
+/* line 900, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform li#li-2-9, .page-template-contact-template-php .lower-content .work-with .cform li#li-2-10, .page-template-contact-template-php .lower-content .collaborate-with .cform li#li-2-9, .page-template-contact-template-php .lower-content .collaborate-with .cform li#li-2-10 {
   display: inline-block;
   width: 36%;
   padding-left: 0px;
 }
-/* line 905, ../sass/screen.scss */
+/* line 907, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform input[type="text"], .page-template-contact-template-php .lower-content .work-with .cform textarea, .page-template-contact-template-php .lower-content .collaborate-with .cform input[type="text"], .page-template-contact-template-php .lower-content .collaborate-with .cform textarea {
   border: none;
   padding: 2%;
   width: 96%;
   margin-bottom: 2%;
 }
-/* line 911, ../sass/screen.scss */
+/* line 913, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cformselect, .page-template-contact-template-php .lower-content .collaborate-with .cform .cformselect {
   background: white url(../images/icons/down-arrow-light-disc.png) no-repeat 95% 50%;
 }
-/* line 915, ../sass/screen.scss */
+/* line 917, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-sb, .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-sb {
   text-align: right;
 }
-/* line 917, ../sass/screen.scss */
+/* line 919, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-sb input[type="submit"], .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-sb input[type="submit"] {
   background-color: #6ec9d0;
   *zoom: 1;
@@ -1247,20 +1249,20 @@ header .menu-main-nav-container .menu li.current_page_item a {
   box-shadow: inset 0 0 4px #fff;
   padding: 10px 0;
 }
-/* line 922, ../sass/screen.scss */
+/* line 924, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .reqtxt, .page-template-contact-template-php .lower-content .work-with .cform .emailreqtxt, .page-template-contact-template-php .lower-content .collaborate-with .cform .reqtxt, .page-template-contact-template-php .lower-content .collaborate-with .cform .emailreqtxt {
   position: absolute;
   left: 0;
   top: 9px;
   font-size: 14px;
 }
-/* line 930, ../sass/screen.scss */
+/* line 932, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with {
   margin-right: 3%;
 }
 
 /* misc styles */
-/* line 939, ../sass/screen.scss */
+/* line 941, ../sass/screen.scss */
 .linklove {
   display: none;
 }
