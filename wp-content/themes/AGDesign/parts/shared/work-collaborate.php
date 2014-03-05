@@ -5,7 +5,7 @@
 ?>			
 
 			<ul class="lower-content">
-				<li class="work-with col-2 column">
+				<li class="work-with col-2 column open">
 <?php 				$work = new WP_Query( 'tag=work-with-us&post_type=page' ); 
 					if ( $work->have_posts() ) : while ( $work->have_posts() ) : $work->the_post();
 ?>

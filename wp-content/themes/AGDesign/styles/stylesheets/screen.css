@@ -1125,40 +1125,45 @@ header .menu-main-nav-container .menu li.current_page_item a {
 }
 /* line 830, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with.open .cform, .page-template-contact-template-php .lower-content .collaborate-with.open .cform {
-  display: inline-block;
   margin-top: 20px;
-  width: 100%;
+  max-height: 1000px;
 }
-/* line 835, ../sass/screen.scss */
+/* line 834, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with.open .arrow-button, .page-template-contact-template-php .lower-content .collaborate-with.open .arrow-button {
   background: url(../images/icons/down-arrow-disc.png) no-repeat;
 }
-/* line 838, ../sass/screen.scss */
+/* line 837, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform, .page-template-contact-template-php .lower-content .collaborate-with .cform {
-  display: none;
+  display: inline-block;
   margin-top: 20px;
+  max-height: 0px;
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: max-height .5s;
+  transition: max-height .5s;
 }
-/* line 842, ../sass/screen.scss */
+/* line 846, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform label, .page-template-contact-template-php .lower-content .collaborate-with .cform label {
   font-weight: bold;
+  display: inline-block;
 }
-/* line 844, ../sass/screen.scss */
+/* line 849, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform label span, .page-template-contact-template-php .lower-content .collaborate-with .cform label span {
   padding: 10px 0;
   display: inline-block;
 }
-/* line 849, ../sass/screen.scss */
+/* line 854, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-box-title, .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-box-title {
   height: auto;
   min-height: 0;
   margin-top: 10px;
   font-weight: bold;
 }
-/* line 855, ../sass/screen.scss */
+/* line 860, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-box-group, .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-box-group {
   margin-bottom: 20px;
 }
-/* line 857, ../sass/screen.scss */
+/* line 862, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-box-group label, .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-box-group label {
   font-weight: normal;
   margin-left: 5px;
@@ -1166,11 +1171,11 @@ header .menu-main-nav-container .menu li.current_page_item a {
   display: inline-block;
   height: 30px;
 }
-/* line 864, ../sass/screen.scss */
+/* line 869, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-box-group input[type='radio'], .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-box-group input[type='radio'] {
   margin-left: 10px;
 }
-/* line 870, ../sass/screen.scss */
+/* line 875, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cformselect, .page-template-contact-template-php .lower-content .collaborate-with .cform .cformselect {
   float: right;
   background: white;
@@ -1181,50 +1186,50 @@ header .menu-main-nav-container .menu li.current_page_item a {
   height: 34px;
   -webkit-appearance: none;
 }
-/* line 881, ../sass/screen.scss */
+/* line 886, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cfselectmulti, .page-template-contact-template-php .lower-content .collaborate-with .cform .cfselectmulti {
   border: none;
   padding: 10px;
 }
-/* line 886, ../sass/screen.scss */
+/* line 891, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform li, .page-template-contact-template-php .lower-content .collaborate-with .cform li {
   min-height: 45px;
   padding-left: 5%;
 }
-/* line 890, ../sass/screen.scss */
+/* line 895, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform li#li-2-8, .page-template-contact-template-php .lower-content .collaborate-with .cform li#li-2-8 {
   width: 21.5%;
   display: inline-block;
   font-weight: bold;
 }
-/* line 894, ../sass/screen.scss */
+/* line 899, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform li#li-2-8:before, .page-template-contact-template-php .lower-content .collaborate-with .cform li#li-2-8:before {
   position: absolute;
   left: 0px;
   content: "*";
 }
-/* line 900, ../sass/screen.scss */
+/* line 905, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform li#li-2-9, .page-template-contact-template-php .lower-content .work-with .cform li#li-2-10, .page-template-contact-template-php .lower-content .collaborate-with .cform li#li-2-9, .page-template-contact-template-php .lower-content .collaborate-with .cform li#li-2-10 {
   display: inline-block;
   width: 36%;
   padding-left: 0px;
 }
-/* line 907, ../sass/screen.scss */
+/* line 912, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform input[type="text"], .page-template-contact-template-php .lower-content .work-with .cform textarea, .page-template-contact-template-php .lower-content .collaborate-with .cform input[type="text"], .page-template-contact-template-php .lower-content .collaborate-with .cform textarea {
   border: none;
   padding: 2%;
   width: 96%;
   margin-bottom: 2%;
 }
-/* line 913, ../sass/screen.scss */
+/* line 918, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cformselect, .page-template-contact-template-php .lower-content .collaborate-with .cform .cformselect {
   background: white url(../images/icons/down-arrow-light-disc.png) no-repeat 95% 50%;
 }
-/* line 917, ../sass/screen.scss */
+/* line 922, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-sb, .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-sb {
   text-align: right;
 }
-/* line 919, ../sass/screen.scss */
+/* line 924, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .cf-sb input[type="submit"], .page-template-contact-template-php .lower-content .collaborate-with .cform .cf-sb input[type="submit"] {
   background-color: #6ec9d0;
   *zoom: 1;
@@ -1249,20 +1254,20 @@ header .menu-main-nav-container .menu li.current_page_item a {
   box-shadow: inset 0 0 4px #fff;
   padding: 10px 0;
 }
-/* line 924, ../sass/screen.scss */
+/* line 929, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with .cform .reqtxt, .page-template-contact-template-php .lower-content .work-with .cform .emailreqtxt, .page-template-contact-template-php .lower-content .collaborate-with .cform .reqtxt, .page-template-contact-template-php .lower-content .collaborate-with .cform .emailreqtxt {
   position: absolute;
   left: 0;
   top: 9px;
   font-size: 14px;
 }
-/* line 932, ../sass/screen.scss */
+/* line 937, ../sass/screen.scss */
 .page-template-contact-template-php .lower-content .work-with {
   margin-right: 3%;
 }
 
 /* misc styles */
-/* line 941, ../sass/screen.scss */
+/* line 946, ../sass/screen.scss */
 .linklove {
   display: none;
 }

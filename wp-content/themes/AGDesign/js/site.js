@@ -30,7 +30,8 @@ jQuery(document).ready(function($) {
 	// Connect Page From Drawer
 	$('.lower-content .open-close').on('click', function(){
 		$(this).parent().toggleClass('open');
-	})
+		$(this).parent().siblings().removeClass('open');
+	});
 	$(".main-content .blog").smoothDivScroll({});
 
 });
