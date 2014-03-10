@@ -26,16 +26,21 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 		while ( $list->have_posts() ) {
 			$list->the_post();
 				$position = get_post_meta( get_the_ID(), 'professional_position', true );
-				$terms = wp_get_post_terms( get_the_ID(), 'expertise', array('fields' => 'name' ) );
+				$terms = wp_get_post_terms( get_the_ID(), 'project-type');
 				$thumbnail = get_the_post_thumbnail();
 				
 				if (class_exists('MultiPostThumbnails')
                 &&  MultiPostThumbnails::has_post_thumbnail( get_post_type(), 'project_thumbnail' ) ) :
 	            	$thumbnail = MultiPostThumbnails::get_the_post_thumbnail( get_post_type(), 'project_thumbnail' );
                 endif;
+
+            $projectType = "";
+            foreach ($terms as $term) {
+            	$projectType .= $term->slug . " ";
+            }
 				
 ?>
-			<li class = "dMember dContainer" 
+			<li class = "dMember dContainer <?php echo $projectType; ?> " 
 	    		 data-name='<?php echo get_the_title(); ?>'
 	    		 data-position='<?php echo $position; ?>'
 	    		 data-id='<?php echo get_the_ID(); ?>'

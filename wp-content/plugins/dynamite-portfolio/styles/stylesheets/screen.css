@@ -70,31 +70,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 9, ../sass/screen.scss */
 #dFolio {
   width: 100%;
-  min-width: 420px;
   height: auto;
   display: block;
 }
-/* line 15, ../sass/screen.scss */
+/* line 14, ../sass/screen.scss */
 #dFolio .dBio {
   background: #eee;
 }
-/* line 20, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 #dFolio .dMember.inactive {
   opacity: .2;
 }
-/* line 21, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 #dFolio .dMember:hover {
   opacity: 1;
 }
-/* line 23, ../sass/screen.scss */
+/* line 22, ../sass/screen.scss */
 #dFolio .dMember .dCard h1 {
   color: white;
 }
-/* line 26, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 #dFolio .dMember .dCard p {
   color: red;
 }
-/* line 29, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 #dFolio .dMember .dCard .dMember-info {
   z-index: 3;
   display: block;
@@ -105,23 +104,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 6%;
   background: rgba(10, 10, 10, 0.9);
 }
-/* line 39, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 #dFolio .dMember .dCard .dMember-info h1 {
   margin-bottom: 5px;
   font-weight: normal;
 }
-/* line 50, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 #dFolio .dMember-thumb {
   width: 200px;
   height: auto;
 }
-/* line 54, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 #dFolio .dMember-profile {
   display: none;
 }
 
 @media (max-width: 960px) {
-  /* line 63, ../sass/screen.scss */
+  /* line 62, ../sass/screen.scss */
   .dMember-info h1 {
     font-size: 12px;
   }

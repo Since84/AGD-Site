@@ -22,7 +22,7 @@
 
 			cont(start, from, to, duration, callback);
 		});
-	};
+	}; 
 
 })(jQuery);
 
@@ -33,6 +33,34 @@ jQuery(document).ready(function($) {
 		$(this).parent().siblings().removeClass('open');
 	});
 	$(".main-content .blog").smoothDivScroll({});
+
+	var $container = $('.dGallery');
+
+	$container.isotope({
+		itemSelector: '.dContainer',
+	    masonry: {
+	      // columnWidth: 200
+	    }
+	    // sortBy: 'number',
+	    // getSortData: {
+	    //   number: function( $elem ) {
+	    //     var number = $elem.hasClass('element') ? 
+	    //       $elem.find('.number').text() :
+	    //       $elem.attr('data-number');
+	    //     return parseInt( number, 10 );
+	    //   },
+	    //   alphabetical: function( $elem ) {
+	    //     var name = $elem.find('.name'),
+	    //         itemText = name.length ? name : $elem;
+	    //     return itemText.text();
+	    //   }
+	});
+
+  $(".top-menu a").on("click", function(){
+  		var filter = $(this).parent().attr('data-filter');
+  		$container.isotope({filter:filter});
+  		return false;
+  })
 
 });
 

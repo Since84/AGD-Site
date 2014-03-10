@@ -778,10 +778,6 @@ header .menu-main-nav-container .menu li.current_page_item a {
   height: auto;
   margin: 20px 0;
 }
-/* line 535, ../sass/screen.scss */
-.page-template-portfolio-php #dFolio .dMember {
-  width: 20%;
-}
 /* line 537, ../sass/screen.scss */
 .page-template-portfolio-php #dFolio .dMember .dCard figure.back .dMember-info {
   -moz-box-sizing: border-box;

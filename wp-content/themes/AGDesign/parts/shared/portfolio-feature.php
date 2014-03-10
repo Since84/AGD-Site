@@ -7,7 +7,12 @@ $projectType = $_GET['project-type'];
 <div class='main-content'>
 	<div class="container">
 		<ul class="top-menu">
-			<li <?php echo ( $projectType == NULL ? 'class="active"' : '' ); ?> data-slug="all"><a href="<?php echo $pageLink; ?>">All</a></li>
+			<li <?php echo ( $projectType == NULL ? 'class="active"' : '' ); ?> 
+				data-filter= "*"
+				data-slug="all"
+			>
+				<a href="<?php echo $pageLink; ?>">All</a>
+			</li>
 			<?php
 
             	$tArgs = array(
@@ -18,7 +23,7 @@ $projectType = $_GET['project-type'];
                 $output = '<span class="btn">';
                 foreach($taxonomy_ar as $taxonomy_term) {
                 	// var_dump($taxonomy_term);
-                    $output.= '<li '.( $taxonomy_term->slug === $projectType ? 'class="active"' : '' ).' data-slug="'.$taxonomy_term->slug.'"><a href="'.$pageLink.'?project-type='.$taxonomy_term->slug.'">'.$taxonomy_term->name.'</a></li>';
+                    $output.= '<li '.( $taxonomy_term->slug === $projectType ? 'class="active"' : '' ).' data-slug="'.$taxonomy_term->slug.'" data-filter=".'.$taxonomy_term->slug.'" ><a href="'.$pageLink.'?project-type='.$taxonomy_term->slug.'">'.$taxonomy_term->name.'</a></li>';
                 }
                 $output.= '</span>';
 
