@@ -83,8 +83,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   opacity: 0;
   z-index: -1;
   position: relative;
+  -webkit-transition: max-height .8s;
+  transition: max-height .8s;
 }
-/* line 25, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 #dFolio .dBio.open {
   display: block;
   z-index: 2;
@@ -93,24 +95,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 100%;
   height: 100%;
 }
-/* line 33, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 #dFolio .dBio.team {
   position: absolute;
   width: 200px;
   height: 200px;
 }
-/* line 38, ../sass/screen.scss */
+/* line 40, ../sass/screen.scss */
 #dFolio .dBio.projects {
   position: relative;
   height: 0;
   width: 100%;
   display: block;
 }
-/* line 43, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 #dFolio .dBio.projects .column {
   padding: 0;
 }
-/* line 49, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 #dFolio .dGallery {
   white-space: normal;
   display: inline-block;
@@ -120,7 +122,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   bottom: 0;
   margin: auto;
 }
-/* line 58, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 #dFolio .dContainer {
   position: relative;
   display: inline-block;
@@ -133,7 +135,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-transform: perspective(800px) rotateY(0);
   transform: perspective(800px) rotateY(0);
 }
-/* line 76, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 #dFolio .dContainer .dCard figure {
   width: 100%;
   height: 100%;
@@ -141,7 +143,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-transition: .75s ease-in-out;
   transition: .75s ease-in-out;
 }
-/* line 83, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 #dFolio .dContainer .dCard figure.back {
   position: absolute;
   left: 0;
@@ -154,7 +156,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-transform: perspective(800px) rotateY(180deg);
   transform: perspective(800px) rotateY(180deg);
 }
-/* line 95, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 #dFolio .dContainer .dCard figure.back .dMember-info {
   position: absolute;
   box-sizing: border-box;
@@ -164,7 +166,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   top: 0;
   left: 0;
 }
-/* line 107, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 #dFolio .dContainer .dCard figure.front {
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -173,39 +175,39 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -webkit-transform: perspective(800px) rotateY(0deg);
   transform: perspective(800px) rotateY(0deg);
 }
-/* line 115, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 #dFolio .dContainer .dCard figure img {
   width: 100%;
   height: auto;
   display: inline-block;
   vertical-align: top;
 }
-/* line 124, ../sass/screen.scss */
+/* line 126, ../sass/screen.scss */
 #dFolio .dContainer .dCard:hover .front {
   -webkit-transform: perspective(800px) rotateY(-179.9deg);
   -moz-transform: perspective(800px) rotateY(-179.9deg);
   transform: perspective(800px) rotateY(-179.9deg);
 }
-/* line 129, ../sass/screen.scss */
+/* line 131, ../sass/screen.scss */
 #dFolio .dContainer .dCard:hover .back {
   -moz-transform: perspective(800px) rotateY(0);
   -webkit-transform: perspective(800px) rotateY(0);
   transform: perspective(800px) rotateY(0);
 }
 
-/* line 170, ../sass/screen.scss */
+/* line 172, ../sass/screen.scss */
 .isotope-item {
   z-index: 2;
 }
 
-/* line 174, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 .isotope-hidden.isotope-item {
   pointer-events: none;
   z-index: 1;
 }
 
 /**** Isotope CSS3 transitions ****/
-/* line 182, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .isotope,
 .isotope .isotope-item {
   -webkit-transition-duration: 0.8s;
@@ -215,7 +217,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-duration: 0.8s;
 }
 
-/* line 190, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 .isotope {
   -webkit-transition-property: height, width;
   -moz-transition-property: height, width;
@@ -224,7 +226,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   transition-property: height, width;
 }
 
-/* line 198, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .isotope .isotope-item {
   -webkit-transition-property: -webkit-transform, opacity;
   -moz-transition-property: -moz-transform, opacity;
@@ -234,7 +236,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /**** disabling Isotope CSS3 transitions ****/
-/* line 210, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 .isotope.no-transition,
 .isotope.no-transition .isotope-item,
 .isotope .isotope-item.no-transition {

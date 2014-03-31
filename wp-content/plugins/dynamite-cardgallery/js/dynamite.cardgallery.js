@@ -107,24 +107,26 @@
 
 			self.options.openPosition = { 
 					display: 'block'
-					// height: '500'
 				}
 			self.options.closedPosition = { 
 					display: 'block',
-					// height: '0px',
+					maxHeight: '0px',
 					opacity: '0'
 				}
 			self._getProject(elem);
 
 			if( $bioDiv.hasClass('open') ) {
 				self._closeProject('open');
-				$bioDiv
-					.addClass('open')
-					.animate( self.options.openPosition, self.options.animationSpeed, function(){
-						$(this).animate({opacity: 1}, self.options.animationSpeed, function(){
-							$(this).unbind();
-						})
-					} )
+				$bioDiv.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd',   
+    				function(e) {
+						$bioDiv
+							.addClass('open')
+							.animate( self.options.openPosition, self.options.animationSpeed, function(){
+								$(this).animate({opacity: 1}, self.options.animationSpeed, function(){
+									$(this).unbind();
+								})
+							} )
+					});
 			} else {
 				$bioDiv.addClass('open').animate( self.options.openPosition, self.options.animationSpeed, function(){
 					$(this).unbind();
@@ -136,16 +138,32 @@
 			var self = this;
 			var $bioDiv = $(this.element).find('.dBio ');
 			
-			$bioDiv
-				.removeClass('open')
-				.animate(self.options.closedPosition, self.options.animationSpeed, function(){
-					$bioDiv
-						.empty()
-						.unbind();
-					$(elem).parent('.dContainer').removeClass('active');
+			// $bioDiv
+			// 	.animate(self.options.closedPosition, self.options.animationSpeed, function(){
+			// 		$bioDiv
+			// 			.removeClass('open')
+			// 			.empty()
+			// 			.unbind();
+			// 		$(elem).parent('.dContainer').removeClass('active');
+			// 		$('.inactive').removeClass('inactive');
+			// 		$(this).parent().removeAttr('style')
+			// 	})
+
+
+			// $bioDiv
+				// .animate(self.options.closedPosition, self.options.animationSpeed, function(){
+
+				$bioDiv
+					.removeClass('open');
+
+				$bioDiv.one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd',   
+    				function(e) {
+					 $bioDiv.empty()
+							.unbind();
+					$('.active').removeClass('active');
 					$('.inactive').removeClass('inactive');
-					$(this).parent().removeAttr('style')
-				})
+					$(this).parent().removeAttr('style');
+				});
 			$('.cycle-slideshow').cycle('destroy');
 			$('.closed').removeClass('closed');
 		},

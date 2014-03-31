@@ -26,7 +26,7 @@ function register_styles_scripts(){
 	wp_register_script( 'cycle', plugins_url( 'dynamite-portfolio/js/jquery.cycle2.min.js'), array('jquery') );
 	wp_register_script( 'cycle-swipe', plugins_url( 'dynamite-portfolio/js/jquery.cycle2.swipe.min.js'), array('jquery', 'cycle') );
 	wp_register_script( 'cycle-iOSfix', plugins_url( 'dynamite-portfolio/js/ios6fix.js'), array('jquery', 'cycle', 'cycle-swipe') );
-	wp_register_script( 'imagesloaded', plugins_url( 'dynamite-portfolio/js/imagesloaded-master/imagesloaded.pkgd.min.js'));
+	wp_register_script( 'imagesloaded', plugins_url( 'dynamite-portfolio/js/imagesloaded-master/imagesloaded.pkgd.min.js'), array('jquery'));
 	wp_register_script( 'main', plugins_url( 'dynamite-portfolio/js/script.js'), array('jquery', 'jqueryui', 'imagesloaded') );
 
 	wp_register_script( 'kinetic', plugins_url( 'dynamite-portfolio/js/smooth-div-scroll/jquery.kinetic.min.js' ), array('jqueryui') );

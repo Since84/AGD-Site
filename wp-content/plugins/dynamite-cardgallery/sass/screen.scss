@@ -21,6 +21,8 @@
 		opacity: 0;
 		z-index: -1;
 		position: relative;
+	    -webkit-transition: max-height .8s;
+	    transition: max-height .8s;
 
 		&.open{
 			display: block;

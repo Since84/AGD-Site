@@ -203,18 +203,18 @@ header {
 	background: $darkGray;
 	padding: 0 0 40px; 
 
-	#dFolio .dGallery{
+	#dFolio .dGallery {
 		position: absolute;
 	}
 
-	.featured-slide-container{
+	.dynamite-slide-container{
 		position: relative;
 		width: 100%;
 		white-space: nowrap;
 		margin: auto;
 	}
 	
-	.featured-slide-window {
+	.dynamite-slide-window {
 		width: 90%;
 		max-width: 1000px;
 		padding: 0 5%;
@@ -254,7 +254,7 @@ header {
 	}
 	&:hover .paging { opacity: 1; }
 
-	.featured-slider{
+	.dynamite-slider{
 		display: block;
 		// position: absolute;
 		width: 90%;
@@ -266,7 +266,7 @@ header {
 		margin: auto;
 		overflow: hidden;
 
-		.featured-slide{
+		.dynamite-slide{
 			display: inline-block;
 			vertical-align: top;
 			position: relative;
@@ -528,6 +528,17 @@ display: none;
 
 /* Project Profiles */
 .page-template-portfolio-php {
+	.sticky {
+		position: fixed;
+		top: 27px;
+		padding: 20px;
+		z-index: 1000;
+		background: white;
+		width: 100%;
+		left: 0;
+		text-align: center;
+		font-size: 16px;
+	}
 	#dFolio {
 		width: auto; 
 		height: auto; 
@@ -612,7 +623,11 @@ display: none;
 			}
 
 		}
+
 	}	
+
+
+
 }
 
 /* Testimonials */

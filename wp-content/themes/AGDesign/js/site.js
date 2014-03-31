@@ -34,33 +34,56 @@ jQuery(document).ready(function($) {
 	});
 	$(".main-content .blog").smoothDivScroll({});
 
-	var $container = $('.dGallery');
+	if( !$('body').hasClass('home') ){
+		var $container = $('.dGallery');
+		$container.imagesLoaded(function(){
+			$container.isotope({
+				itemSelector: '.dContainer',
+			    masonry: {
+			      // columnWidth: 200
+			    }
+			    // sortBy: 'number',
+			    // getSortData: {
+			    //   number: function( $elem ) {
+			    //     var number = $elem.hasClass('element') ? 
+			    //       $elem.find('.number').text() :
+			    //       $elem.attr('data-number');
+			    //     return parseInt( number, 10 );
+			    //   },
+			    //   alphabetical: function( $elem ) {
+			    //     var name = $elem.find('.name'),
+			    //         itemText = name.length ? name : $elem;
+			    //     return itemText.text();
+			    //   }
+			});		
+		})
+	}
 
-	$container.isotope({
-		itemSelector: '.dContainer',
-	    masonry: {
-	      // columnWidth: 200
-	    }
-	    // sortBy: 'number',
-	    // getSortData: {
-	    //   number: function( $elem ) {
-	    //     var number = $elem.hasClass('element') ? 
-	    //       $elem.find('.number').text() :
-	    //       $elem.attr('data-number');
-	    //     return parseInt( number, 10 );
-	    //   },
-	    //   alphabetical: function( $elem ) {
-	    //     var name = $elem.find('.name'),
-	    //         itemText = name.length ? name : $elem;
-	    //     return itemText.text();
-	    //   }
-	});
 
   $(".top-menu a").on("click", function(){
   		var filter = $(this).parent().attr('data-filter');
   		$container.isotope({filter:filter});
+  		$(".top-menu .active").removeClass('active');
+  		$(this).parent().addClass('active');
   		return false;
   })
+
+	//sticky subnav
+   var stickyElement = $('.top-menu');
+   if ( stickyElement.length && stickyElement.children().length ) {
+	   var stickyElementLocation = stickyElement.offset().top;
+	   var stickyElementHeight = stickyElement.height();
+       $(window).scroll(function(){
+       	var windowTopPosition = $(window).scrollTop();
+           if ( windowTopPosition >= stickyElementLocation ) {
+               stickyElement.addClass('sticky');
+               $('body').css({'paddingTop':stickyElementHeight});
+           } else {
+               stickyElement.removeClass('sticky');
+               $('body').css({'paddingTop':0});
+           }
+       });
+    }
 
 });
 

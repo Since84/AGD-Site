@@ -1,0 +1,69 @@
+/** Base Styles for AGD **/
+
+
+/* COLORS */
+$red 			: red;
+$darkRed 		: #ff0202;
+$midRed 		: #E70000;
+$lightRed 		: #7a0707;
+$textGray		: #777777;
+$backgroundGray : #222121;
+$darkGray		: #302d2d;
+$lightGray		: #f4f4f4;
+
+$fontSmall: 11px;
+$fontMedium: 12px;
+$fontLarge: 13px;
+$fontXLarge: 14px;
+
+/* GRAPHIC ELEMENTS */
+
+$header-gradient 	: url(../images/navbg.png) repeat-x;
+$header-hover 		: url(../images/nav_over.png) no-repeat;
+
+/* Icons */
+
+$left-arrow-slider	: url(../images/icons/Left-Arrow.png);
+$right-arrow-slider	: url(../images/icons/Right-Arrow.png);
+$close-button		: url(../images/icons/close-button.png);
+$facebook			: url(../images/icons/Facebook.png);
+$linkedin			: url(../images/icons/LinkedIn.png);
+$twitter			: url(../images/icons/Twitter.png);
+$pager-circle		: url(../images/icons/paging-sprite.png);
+
+// @mixin header-gradient{
+// // needs latest Compass, add '@import "compass"' to your scss
+// 	background-color: #ff0202; // Old browsers
+// 	@include filter-gradient(#ff0202, #7a0707, vertical); // IE6-8
+// // IE9 SVG, needs conditional override of 'filter' to 'none'
+// 	$experimental-support-for-svg: true;
+// 	@include background-image(linear-gradient(top, #ff0202 0%,#7a0707 100%));	
+// }
+
+@mixin header-gradient {
+	background : $header-gradient;
+}
+
+@mixin button-gradient {
+	// needs latest Compass, add '@import "compass"' to your scss
+	background-color: #6ec9d0; // Old browsers
+	@include filter-gradient(#6ec9d0, #367075, vertical); // IE6-8
+	// IE9 SVG, needs conditional override of 'filter' to 'none'
+	$experimental-support-for-svg: true;
+	@include background-image(linear-gradient(top, #6ec9d0 0%,#6ec9d0 48%,#4d9fa5 59%,#367075 95%,#367075 100%));
+}
+
+@mixin blue-button {
+	@include button-gradient;
+	border-radius: 5px; 
+	border: none;
+	padding: 5px;
+	width: 160px;
+	font-size: 12px;
+	color: white;
+	text-transform: uppercase;
+	font-weight: normal;
+	-webkit-box-shadow: inset 0 0 4px #fff;
+    -moz-box-shadow: inset 0 0 4px #fff;
+    box-shadow: inset 0 0 4px #fff;
+}
