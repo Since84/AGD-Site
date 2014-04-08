@@ -1,0 +1,101 @@
+// /* 
+// 	AG Mobile Styles 
+// 	Author: Damon Hastings *~==
+// */
+
+@import "agd";
+
+
+@media screen and (device-aspect-ratio: 40/71)  {
+
+}
+@media only screen and (max-width:720px) {
+	*, *:before, *:after {
+	  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+
+	.featured-content{
+		padding: 0;
+	}
+
+	.featured-content .dynamite-slider, 
+	.featured-content .dynamite-slider .slide,
+	.featured-content .dynamite-slider #dFolio
+	{ height: auto }
+
+	.main-content .column {
+		width: 100%;
+		padding-left: 0;
+	}
+
+	.main-content .news.section .post {
+		width: 100%;
+		padding: 2%;
+		margin-bottom: 15px;
+	}
+
+	body {
+		width: 100%;
+		min-width: 0;
+	}
+
+	header .menu-main-nav-container{
+		display:none;
+	}
+
+	.cform {
+		display: none; //TEMPORARY
+	}
+
+	footer.container .footer-nav {
+		min-width: 0;
+		width: 100%;
+		& > li{
+			width: 24%;
+			margin-right: 0%;
+		}
+	}
+
+	#dFolio {
+		.dContainer{
+			width: 33.3%;
+		}
+		.dGallery {
+			position: relative !important;
+
+			.dContainer:not(:nth-child(-n+6)){
+				display: none;
+			}
+		}
+	}
+	.subheader{
+		display: none;
+	}
+
+	.featured-content .dynamite-slider{
+		width: 100%;
+
+		.button.paging{
+			display: none;
+		}
+
+		.slide:not(.project-feature) {
+			display: none;
+		}
+		.dynamite-slide-window {
+			padding: 0;
+			margin: 0;
+			width: 100%;
+		}
+		.dynamite-slide-container{
+			position: relative;
+			left: auto !important;
+			padding: 0;
+		}
+	}
+}
+@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }

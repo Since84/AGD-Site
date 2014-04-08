@@ -85,6 +85,9 @@
         wp_register_style( 'responsive', get_stylesheet_directory_uri().'/styles/stylesheets/responsive.css', '', '' );
         wp_enqueue_style( 'responsive' );
 
+        wp_register_style( 'mobile', get_stylesheet_directory_uri().'/styles/stylesheets/mobile.css', '', '' );
+        wp_enqueue_style( 'mobile' );
+
 		wp_register_style( 'print', get_stylesheet_directory_uri().'/styles/stylesheets/screen.css', '', '', 'print' );
         wp_enqueue_style( 'print' );
 

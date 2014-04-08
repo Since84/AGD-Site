@@ -3859,7 +3859,22 @@
 	<key>queryFavorites</key>
 	<array/>
 	<key>queryHistory</key>
-	<array/>
+	<array>
+		<string># ************************************************************
+# Sequel Pro SQL dump
+# Version 4096
+#
+# http://www.sequelpro.com/
+# http://code.google.com/p/sequel-pro/
+#
+# Host: 127.0.0.1 (MySQL 5.5.29)
+# Database: agd
+# Generation Time: 2014-03-30 23:49:31 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */</string>
+	</array>
 	<key>rdbms_type</key>
 	<string>mysql</string>
 	<key>rdbms_version</key>
