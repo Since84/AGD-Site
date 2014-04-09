@@ -26,6 +26,7 @@
 	.main-content .column {
 		width: 100%;
 		padding-left: 0;
+		padding: 10% 0;
 	}
 
 	.main-content .news.section .post {
@@ -55,6 +56,15 @@
 			margin-right: 0%;
 		}
 	}
+	
+	.footer-sub > span {
+		clear: both;
+		display: block;
+		&.right {
+			float: none;
+			padding: 10px 0;
+		}
+	}
 
 	#dFolio {
 		.dContainer{
@@ -67,9 +77,6 @@
 				display: none;
 			}
 		}
-	}
-	.subheader{
-		display: none;
 	}
 
 	.featured-content .dynamite-slider{

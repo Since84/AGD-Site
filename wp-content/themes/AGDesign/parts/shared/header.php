@@ -12,8 +12,8 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 		<?php wp_nav_menu( array('menu' => 'Main Nav' )); ?>
 	</div>
 </header>
-<div class="subheader">
 <?php if ( !is_home() ) : ?>
+<div class="subheader">
 	<div class="container">
 <?php 	
 	if( !is_home() ){	 
@@ -32,11 +32,11 @@ $headline = get_post_meta( $post->ID, 'headline', true );
 		<div class="headline page-title container">
 			Oops. We can't seem to find the page you are searching for. 
 		</div>
-<?php } else if ( !is_home() ) { ?>
+<?php } else { ?>
 		<div class="headline page-title container">
 			<?php the_title(); ?>
 		</div>
 <?php } ?>
 	</div>
-<?php endif; ?>
 </div>
+<?php endif;

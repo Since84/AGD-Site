@@ -26,79 +26,86 @@
   .main-content .column {
     width: 100%;
     padding-left: 0;
+    padding: 10% 0;
   }
 
-  /* line 31, ../sass/mobile.scss */
+  /* line 32, ../sass/mobile.scss */
   .main-content .news.section .post {
     width: 100%;
     padding: 2%;
     margin-bottom: 15px;
   }
 
-  /* line 37, ../sass/mobile.scss */
+  /* line 38, ../sass/mobile.scss */
   body {
     width: 100%;
     min-width: 0;
   }
 
-  /* line 42, ../sass/mobile.scss */
+  /* line 43, ../sass/mobile.scss */
   header .menu-main-nav-container {
     display: none;
   }
 
-  /* line 46, ../sass/mobile.scss */
+  /* line 47, ../sass/mobile.scss */
   .cform {
     display: none;
   }
 
-  /* line 50, ../sass/mobile.scss */
+  /* line 51, ../sass/mobile.scss */
   footer.container .footer-nav {
     min-width: 0;
     width: 100%;
   }
-  /* line 53, ../sass/mobile.scss */
+  /* line 54, ../sass/mobile.scss */
   footer.container .footer-nav > li {
     width: 24%;
     margin-right: 0%;
   }
 
   /* line 60, ../sass/mobile.scss */
+  .footer-sub > span {
+    clear: both;
+    display: block;
+  }
+  /* line 63, ../sass/mobile.scss */
+  .footer-sub > span.right {
+    float: none;
+    padding: 10px 0;
+  }
+
+  /* line 70, ../sass/mobile.scss */
   #dFolio .dContainer {
     width: 33.3%;
   }
-  /* line 63, ../sass/mobile.scss */
+  /* line 73, ../sass/mobile.scss */
   #dFolio .dGallery {
     position: relative !important;
   }
-  /* line 66, ../sass/mobile.scss */
+  /* line 76, ../sass/mobile.scss */
   #dFolio .dGallery .dContainer:not(:nth-child(-n+6)) {
     display: none;
   }
 
-  /* line 71, ../sass/mobile.scss */
-  .subheader {
-    display: none;
-  }
-
-  /* line 75, ../sass/mobile.scss */
+  /* line 82, ../sass/mobile.scss */
   .featured-content .dynamite-slider {
     width: 100%;
   }
-  /* line 78, ../sass/mobile.scss */
+  /* line 85, ../sass/mobile.scss */
   .featured-content .dynamite-slider .button.paging {
     display: none;
   }
-  /* line 82, ../sass/mobile.scss */
+  /* line 89, ../sass/mobile.scss */
   .featured-content .dynamite-slider .slide:not(.project-feature) {
     display: none;
   }
-  /* line 85, ../sass/mobile.scss */
+  /* line 92, ../sass/mobile.scss */
   .featured-content .dynamite-slider .dynamite-slide-window {
     padding: 0;
     margin: 0;
     width: 100%;
   }
-  /* line 90, ../sass/mobile.scss */
+  /* line 97, ../sass/mobile.scss */
   .featured-content .dynamite-slider .dynamite-slide-container {
     position: relative;
     left: auto !important;
