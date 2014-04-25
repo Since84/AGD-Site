@@ -99,6 +99,10 @@ header {
 	@include header-gradient;
 	box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.75);
 
+	& > .container{
+		height: 100px;
+	}
+
 	.home-logo{
 		width: 40.7%;
 		display: inline-block;
@@ -106,6 +110,7 @@ header {
 		padding-top: 30px;
 		position: absolute;
 	}
+	.mobile-logo{ display:none;}
 
 	.menu-main-nav-container {
 		height: 100px;
@@ -336,11 +341,14 @@ display: none;
 			display: inline-block; 
 			vertical-align: bottom;
 			padding-right: 10px;
+			font-weight:700;
 			&:not(:last-child){ border-right: 2px solid #bbb; margin-right: 10px; }
 			&.active{ 
 				color: $red; 
-				font-weight: 700; 
 				a { color: $red; }
+			}
+			&.all-work{
+				font-weight: 700;
 			}
 			&:not(.active){ cursor: pointer; }
 			a {
@@ -530,8 +538,7 @@ display: none;
 .page-template-portfolio-php {
 	.sticky {
 		position: fixed;
-		top: 27px;
-		padding: 20px;
+		top: 0;
 		z-index: 1000;
 		background: white;
 		width: 100%;

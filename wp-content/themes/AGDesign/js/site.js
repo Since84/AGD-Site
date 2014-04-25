@@ -68,6 +68,22 @@ jQuery(document).ready(function($) {
   		return false;
   })
 
+  //Category Selector for 'Our Work' page.
+  var active = $('.active').text();
+
+  $(".work-selected-category").text(active);
+
+  $(".top-menu .work-selected-category").click(function(){
+  		$(this).parent().toggleClass('on');
+  })
+
+  $(".top-menu .btn li").on('click', function(){
+  		var category = $(this).text();
+  		
+  		$('.work-selected-category').text(category);
+  		$('.top-menu').removeClass('on');
+  })
+
 	//sticky subnav
    var stickyElement = $('.top-menu');
    if ( stickyElement.length && stickyElement.children().length ) {
@@ -84,6 +100,13 @@ jQuery(document).ready(function($) {
            }
        });
     }
+
+    $('.sidr-menu-button').sidr({
+      name: 'sidr-main',
+      source: '#menu-main-nav, footer.container',
+      side: 'right',
+      body: 'body'
+    });
 
 });
 
