@@ -21,9 +21,10 @@
   /* line 19, ../sass/mobile.scss */
   header .sidr-menu-button {
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    background: black;
+    width: 45px;
+    height: 45px;
+    background: url(../images/icons/menu-icon.png) center center no-repeat;
+    background-size: 100% auto;
     position: absolute;
     right: 3em;
     top: 0;
@@ -31,89 +32,95 @@
     margin: auto;
   }
 
-  /* line 32, ../sass/mobile.scss */
+  /* line 33, ../sass/mobile.scss */
   .container {
     padding: 0;
   }
 
-  /* line 36, ../sass/mobile.scss */
+  /* line 37, ../sass/mobile.scss */
   .featured-content {
     padding: 0;
   }
 
-  /* line 43, ../sass/mobile.scss */
+  /* line 44, ../sass/mobile.scss */
   .featured-content .dynamite-slider,
   .featured-content .dynamite-slider .slide,
   .featured-content .dynamite-slider #dFolio {
     height: auto;
   }
 
-  /* line 46, ../sass/mobile.scss */
+  /* line 47, ../sass/mobile.scss */
   .featured-content .dynamite-slider .paging {
     display: none;
   }
 
-  /* line 49, ../sass/mobile.scss */
+  /* line 50, ../sass/mobile.scss */
   .featured-content .dynamite-slider .dCard .front {
     -webkit-transform: none;
     -moz-transform: none;
     transform: none;
   }
-  /* line 54, ../sass/mobile.scss */
+  /* line 55, ../sass/mobile.scss */
   .featured-content .dynamite-slider .dCard .back {
     -moz-transform: none;
     -webkit-transform: none;
     transform: none;
   }
-  /* line 61, ../sass/mobile.scss */
+  /* line 62, ../sass/mobile.scss */
   .featured-content .dynamite-slider .dCard:hover .front {
     -webkit-transform: none;
     -moz-transform: none;
     transform: none;
   }
-  /* line 66, ../sass/mobile.scss */
+  /* line 67, ../sass/mobile.scss */
   .featured-content .dynamite-slider .dCard:hover .back {
     -moz-transform: none;
     -webkit-transform: none;
     transform: none;
   }
 
-  /* line 74, ../sass/mobile.scss */
-  .main-content .column {
-    width: 100%;
-    padding-left: 0;
-    padding: 10% 0;
+  /* line 75, ../sass/mobile.scss */
+  .main-content {
+    padding: 1.5rem;
+    background: white;
   }
 
   /* line 80, ../sass/mobile.scss */
+  .main-content .column {
+    width: 100%;
+    padding-left: 0;
+    padding: 1rem 0;
+  }
+
+  /* line 86, ../sass/mobile.scss */
   .main-content .news.section .post {
     width: 100%;
     padding: 2%;
     margin-bottom: 15px;
   }
 
-  /* line 86, ../sass/mobile.scss */
+  /* line 92, ../sass/mobile.scss */
   body {
     width: 100%;
     min-width: 0;
   }
 
-  /* line 92, ../sass/mobile.scss */
+  /* line 98, ../sass/mobile.scss */
   header .mobile-logo {
     margin-left: 20px;
   }
-  /* line 95, ../sass/mobile.scss */
+  /* line 101, ../sass/mobile.scss */
   header .menu-main-nav-container {
     display: none;
   }
 
-  /* line 100, ../sass/mobile.scss */
+  /* line 106, ../sass/mobile.scss */
   .top-menu {
     text-align: center;
     padding: 0px;
     z-index: 9999;
   }
-  /* line 104, ../sass/mobile.scss */
+  /* line 110, ../sass/mobile.scss */
   .top-menu .work-selected-category {
     border-right: 0 !important;
     margin: 10px;
@@ -125,11 +132,11 @@
     border-radius: 10px;
     text-align: left;
   }
-  /* line 115, ../sass/mobile.scss */
+  /* line 121, ../sass/mobile.scss */
   .top-menu .btn {
     display: none;
   }
-  /* line 120, ../sass/mobile.scss */
+  /* line 126, ../sass/mobile.scss */
   .top-menu.on .btn {
     display: block;
     position: absolute;
@@ -143,125 +150,181 @@
     padding: 10px 20px;
     text-align: left;
   }
-  /* line 133, ../sass/mobile.scss */
+  /* line 139, ../sass/mobile.scss */
   .top-menu.on .btn li {
     border-right: 0px;
     width: 100%;
     margin-bottom: 5px;
   }
-  /* line 137, ../sass/mobile.scss */
+  /* line 143, ../sass/mobile.scss */
   .top-menu.on .btn li:not(:last-child) {
     padding-bottom: 5px;
     border-bottom: 1px solid #777;
   }
-  /* line 141, ../sass/mobile.scss */
+  /* line 147, ../sass/mobile.scss */
   .top-menu.on .btn li a {
     color: #777;
   }
 
-  /* line 149, ../sass/mobile.scss */
-  .cform {
-    display: none;
-  }
-
-  /* line 153, ../sass/mobile.scss */
+  /* line 155, ../sass/mobile.scss */
   footer.container .footer-nav {
     min-width: 0;
     width: 100%;
   }
-  /* line 156, ../sass/mobile.scss */
+  /* line 158, ../sass/mobile.scss */
   footer.container .footer-nav > li {
     width: 24%;
     margin-right: 0%;
   }
 
-  /* line 162, ../sass/mobile.scss */
+  /* line 164, ../sass/mobile.scss */
   .footer-sub > span {
     clear: both;
     display: block;
   }
-  /* line 165, ../sass/mobile.scss */
+  /* line 167, ../sass/mobile.scss */
   .footer-sub > span.right {
     float: none;
     padding: 10px 0;
   }
 
-  /* line 171, ../sass/mobile.scss */
+  /* line 173, ../sass/mobile.scss */
   .subheader .headline {
     padding: 10px 20px;
   }
 
-  /* line 175, ../sass/mobile.scss */
+  /* line 177, ../sass/mobile.scss */
   .subheader form {
     display: none;
   }
 
-  /* line 179, ../sass/mobile.scss */
+  /* line 181, ../sass/mobile.scss */
   #dFolio {
     margin: 0 !important;
   }
-  /* line 181, ../sass/mobile.scss */
+  /* line 183, ../sass/mobile.scss */
   #dFolio .dContainer {
     width: 33%;
   }
-  /* line 184, ../sass/mobile.scss */
+  /* line 186, ../sass/mobile.scss */
   #dFolio .dGallery {
     position: relative !important;
   }
-  /* line 187, ../sass/mobile.scss */
+  /* line 189, ../sass/mobile.scss */
   #dFolio .dGallery .dContainer:not(:nth-child(-n+6)) {
     display: none;
   }
 
-  /* line 193, ../sass/mobile.scss */
+  /* line 195, ../sass/mobile.scss */
   .featured-content .dynamite-slider {
     width: 100%;
   }
-  /* line 196, ../sass/mobile.scss */
+  /* line 198, ../sass/mobile.scss */
   .featured-content .dynamite-slider .button.paging {
     display: none;
   }
-  /* line 200, ../sass/mobile.scss */
+  /* line 202, ../sass/mobile.scss */
   .featured-content .dynamite-slider .slide:not(.project-feature) {
     display: none;
   }
-  /* line 203, ../sass/mobile.scss */
+  /* line 205, ../sass/mobile.scss */
   .featured-content .dynamite-slider .dynamite-slide-window {
     padding: 0;
     margin: 0;
     width: 100%;
   }
-  /* line 208, ../sass/mobile.scss */
+  /* line 210, ../sass/mobile.scss */
   .featured-content .dynamite-slider .dynamite-slide-container {
     position: relative;
     left: auto !important;
     padding: 0;
   }
 
-  /* line 216, ../sass/mobile.scss */
+  /* line 218, ../sass/mobile.scss */
+  .stay-connected ol {
+    width: 100%;
+  }
+  /* line 221, ../sass/mobile.scss */
+  .stay-connected li {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  /* line 225, ../sass/mobile.scss */
+  .stay-connected input {
+    width: 80%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  /* line 233, ../sass/mobile.scss */
   .sidr.right {
     background: #a09f9f;
     -webkit-box-shadow: inset 10px -1px 5px -6px #000;
     -moz-box-shadow: inset 10px -1px 5px -6px #000;
     box-shadow: inset 10px -1px 5px -6px #000;
   }
-  /* line 221, ../sass/mobile.scss */
-  .sidr.right .sidr-inner > .sidr-class-menu-item {
-    padding: 10px 20px;
-    border-bottom: 1px solid white;
+  /* line 239, ../sass/mobile.scss */
+  .sidr.right ul {
+    border-bottom: none;
   }
-  /* line 224, ../sass/mobile.scss */
+  /* line 243, ../sass/mobile.scss */
+  .sidr.right .sidr-inner:last-child {
+    position: absolute;
+    bottom: 0;
+  }
+  /* line 248, ../sass/mobile.scss */
+  .sidr.right .sidr-inner > .sidr-class-menu-item {
+    margin-left: 5px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+  /* line 251, ../sass/mobile.scss */
   .sidr.right .sidr-inner > .sidr-class-menu-item a {
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
+    display: block;
   }
-  /* line 229, ../sass/mobile.scss */
+  /* line 258, ../sass/mobile.scss */
   .sidr.right #sidr-id-socialmedia-container {
     margin-left: 20px;
   }
-  /* line 232, ../sass/mobile.scss */
+  /* line 261, ../sass/mobile.scss */
   .sidr.right .sidr-class-smc_icon_container {
     display: inline-block;
     margin-right: 10px;
+    background-size: 100% auto !important;
+  }
+  /* line 265, ../sass/mobile.scss */
+  .sidr.right .sidr-class-smc_icon_container img {
+    opacity: 0;
+  }
+  /* line 268, ../sass/mobile.scss */
+  .sidr.right .sidr-class-smc_icon_container#sidr-id-social-Facebook {
+    background: url("../images/icons/mobile-facebook.png") center center no-repeat;
+  }
+  /* line 271, ../sass/mobile.scss */
+  .sidr.right .sidr-class-smc_icon_container#sidr-id-social-InDesign {
+    background: url("../images/icons/mobile-linkedin.png") center center no-repeat;
+  }
+  /* line 274, ../sass/mobile.scss */
+  .sidr.right .sidr-class-smc_icon_container#sidr-id-social-Twitter {
+    background: url("../images/icons/mobile-twitter.png") center center no-repeat;
+  }
+  /* line 278, ../sass/mobile.scss */
+  .sidr.right .sidr-class-footer-nav {
+    display: none;
+  }
+  /* line 281, ../sass/mobile.scss */
+  .sidr.right .sidr-class-footer-sub {
+    color: white;
+    font-size: .7rem;
+    line-height: 1rem;
+    padding: 1rem;
+  }
+  /* line 287, ../sass/mobile.scss */
+  .sidr.right .sidr-class-footer-sub .sidr-class-right {
+    margin-top: 20px;
+    position: relative;
+    display: block;
   }
 }

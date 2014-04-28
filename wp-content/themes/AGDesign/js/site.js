@@ -81,7 +81,6 @@ jQuery(document).ready(function($) {
   		var category = $(this).text();
   		
   		$('.work-selected-category').text(category);
-  		$('.top-menu').removeClass('on');
   })
 
 	//sticky subnav
@@ -105,7 +104,7 @@ jQuery(document).ready(function($) {
       name: 'sidr-main',
       source: '#menu-main-nav, footer.container',
       side: 'right',
-      body: 'body'
+      body: 'html'
     });
 
 });
