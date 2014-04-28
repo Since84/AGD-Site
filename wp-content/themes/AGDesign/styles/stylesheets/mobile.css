@@ -256,72 +256,88 @@
     margin-right: 5px;
   }
 
-  /* line 233, ../sass/mobile.scss */
+  /* line 232, ../sass/mobile.scss */
+  footer.container {
+    padding: 2rem;
+  }
+  /* line 235, ../sass/mobile.scss */
+  footer.container .footer-sub {
+    border-top: none;
+    padding-top: 0;
+  }
+  /* line 239, ../sass/mobile.scss */
+  footer.container #socialmedia-container {
+    padding-left: 0;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  /* line 247, ../sass/mobile.scss */
   .sidr.right {
     background: #a09f9f;
     -webkit-box-shadow: inset 10px -1px 5px -6px #000;
     -moz-box-shadow: inset 10px -1px 5px -6px #000;
     box-shadow: inset 10px -1px 5px -6px #000;
   }
-  /* line 239, ../sass/mobile.scss */
+  /* line 253, ../sass/mobile.scss */
   .sidr.right ul {
     border-bottom: none;
   }
-  /* line 243, ../sass/mobile.scss */
+  /* line 257, ../sass/mobile.scss */
   .sidr.right .sidr-inner:last-child {
     position: absolute;
     bottom: 0;
   }
-  /* line 248, ../sass/mobile.scss */
+  /* line 262, ../sass/mobile.scss */
   .sidr.right .sidr-inner > .sidr-class-menu-item {
     margin-left: 5px;
     border-bottom: 1px solid #cdcdcd;
   }
-  /* line 251, ../sass/mobile.scss */
+  /* line 265, ../sass/mobile.scss */
   .sidr.right .sidr-inner > .sidr-class-menu-item a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
     display: block;
   }
-  /* line 258, ../sass/mobile.scss */
+  /* line 272, ../sass/mobile.scss */
   .sidr.right #sidr-id-socialmedia-container {
     margin-left: 20px;
   }
-  /* line 261, ../sass/mobile.scss */
+  /* line 275, ../sass/mobile.scss */
   .sidr.right .sidr-class-smc_icon_container {
     display: inline-block;
     margin-right: 10px;
     background-size: 100% auto !important;
   }
-  /* line 265, ../sass/mobile.scss */
+  /* line 279, ../sass/mobile.scss */
   .sidr.right .sidr-class-smc_icon_container img {
     opacity: 0;
   }
-  /* line 268, ../sass/mobile.scss */
+  /* line 282, ../sass/mobile.scss */
   .sidr.right .sidr-class-smc_icon_container#sidr-id-social-Facebook {
     background: url("../images/icons/mobile-facebook.png") center center no-repeat;
   }
-  /* line 271, ../sass/mobile.scss */
+  /* line 285, ../sass/mobile.scss */
   .sidr.right .sidr-class-smc_icon_container#sidr-id-social-InDesign {
     background: url("../images/icons/mobile-linkedin.png") center center no-repeat;
   }
-  /* line 274, ../sass/mobile.scss */
+  /* line 288, ../sass/mobile.scss */
   .sidr.right .sidr-class-smc_icon_container#sidr-id-social-Twitter {
     background: url("../images/icons/mobile-twitter.png") center center no-repeat;
   }
-  /* line 278, ../sass/mobile.scss */
+  /* line 292, ../sass/mobile.scss */
   .sidr.right .sidr-class-footer-nav {
     display: none;
   }
-  /* line 281, ../sass/mobile.scss */
+  /* line 295, ../sass/mobile.scss */
   .sidr.right .sidr-class-footer-sub {
     color: white;
     font-size: .7rem;
     line-height: 1rem;
     padding: 1rem;
   }
-  /* line 287, ../sass/mobile.scss */
+  /* line 301, ../sass/mobile.scss */
   .sidr.right .sidr-class-footer-sub .sidr-class-right {
     margin-top: 20px;
     position: relative;
