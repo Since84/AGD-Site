@@ -538,13 +538,14 @@ display: none;
 .page-template-portfolio-php {
 	.sticky {
 		position: fixed;
-		top: 0;
+		font-size: 16px;
 		z-index: 1000;
-		background: white;
 		width: 100%;
 		left: 0;
+		top: 0;
 		text-align: center;
-		font-size: 16px;
+		background: white;
+		padding: 15px 0;
 	}
 	#dFolio {
 		width: auto; 
