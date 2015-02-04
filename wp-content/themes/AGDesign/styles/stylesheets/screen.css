@@ -840,7 +840,7 @@ h3 {
   margin: 20px 0;
 }
 /* line 507, ../sass/screen.scss */
-.page-template-portfolio-php #dFolio .dMember .dCard figure.back .dMember-info {
+.page-template-portfolio-php #dFolio .dMember .dCard .back .dMember-info {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

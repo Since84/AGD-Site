@@ -46,10 +46,10 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 	    		 data-id='<?php echo get_the_ID(); ?>'
 			>
 				<div class='dCard'>	
-				    <figure class='front'>
+				    <div class='front'>
 <?php 					echo $thumbnail;	?>
-				    </figure>
-				    <figure class='back'>
+				    </div>
+				    <div class='back'>
 <?php 					echo $thumbnail;	
 						if ( get_post_type() == "project" ):
 ?>
@@ -70,7 +70,7 @@ function get_dFolio( $type, $perPage, $pageSlug ){
 
 <?php 					endif; ?>
 
-				    </figure>					
+				    </div>					
 				</div>
 <?php
 		}
