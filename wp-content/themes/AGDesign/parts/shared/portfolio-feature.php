@@ -14,7 +14,7 @@ $projectType = $_GET['project-type'];
             		'hide_empty'	=> true
             	);
                 $taxonomy_ar = get_terms('project-type', $tArgs);
-                $output = '<li class="work-selected-category"></li>'
+                $output = ''//'<li class="work-selected-category"></li>'
                 		. '<span class="btn">'
                 		. '	<li class="all-work '. ( $projectType ? '' : 'active') .'" data-filter="*"><a href="'.$pageLink.'">All Work</a></li>';
                 foreach($taxonomy_ar as $taxonomy_term) {
